@@ -1,0 +1,85 @@
+{
+  "active_checkpoint": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_aids700nef.pt",
+  "best_trial": {
+    "checkpoint": "training_logs/hpo/simgnn/aids700nef/20260810T163615Z_e88269/trial_003/model.pt",
+    "config": {
+      "batch_size": 64,
+      "dropout": 0.25,
+      "learning_rate": 0.0015,
+      "weight_decay": 1e-05
+    },
+    "index": 3,
+    "return_code": 0,
+    "status": "completed",
+    "validation_mse": 0.009955
+  },
+  "budget": 30,
+  "completed_trials": 4,
+  "created_at": "2026-08-10T16:48:01.405041+00:00",
+  "dataset_id": "aids700nef",
+  "model_id": "simgnn",
+  "objective": "minimum validation similarity MSE",
+  "promoted": true,
+  "promoted_files": [
+    "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_aids700nef.pt"
+  ],
+  "requested_trials": 4,
+  "seed": 3407,
+  "strategy": "deterministic shuffled grid search",
+  "study_id": "20260810T163615Z_e88269",
+  "test_set_used_for_selection": false,
+  "trials": [
+    {
+      "checkpoint": "training_logs/hpo/simgnn/aids700nef/20260810T163615Z_e88269/trial_000/model.pt",
+      "config": {
+        "batch_size": 128,
+        "dropout": 0.5,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0005
+      },
+      "index": 0,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.010315
+    },
+    {
+      "checkpoint": "training_logs/hpo/simgnn/aids700nef/20260810T163615Z_e88269/trial_001/model.pt",
+      "config": {
+        "batch_size": 64,
+        "dropout": 0.4,
+        "learning_rate": 0.0015,
+        "weight_decay": 0.0005
+      },
+      "index": 1,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.010894
+    },
+    {
+      "checkpoint": "training_logs/hpo/simgnn/aids700nef/20260810T163615Z_e88269/trial_002/model.pt",
+      "config": {
+        "batch_size": 64,
+        "dropout": 0.4,
+        "learning_rate": 0.0003,
+        "weight_decay": 1e-05
+      },
+      "index": 2,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.011089
+    },
+    {
+      "checkpoint": "training_logs/hpo/simgnn/aids700nef/20260810T163615Z_e88269/trial_003/model.pt",
+      "config": {
+        "batch_size": 64,
+        "dropout": 0.25,
+        "learning_rate": 0.0015,
+        "weight_decay": 1e-05
+      },
+      "index": 3,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.009955
+    }
+  ]
+}

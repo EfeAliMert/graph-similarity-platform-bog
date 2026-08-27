@@ -1,0 +1,196 @@
+{
+  "dataset_id": "aids700nef",
+  "generated_at": "2026-08-23T01:50:35.691639+00:00",
+  "left_graph": "AIDS700nef/train/4.gexf",
+  "models": [
+    {
+      "checkpoint": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_aids700nef.pt",
+      "comparable_similarity": 0.3735683858394623,
+      "conversion_consistent": true,
+      "exact_ged_error": 2.1534580344799554,
+      "hpo": {
+        "completed_trials": 4,
+        "study_id": "20260810T163615Z_e88269",
+        "test_set_used_for_selection": false,
+        "validation_mse": 0.009955
+      },
+      "hyperparameters": {
+        "batch_size": 64,
+        "dropout": 0.25,
+        "learning_rate": 0.0015,
+        "weight_decay": 1e-05
+      },
+      "identity_comparable_similarity": 0.9955090284347534,
+      "identity_predicted_ged": 0.0450108627264939,
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "native_output": 0.3735683858394623,
+      "predicted_ged": 9.846541965520045,
+      "reference_ged_error": 2.1534580344799554,
+      "reverse_comparable_similarity": 0.3788480162620545,
+      "score_semantics": "exp(-normalized GED)",
+      "seed": 3407,
+      "status": "executed",
+      "symmetry_gap": 0.005279630422592219,
+      "target": {
+        "dataset_id": "aids700nef",
+        "exact": true,
+        "pairs": 392000,
+        "path": "Models&Datasets/drive-download-20260630T100606Z-3-001/aids700nef_ged_astar_gidpair_dist_map.pickle",
+        "target_semantics": null,
+        "target_source": "exact benchmark GED"
+      },
+      "technical_integrity": true
+    },
+    {
+      "checkpoint": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt",
+      "comparable_similarity": 0.47448970236511595,
+      "conversion_consistent": true,
+      "exact_ged_error": 4.544846367567271,
+      "hpo": {
+        "completed_trials": 3,
+        "study_id": "20260822T234045Z_e1da3c",
+        "test_set_used_for_selection": false,
+        "validation_mse": 0.024269911943965678
+      },
+      "hyperparameters": {
+        "batch_size": 16,
+        "learning_rate": 0.001
+      },
+      "identity_comparable_similarity": 0.4221982705579281,
+      "identity_predicted_ged": 8.622802398389117,
+      "model_id": "multiscale-set",
+      "model_name": "Multi-Scale Convolutional Set Matching",
+      "native_output": 0.5934153199195862,
+      "predicted_ged": 7.455153632432729,
+      "reference_ged_error": 4.544846367567271,
+      "reverse_comparable_similarity": 0.4788065631426625,
+      "score_semantics": "exp(-0.7 * normalized GED)",
+      "seed": 379,
+      "status": "executed",
+      "symmetry_gap": 0.004316860777546561,
+      "target": {
+        "dataset_id": "aids700nef",
+        "exact": true,
+        "pairs": 392000,
+        "path": "Models&Datasets/drive-download-20260630T100606Z-3-001/aids700nef_ged_astar_gidpair_dist_map.pickle",
+        "target_kind": "exact",
+        "target_semantics": "GED distance transformed by GraphSim as exp(-0.7 * normalized GED)",
+        "target_source": "exact benchmark GED"
+      },
+      "technical_integrity": true
+    },
+    {
+      "checkpoint": "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt",
+      "comparable_similarity": 0.21063825488090512,
+      "conversion_consistent": true,
+      "exact_ged_error": 3.576130486702887,
+      "hpo": null,
+      "hyperparameters": {
+        "batch_size": 8,
+        "edge_cap": 14,
+        "learning_rate": 0.0005,
+        "node_cap": 10
+      },
+      "identity_comparable_similarity": 0.9998432397842407,
+      "identity_predicted_ged": 0.0015677250392611367,
+      "model_id": "segmn",
+      "model_name": "SEGMN",
+      "native_output": 0.21063825488090515,
+      "predicted_ged": 15.576130486702887,
+      "reference_ged_error": 3.576130486702887,
+      "reverse_comparable_similarity": 0.23772680759429932,
+      "score_semantics": "exp(-normalized GED)",
+      "seed": 379,
+      "status": "executed",
+      "symmetry_gap": 0.027088552713394193,
+      "target": {
+        "dataset_id": "aids700nef",
+        "exact": true,
+        "pairs": 392000,
+        "path": "Models&Datasets/drive-download-20260630T100606Z-3-001/aids700nef_ged_astar_gidpair_dist_map.pickle",
+        "target_semantics": null,
+        "target_source": "exact benchmark GED"
+      },
+      "technical_integrity": true
+    },
+    {
+      "checkpoint": "Models&Datasets/GFM-code/checkpoints/gfm_aids700nef.pt",
+      "comparable_similarity": 0.30570587515830994,
+      "conversion_consistent": true,
+      "exact_ged_error": 0.14868168435600992,
+      "hpo": null,
+      "hyperparameters": {
+        "batch_size": 32,
+        "learning_rate": 0.0005
+      },
+      "identity_comparable_similarity": 0.8028838038444519,
+      "identity_predicted_ged": 2.1954527806563657,
+      "model_id": "graph-fusion",
+      "model_name": "Graph Fusion",
+      "native_output": 0.30570587515830994,
+      "predicted_ged": 11.85131831564399,
+      "reference_ged_error": 0.14868168435600992,
+      "reverse_comparable_similarity": 0.3135814070701599,
+      "score_semantics": "exp(-normalized GED)",
+      "seed": 3407,
+      "status": "executed",
+      "symmetry_gap": 0.007875531911849976,
+      "target": {
+        "dataset_id": "aids700nef",
+        "exact": true,
+        "pairs": 392000,
+        "path": "Models&Datasets/drive-download-20260630T100606Z-3-001/aids700nef_ged_astar_gidpair_dist_map.pickle",
+        "target_semantics": null,
+        "target_source": "exact benchmark GED"
+      },
+      "technical_integrity": true
+    },
+    {
+      "checkpoint": "Models&Datasets/Graph2Region-main/checkpoints/aids700nef/g2r_aids700nef_best.pt",
+      "comparable_similarity": 0.2645309865474701,
+      "conversion_consistent": true,
+      "exact_ged_error": 1.297968831372689,
+      "hpo": {
+        "completed_trials": 3,
+        "study_id": "20260822T235518Z_ee97f9",
+        "test_set_used_for_selection": false,
+        "validation_mse": 0.07516176998615265
+      },
+      "hyperparameters": {
+        "batch_size": 16,
+        "learning_rate": 0.001
+      },
+      "identity_comparable_similarity": 0.8887451887130737,
+      "identity_predicted_ged": 1.1794471142299794,
+      "model_id": "graph2region",
+      "model_name": "Graph2Region",
+      "native_output": 0.2645309865474701,
+      "predicted_ged": 13.297968831372689,
+      "reference_ged_error": 1.297968831372689,
+      "reverse_comparable_similarity": 0.3036951124668121,
+      "score_semantics": "exp(-normalized GED)",
+      "seed": 379,
+      "status": "executed",
+      "symmetry_gap": 0.039164125919341986,
+      "target": {
+        "dataset_id": "aids700nef",
+        "exact": true,
+        "pairs": 470400,
+        "path": "Models&Datasets/drive-download-20260630T100606Z-3-001/aids700nef_ged_astar_gidpair_dist_map.pickle",
+        "target_kind": "exact",
+        "target_semantics": "GED distance; each trainer applies its documented native target transform",
+        "target_source": "exact A* GED benchmark"
+      },
+      "technical_integrity": true
+    }
+  ],
+  "reference_exact": true,
+  "reference_ged": 12.0,
+  "reference_kind": "exact",
+  "reference_similarity": 0.30119421191220214,
+  "reference_source": "exact A* GED benchmark",
+  "right_graph": "AIDS700nef/test/6.gexf",
+  "technical_integrity_passed": 5,
+  "warning": "Technical integrity verifies execution, input binding, bounds, and GED-scale conversion. It does not certify checkpoint accuracy."
+}

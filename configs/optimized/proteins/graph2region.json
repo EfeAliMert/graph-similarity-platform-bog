@@ -1,0 +1,35 @@
+{
+  "best_trial": 5,
+  "created_at": "2026-08-26T20:08:25.896529+00:00",
+  "dataset": "proteins",
+  "dataset_fingerprint": "97e13d00c5d36c7cc749ff42c4af5dc9fbe49c4031ae08401f0de73293f3d3a6",
+  "dataset_name": "PROTEINS",
+  "dataset_profile_version": "dataset-profile-v1",
+  "final_training": {
+    "status": "not_started",
+    "test_evaluation": "not_run"
+  },
+  "git_commit": "4ed32d3b75a3b84c78713e6143715cbba2ea0edd",
+  "hyperparameters": {
+    "batch_size": 16,
+    "identity_probability": 0.1,
+    "learning_rate": 0.002865522943830101
+  },
+  "model": "graph2region",
+  "objective": "minimize validation normalized-GED similarity MSE",
+  "schema_version": "optimized-config-v1",
+  "search_space_version": "graph2region-v2",
+  "seeds": [
+    379
+  ],
+  "split_seed": 380,
+  "study_name": "graph2region__proteins__normalized_ged__graph2region-v2__97e13d00c5d3",
+  "study_storage": "training_logs/hpo/optimization.db",
+  "target_kind": "structural_proxy",
+  "target_source": "derived structural GED proxy",
+  "test_set_used_for_selection": false,
+  "trial_checkpoint": "training_logs/hpo/studies/graph2region__proteins__normalized_ged__graph2region-v2__97e13d00c5d3/trials/trial_0005/model.pt",
+  "validation_mse": 0.061433,
+  "validation_mse_std": 0.0,
+  "validation_spearman": 0.485523
+}

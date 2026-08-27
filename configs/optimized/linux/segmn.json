@@ -1,0 +1,37 @@
+{
+  "best_trial": 0,
+  "created_at": "2026-08-26T19:00:06.325841+00:00",
+  "dataset": "linux",
+  "dataset_fingerprint": "ca0fa691641d43101e27a765f228900d035434f970474203c68fca17ca630018",
+  "dataset_name": "LINUX",
+  "dataset_profile_version": "dataset-profile-v1",
+  "final_training": {
+    "status": "not_started",
+    "test_evaluation": "not_run"
+  },
+  "git_commit": "4ed32d3b75a3b84c78713e6143715cbba2ea0edd",
+  "hyperparameters": {
+    "batch_size": 4,
+    "edge_cap": 16,
+    "identity_probability": 0.2,
+    "learning_rate": 0.0005,
+    "node_cap": 10
+  },
+  "model": "segmn",
+  "objective": "minimize validation normalized-GED similarity MSE",
+  "schema_version": "optimized-config-v1",
+  "search_space_version": "segmn-v2",
+  "seeds": [
+    379
+  ],
+  "split_seed": 380,
+  "study_name": "segmn__linux__normalized_ged__segmn-v2__ca0fa691641d",
+  "study_storage": "training_logs/hpo/optimization.db",
+  "target_kind": "exact",
+  "target_source": "exact A* GED benchmark",
+  "test_set_used_for_selection": false,
+  "trial_checkpoint": "training_logs/hpo/studies/segmn__linux__normalized_ged__segmn-v2__ca0fa691641d/trials/trial_0000/model.pt",
+  "validation_mse": 0.017448,
+  "validation_mse_std": 0.0,
+  "validation_spearman": 0.924628
+}

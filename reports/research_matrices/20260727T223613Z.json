@@ -1,0 +1,1692 @@
+{
+  "evaluation_pairs": 20,
+  "expected_seeds": [
+    379
+  ],
+  "generated_at": "2026-08-22T23:31:44.917158+00:00",
+  "manifest_path": "training_logs/research_matrix/20260727T223613Z/manifest.json",
+  "matrix_complete": false,
+  "rows": [
+    {
+      "complete": false,
+      "dataset_id": "enzymes",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "graph-fusion",
+      "model_name": "Graph Fusion",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 204.208,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 204.208,
+        "mean": 204.208,
+        "min": 204.208,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "enzymes",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "graph2region",
+      "model_name": "Graph2Region",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 2.562,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 2.562,
+        "mean": 2.562,
+        "min": 2.562,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "enzymes",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "multiscale-set",
+      "model_name": "Multi-Scale Convolutional Set Matching",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 28.244,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 28.244,
+        "mean": 28.244,
+        "min": 28.244,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "enzymes",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "segmn",
+      "model_name": "SEGMN",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 3.333,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 3.333,
+        "mean": 3.333,
+        "min": 3.333,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "enzymes",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 194.31,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 194.31,
+        "mean": 194.31,
+        "min": 194.31,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "mutag",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "graph-fusion",
+      "model_name": "Graph Fusion",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 158.305,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 158.305,
+        "mean": 158.305,
+        "min": 158.305,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "mutag",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "graph2region",
+      "model_name": "Graph2Region",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 2.004,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 2.004,
+        "mean": 2.004,
+        "min": 2.004,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "mutag",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "multiscale-set",
+      "model_name": "Multi-Scale Convolutional Set Matching",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 23.764,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 23.764,
+        "mean": 23.764,
+        "min": 23.764,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "mutag",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "segmn",
+      "model_name": "SEGMN",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 3.065,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 3.065,
+        "mean": 3.065,
+        "min": 3.065,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "mutag",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 157.571,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 157.571,
+        "mean": 157.571,
+        "min": 157.571,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "proteins",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "graph-fusion",
+      "model_name": "Graph Fusion",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 309.739,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 309.739,
+        "mean": 309.739,
+        "min": 309.739,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "proteins",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "graph2region",
+      "model_name": "Graph2Region",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 4.205,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 4.205,
+        "mean": 4.205,
+        "min": 4.205,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "proteins",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "multiscale-set",
+      "model_name": "Multi-Scale Convolutional Set Matching",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 37.6,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 37.6,
+        "mean": 37.6,
+        "min": 37.6,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "proteins",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "segmn",
+      "model_name": "SEGMN",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 4.667,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 4.667,
+        "mean": 4.667,
+        "min": 4.667,
+        "std": 0.0
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "proteins",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "structural GED proxy",
+          "training_duration_seconds": 210.348,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 210.348,
+        "mean": 210.348,
+        "min": 210.348,
+        "std": 0.0
+      }
+    }
+  ],
+  "run_id": "20260727T223613Z"
+}

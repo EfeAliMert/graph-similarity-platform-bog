@@ -1,0 +1,596 @@
+{
+  "budget": "quick",
+  "completed": 29,
+  "datasets": [
+    "linux",
+    "imdbmulti",
+    "ptc",
+    "mutag",
+    "proteins",
+    "enzymes"
+  ],
+  "failed": 1,
+  "generated_at": "2026-08-26T20:29:30.777942+00:00",
+  "jobs": [
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "linux",
+        "--model",
+        "simgnn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "linux",
+      "model_id": "simgnn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "linux",
+        "--model",
+        "multiscale-set",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "linux",
+      "model_id": "multiscale-set",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "linux",
+        "--model",
+        "segmn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "linux",
+      "model_id": "segmn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "linux",
+        "--model",
+        "graph-fusion",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "linux",
+      "model_id": "graph-fusion",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "linux",
+        "--model",
+        "graph2region",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "linux",
+      "model_id": "graph2region",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "imdbmulti",
+        "--model",
+        "simgnn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "imdbmulti",
+      "model_id": "simgnn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "imdbmulti",
+        "--model",
+        "multiscale-set",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "imdbmulti",
+      "model_id": "multiscale-set",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "imdbmulti",
+        "--model",
+        "segmn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "imdbmulti",
+      "model_id": "segmn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "imdbmulti",
+        "--model",
+        "graph-fusion",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "imdbmulti",
+      "model_id": "graph-fusion",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "imdbmulti",
+        "--model",
+        "graph2region",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "imdbmulti",
+      "model_id": "graph2region",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "ptc",
+        "--model",
+        "simgnn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "ptc",
+      "model_id": "simgnn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "ptc",
+        "--model",
+        "multiscale-set",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "ptc",
+      "model_id": "multiscale-set",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "ptc",
+        "--model",
+        "segmn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "ptc",
+      "model_id": "segmn",
+      "return_code": 1,
+      "status": "failed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "ptc",
+        "--model",
+        "graph-fusion",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "ptc",
+      "model_id": "graph-fusion",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "ptc",
+        "--model",
+        "graph2region",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "ptc",
+      "model_id": "graph2region",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "mutag",
+        "--model",
+        "simgnn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "mutag",
+      "model_id": "simgnn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "mutag",
+        "--model",
+        "multiscale-set",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "mutag",
+      "model_id": "multiscale-set",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "mutag",
+        "--model",
+        "segmn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "mutag",
+      "model_id": "segmn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "mutag",
+        "--model",
+        "graph-fusion",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "mutag",
+      "model_id": "graph-fusion",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "mutag",
+        "--model",
+        "graph2region",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "mutag",
+      "model_id": "graph2region",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "proteins",
+        "--model",
+        "simgnn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "proteins",
+      "model_id": "simgnn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "proteins",
+        "--model",
+        "multiscale-set",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "proteins",
+      "model_id": "multiscale-set",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "proteins",
+        "--model",
+        "segmn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "proteins",
+      "model_id": "segmn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "proteins",
+        "--model",
+        "graph-fusion",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "proteins",
+      "model_id": "graph-fusion",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "proteins",
+        "--model",
+        "graph2region",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "proteins",
+      "model_id": "graph2region",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "enzymes",
+        "--model",
+        "simgnn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "enzymes",
+      "model_id": "simgnn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "enzymes",
+        "--model",
+        "multiscale-set",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "enzymes",
+      "model_id": "multiscale-set",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "enzymes",
+        "--model",
+        "segmn",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "enzymes",
+      "model_id": "segmn",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "enzymes",
+        "--model",
+        "graph-fusion",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "enzymes",
+      "model_id": "graph-fusion",
+      "return_code": 0,
+      "status": "completed"
+    },
+    {
+      "budget": "quick",
+      "command": [
+        ".venvs/gnn-pyg/bin/python",
+        "scripts/optimize.py",
+        "--dataset",
+        "enzymes",
+        "--model",
+        "graph2region",
+        "--budget",
+        "quick",
+        "--seed",
+        "379"
+      ],
+      "dataset_id": "enzymes",
+      "model_id": "graph2region",
+      "return_code": 0,
+      "status": "completed"
+    }
+  ],
+  "models": [
+    "simgnn",
+    "multiscale-set",
+    "segmn",
+    "graph-fusion",
+    "graph2region"
+  ],
+  "run_id": "20260826T185453Z",
+  "seed": 379,
+  "skipped": 0
+}

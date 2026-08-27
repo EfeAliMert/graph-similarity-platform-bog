@@ -1,0 +1,92 @@
+{
+  "active_checkpoint": "Models&Datasets/GFM-code/checkpoints/gfm_aids700nef.pt",
+  "best_trial": {
+    "checkpoint": "training_logs/hpo/graph-fusion/aids700nef/20260822T235518Z_a9c10c/trial_001/model.pt",
+    "config": {
+      "batch_size": 64,
+      "learning_rate": 0.002
+    },
+    "index": 1,
+    "return_code": 0,
+    "status": "completed",
+    "validation_mse": 0.01781829632818699
+  },
+  "budget": 8,
+  "completed_trials": 3,
+  "created_at": "2026-08-22T23:58:51.535571+00:00",
+  "dataset_id": "aids700nef",
+  "improved_over_incumbent": false,
+  "incumbent_pair_split": {
+    "candidate_pairs": 156520,
+    "pair_overlap": 0,
+    "seed": 3408,
+    "split_sha256": "a9f3c66b96fbdb778eac20b07d76ca315a3999893f0c32c62c10339e4285bb66",
+    "strategy": "deterministic normalized-GED-stratified pair holdout",
+    "training_pairs": 155496,
+    "validation_pairs": 1024
+  },
+  "incumbent_validation_mse": 0.017048457637429237,
+  "model_id": "graph-fusion",
+  "objective": "minimum validation similarity MSE",
+  "pair_split": {
+    "candidate_pairs": 156520,
+    "pair_overlap": 0,
+    "seed": 3408,
+    "split_sha256": "a9f3c66b96fbdb778eac20b07d76ca315a3999893f0c32c62c10339e4285bb66",
+    "strategy": "deterministic normalized-GED-stratified pair holdout",
+    "training_pairs": 155496,
+    "validation_pairs": 1024
+  },
+  "promoted": false,
+  "promoted_files": [],
+  "requested_trials": 3,
+  "seed": 379,
+  "split_seed": 3408,
+  "strategy": "deterministic shuffled grid search",
+  "study_id": "20260822T235518Z_a9c10c",
+  "target": {
+    "dataset_id": "aids700nef",
+    "exact": true,
+    "pairs": 392000,
+    "path": "Models&Datasets/drive-download-20260630T100606Z-3-001/aids700nef_ged_astar_gidpair_dist_map.pickle",
+    "target_semantics": null,
+    "target_source": "exact benchmark GED"
+  },
+  "test_set_used_for_selection": false,
+  "trials": [
+    {
+      "checkpoint": "training_logs/hpo/graph-fusion/aids700nef/20260822T235518Z_a9c10c/trial_000/model.pt",
+      "config": {
+        "batch_size": 32,
+        "learning_rate": 0.001
+      },
+      "index": 0,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.019302980974316597
+    },
+    {
+      "checkpoint": "training_logs/hpo/graph-fusion/aids700nef/20260822T235518Z_a9c10c/trial_001/model.pt",
+      "config": {
+        "batch_size": 64,
+        "learning_rate": 0.002
+      },
+      "index": 1,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.01781829632818699
+    },
+    {
+      "checkpoint": "training_logs/hpo/graph-fusion/aids700nef/20260822T235518Z_a9c10c/trial_002/model.pt",
+      "config": {
+        "batch_size": 32,
+        "learning_rate": 0.0003
+      },
+      "index": 2,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.018560711294412613
+    }
+  ],
+  "validation_protocol_comparable": true
+}

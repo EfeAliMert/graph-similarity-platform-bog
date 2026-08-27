@@ -1,0 +1,94 @@
+{
+  "active_checkpoint": "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt",
+  "best_trial": {
+    "checkpoint": "training_logs/hpo/segmn/aids700nef/20260822T235518Z_cff868/trial_001/model.pt",
+    "config": {
+      "learning_rate": 0.001,
+      "node_cap": 24
+    },
+    "index": 1,
+    "return_code": 0,
+    "status": "completed",
+    "validation_mse": 0.0901337523246184
+  },
+  "budget": 8,
+  "completed_trials": 3,
+  "created_at": "2026-08-22T23:55:35.272729+00:00",
+  "dataset_id": "aids700nef",
+  "improved_over_incumbent": true,
+  "incumbent_pair_split": {
+    "candidate_pairs": 156520,
+    "pair_overlap": 0,
+    "seed": 3408,
+    "split_sha256": "2b597bb88038451f6b6960ca22fb946d63b59f9795211684b19238f4fb61067d",
+    "strategy": "deterministic normalized-GED-stratified pair holdout",
+    "training_pairs": 156512,
+    "validation_pairs": 8
+  },
+  "incumbent_validation_mse": 0.09055940550751984,
+  "model_id": "segmn",
+  "objective": "minimum validation similarity MSE",
+  "pair_split": {
+    "candidate_pairs": 156520,
+    "pair_overlap": 0,
+    "seed": 3408,
+    "split_sha256": "2b597bb88038451f6b6960ca22fb946d63b59f9795211684b19238f4fb61067d",
+    "strategy": "deterministic normalized-GED-stratified pair holdout",
+    "training_pairs": 156512,
+    "validation_pairs": 8
+  },
+  "promoted": true,
+  "promoted_files": [
+    "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt"
+  ],
+  "requested_trials": 3,
+  "seed": 379,
+  "split_seed": 3408,
+  "strategy": "deterministic shuffled grid search",
+  "study_id": "20260822T235518Z_cff868",
+  "target": {
+    "dataset_id": "aids700nef",
+    "exact": true,
+    "pairs": 392000,
+    "path": "Models&Datasets/drive-download-20260630T100606Z-3-001/aids700nef_ged_astar_gidpair_dist_map.pickle",
+    "target_semantics": null,
+    "target_source": "exact benchmark GED"
+  },
+  "test_set_used_for_selection": false,
+  "trials": [
+    {
+      "checkpoint": "training_logs/hpo/segmn/aids700nef/20260822T235518Z_cff868/trial_000/model.pt",
+      "config": {
+        "learning_rate": 0.0005,
+        "node_cap": 16
+      },
+      "index": 0,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.09019068966154009
+    },
+    {
+      "checkpoint": "training_logs/hpo/segmn/aids700nef/20260822T235518Z_cff868/trial_001/model.pt",
+      "config": {
+        "learning_rate": 0.001,
+        "node_cap": 24
+      },
+      "index": 1,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.0901337523246184
+    },
+    {
+      "checkpoint": "training_logs/hpo/segmn/aids700nef/20260822T235518Z_cff868/trial_002/model.pt",
+      "config": {
+        "learning_rate": 0.0001,
+        "node_cap": 16
+      },
+      "index": 2,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.09023799316491932
+    }
+  ],
+  "validation_protocol_comparable": true
+}

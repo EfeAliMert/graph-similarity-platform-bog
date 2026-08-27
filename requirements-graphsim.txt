@@ -1,0 +1,15 @@
+tensorflow==2.15.1
+grpcio==1.80.0
+numpy==1.26.4
+networkx==2.8.8
+scipy==1.13.1
+scikit-learn==1.5.2
+pandas==2.2.3
+klepto==0.2.7
+beautifulsoup4==4.15.0
+lxml==6.1.1
+matplotlib==3.9.4
+seaborn==0.13.2
+colour==0.1.5
+pytz==2026.3.post1
+requests==2.32.5

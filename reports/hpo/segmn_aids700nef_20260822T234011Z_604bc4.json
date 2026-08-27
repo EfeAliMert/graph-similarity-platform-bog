@@ -1,0 +1,70 @@
+{
+  "active_checkpoint": "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt",
+  "best_trial": {
+    "checkpoint": "training_logs/hpo/segmn/aids700nef/20260822T234011Z_604bc4/trial_002/model.pt",
+    "config": {
+      "learning_rate": 0.0001,
+      "node_cap": 16
+    },
+    "index": 2,
+    "return_code": 0,
+    "status": "completed",
+    "validation_mse": 0.08165046292924671
+  },
+  "budget": 8,
+  "completed_trials": 3,
+  "created_at": "2026-08-22T23:40:23.144090+00:00",
+  "dataset_id": "aids700nef",
+  "improved_over_incumbent": true,
+  "incumbent_validation_mse": 0.09055940550751984,
+  "model_id": "segmn",
+  "objective": "minimum validation similarity MSE",
+  "pair_split": null,
+  "promoted": true,
+  "promoted_files": [
+    "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt"
+  ],
+  "requested_trials": 3,
+  "seed": 379,
+  "strategy": "deterministic shuffled grid search",
+  "study_id": "20260822T234011Z_604bc4",
+  "target": null,
+  "test_set_used_for_selection": false,
+  "trials": [
+    {
+      "checkpoint": "training_logs/hpo/segmn/aids700nef/20260822T234011Z_604bc4/trial_000/model.pt",
+      "config": {
+        "learning_rate": 0.0005,
+        "node_cap": 16
+      },
+      "index": 0,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.08171636485712952
+    },
+    {
+      "checkpoint": "training_logs/hpo/segmn/aids700nef/20260822T234011Z_604bc4/trial_001/model.pt",
+      "config": {
+        "learning_rate": 0.001,
+        "node_cap": 24
+      },
+      "index": 1,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.08173561336298008
+    },
+    {
+      "checkpoint": "training_logs/hpo/segmn/aids700nef/20260822T234011Z_604bc4/trial_002/model.pt",
+      "config": {
+        "learning_rate": 0.0001,
+        "node_cap": 16
+      },
+      "index": 2,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.08165046292924671
+    }
+  ],
+  "promotion_rolled_back": true,
+  "rollback_reason": "validation split differed from incumbent; active checkpoint restored before fair rerun"
+}

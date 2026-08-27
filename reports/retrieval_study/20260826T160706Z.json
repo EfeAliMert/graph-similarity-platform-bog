@@ -1,0 +1,883 @@
+{
+  "budgets": [
+    1,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "generated_at": "2026-08-26T16:07:06.940961+00:00",
+  "prefilter": [
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T160707Z-7673aabf.json",
+      "budgets": [
+        {
+          "best_ged_in_candidates": 6.0,
+          "best_ged_regret": 6.0,
+          "budget": 1,
+          "candidate_fraction": 1.3e-05,
+          "exact_best_recalled": false,
+          "precision": 0.0,
+          "recall_at_k": 0.0,
+          "reduction_percent": 99.999
+        },
+        {
+          "best_ged_in_candidates": 2.0,
+          "best_ged_regret": 2.0,
+          "budget": 4,
+          "candidate_fraction": 5.1e-05,
+          "exact_best_recalled": false,
+          "precision": 0.0,
+          "recall_at_k": 0.0,
+          "reduction_percent": 99.995
+        },
+        {
+          "best_ged_in_candidates": 2.0,
+          "best_ged_regret": 2.0,
+          "budget": 8,
+          "candidate_fraction": 0.000102,
+          "exact_best_recalled": false,
+          "precision": 0.0,
+          "recall_at_k": 0.0,
+          "reduction_percent": 99.99
+        },
+        {
+          "best_ged_in_candidates": 2.0,
+          "best_ged_regret": 2.0,
+          "budget": 16,
+          "candidate_fraction": 0.000204,
+          "exact_best_recalled": false,
+          "precision": 0.0,
+          "recall_at_k": 0.0,
+          "reduction_percent": 99.98
+        },
+        {
+          "best_ged_in_candidates": 2.0,
+          "best_ged_regret": 2.0,
+          "budget": 32,
+          "candidate_fraction": 0.000408,
+          "exact_best_recalled": false,
+          "precision": 0.0,
+          "recall_at_k": 0.0,
+          "reduction_percent": 99.959
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 64,
+          "candidate_fraction": 0.000816,
+          "exact_best_recalled": true,
+          "precision": 0.15625,
+          "recall_at_k": 1.0,
+          "reduction_percent": 99.918
+        }
+      ],
+      "dataset_id": "aids700nef",
+      "reference_kind": "exact",
+      "run_id": "20260826T160707Z-7673aabf",
+      "total_pairs": 78400
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T160710Z-22246b4f.json",
+      "budgets": [
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 1,
+          "candidate_fraction": 6e-06,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.1,
+          "reduction_percent": 99.999
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 4,
+          "candidate_fraction": 2.5e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.4,
+          "reduction_percent": 99.997
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 8,
+          "candidate_fraction": 5e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.8,
+          "reduction_percent": 99.995
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 16,
+          "candidate_fraction": 0.0001,
+          "exact_best_recalled": true,
+          "precision": 0.625,
+          "recall_at_k": 1.0,
+          "reduction_percent": 99.99
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 32,
+          "candidate_fraction": 0.0002,
+          "exact_best_recalled": true,
+          "precision": 0.3125,
+          "recall_at_k": 1.0,
+          "reduction_percent": 99.98
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 64,
+          "candidate_fraction": 0.0004,
+          "exact_best_recalled": true,
+          "precision": 0.15625,
+          "recall_at_k": 1.0,
+          "reduction_percent": 99.96
+        }
+      ],
+      "dataset_id": "linux",
+      "reference_kind": "exact",
+      "run_id": "20260826T160710Z-22246b4f",
+      "total_pairs": 160000
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T160716Z-25119762.json",
+      "budgets": [
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 1,
+          "candidate_fraction": 3e-06,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.1,
+          "reduction_percent": 100.0
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 4,
+          "candidate_fraction": 1.1e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.4,
+          "reduction_percent": 99.999
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 8,
+          "candidate_fraction": 2.2e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.8,
+          "reduction_percent": 99.998
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 16,
+          "candidate_fraction": 4.4e-05,
+          "exact_best_recalled": true,
+          "precision": 0.625,
+          "recall_at_k": 1.0,
+          "reduction_percent": 99.996
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 32,
+          "candidate_fraction": 8.9e-05,
+          "exact_best_recalled": true,
+          "precision": 0.3125,
+          "recall_at_k": 1.0,
+          "reduction_percent": 99.991
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 64,
+          "candidate_fraction": 0.000178,
+          "exact_best_recalled": true,
+          "precision": 0.15625,
+          "recall_at_k": 1.0,
+          "reduction_percent": 99.982
+        }
+      ],
+      "dataset_id": "imdbmulti",
+      "reference_kind": "approximate_benchmark",
+      "run_id": "20260826T160716Z-25119762",
+      "total_pairs": 360000
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T160716Z-d6b2e67e.json",
+      "budgets": [
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 1,
+          "candidate_fraction": 5.3e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.1,
+          "reduction_percent": 99.995
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 4,
+          "candidate_fraction": 0.000211,
+          "exact_best_recalled": true,
+          "precision": 0.5,
+          "recall_at_k": 0.2,
+          "reduction_percent": 99.979
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 8,
+          "candidate_fraction": 0.000422,
+          "exact_best_recalled": true,
+          "precision": 0.375,
+          "recall_at_k": 0.3,
+          "reduction_percent": 99.958
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 16,
+          "candidate_fraction": 0.000843,
+          "exact_best_recalled": true,
+          "precision": 0.1875,
+          "recall_at_k": 0.3,
+          "reduction_percent": 99.916
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 32,
+          "candidate_fraction": 0.001686,
+          "exact_best_recalled": true,
+          "precision": 0.125,
+          "recall_at_k": 0.4,
+          "reduction_percent": 99.831
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 64,
+          "candidate_fraction": 0.003373,
+          "exact_best_recalled": true,
+          "precision": 0.0625,
+          "recall_at_k": 0.4,
+          "reduction_percent": 99.663
+        }
+      ],
+      "dataset_id": "ptc",
+      "reference_kind": "approximate_benchmark",
+      "run_id": "20260826T160716Z-d6b2e67e",
+      "total_pairs": 18975
+    }
+  ],
+  "rerank": [
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T160916Z-25f43948-gnn.json",
+      "budgets": [
+        {
+          "budget": 1,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 3388.621,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.022909,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 4,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 8567.367,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.082028,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 8,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 15536.947,
+          "model_selected_ged_regret": 5.0,
+          "reranked_ndcg_at_k": 0.119697,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 16,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 29379.15,
+          "model_selected_ged_regret": 5.0,
+          "reranked_ndcg_at_k": 0.16857,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 32,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 57506.88,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.167885,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 64,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 113345.88,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.50469,
+          "reranked_recall_at_k": 0.5
+        }
+      ],
+      "dataset_id": "aids700nef",
+      "method_id": "simgnn",
+      "model_name": "SimGNN",
+      "reference_kind": "exact",
+      "run_id": "20260826T160916Z-25f43948",
+      "total_pairs": 78400
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T161249Z-20ffa1c9-gnn.json",
+      "budgets": [
+        {
+          "budget": 1,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 4293.995,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.022909,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 4,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 13172.028,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.097891,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 8,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 24937.316,
+          "model_selected_ged_regret": 5.0,
+          "reranked_ndcg_at_k": 0.125584,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 16,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 48321.817,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.180879,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 32,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 95483.24,
+          "model_selected_ged_regret": 4.0,
+          "reranked_ndcg_at_k": 0.18376,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 64,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 199143.727,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.540174,
+          "reranked_recall_at_k": 0.3
+        }
+      ],
+      "dataset_id": "aids700nef",
+      "method_id": "multiscale-set",
+      "model_name": "Multi-Scale Convolutional Set Matching",
+      "reference_kind": "exact",
+      "run_id": "20260826T161249Z-20ffa1c9",
+      "total_pairs": 78400
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T161421Z-93dcbb27-gnn.json",
+      "budgets": [
+        {
+          "budget": 1,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 1973.922,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.022909,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 4,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 5915.803,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.09721,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 8,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 11533.349,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.138037,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 16,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 22084.431,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.198558,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 32,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 43224.916,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.216067,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 64,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 85597.043,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.580207,
+          "reranked_recall_at_k": 0.5
+        }
+      ],
+      "dataset_id": "aids700nef",
+      "method_id": "segmn",
+      "model_name": "SEGMN",
+      "reference_kind": "exact",
+      "run_id": "20260826T161421Z-93dcbb27",
+      "total_pairs": 78400
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T161555Z-4a918ed4-gnn.json",
+      "budgets": [
+        {
+          "budget": 1,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 1395.763,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.022909,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 4,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 5477.418,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.078365,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 8,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 10883.158,
+          "model_selected_ged_regret": 4.0,
+          "reranked_ndcg_at_k": 0.11962,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 16,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 21821.834,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.184784,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 32,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 43479.642,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.20789,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 64,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 86902.626,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.950967,
+          "reranked_recall_at_k": 0.9
+        }
+      ],
+      "dataset_id": "aids700nef",
+      "method_id": "graph-fusion",
+      "model_name": "Graph Fusion",
+      "reference_kind": "exact",
+      "run_id": "20260826T161555Z-4a918ed4",
+      "total_pairs": 78400
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T161728Z-141558d4-gnn.json",
+      "budgets": [
+        {
+          "budget": 1,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 1377.586,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.022909,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 4,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 5394.242,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.085233,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 8,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 10861.258,
+          "model_selected_ged_regret": 6.0,
+          "reranked_ndcg_at_k": 0.115791,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 16,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 21745.183,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.16999,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 32,
+          "candidate_recall_at_k": 0.0,
+          "latency_total_ms": 43485.861,
+          "model_selected_ged_regret": 2.0,
+          "reranked_ndcg_at_k": 0.159542,
+          "reranked_recall_at_k": 0.0
+        },
+        {
+          "budget": 64,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 86459.351,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 1.0
+        }
+      ],
+      "dataset_id": "aids700nef",
+      "method_id": "graph2region",
+      "model_name": "Graph2Region",
+      "reference_kind": "exact",
+      "run_id": "20260826T161728Z-141558d4",
+      "total_pairs": 78400
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T161937Z-46cede28-gnn.json",
+      "budgets": [
+        {
+          "budget": 1,
+          "candidate_recall_at_k": 0.1,
+          "latency_total_ms": 2765.254,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.220092,
+          "reranked_recall_at_k": 0.1
+        },
+        {
+          "budget": 4,
+          "candidate_recall_at_k": 0.4,
+          "latency_total_ms": 8222.547,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.563788,
+          "reranked_recall_at_k": 0.4
+        },
+        {
+          "budget": 8,
+          "candidate_recall_at_k": 0.8,
+          "latency_total_ms": 15372.143,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.870125,
+          "reranked_recall_at_k": 0.8
+        },
+        {
+          "budget": 16,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 29938.3,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 1.0
+        },
+        {
+          "budget": 32,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 58502.72,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 1.0
+        },
+        {
+          "budget": 64,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 115467.429,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 1.0
+        }
+      ],
+      "dataset_id": "linux",
+      "method_id": "simgnn",
+      "model_name": "SimGNN",
+      "reference_kind": "exact",
+      "run_id": "20260826T161937Z-46cede28",
+      "total_pairs": 160000
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T162310Z-2b77e8dd-gnn.json",
+      "budgets": [
+        {
+          "budget": 1,
+          "candidate_recall_at_k": 0.1,
+          "latency_total_ms": 4307.113,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.220092,
+          "reranked_recall_at_k": 0.1
+        },
+        {
+          "budget": 4,
+          "candidate_recall_at_k": 0.4,
+          "latency_total_ms": 13914.067,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.563788,
+          "reranked_recall_at_k": 0.4
+        },
+        {
+          "budget": 8,
+          "candidate_recall_at_k": 0.8,
+          "latency_total_ms": 26769.559,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.870125,
+          "reranked_recall_at_k": 0.8
+        },
+        {
+          "budget": 16,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 52910.258,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.7
+        },
+        {
+          "budget": 32,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 104223.328,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.6
+        },
+        {
+          "budget": 64,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 199934.641,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.6
+        }
+      ],
+      "dataset_id": "linux",
+      "method_id": "multiscale-set",
+      "model_name": "Multi-Scale Convolutional Set Matching",
+      "reference_kind": "exact",
+      "run_id": "20260826T162310Z-2b77e8dd",
+      "total_pairs": 160000
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T162435Z-091cdb45-gnn.json",
+      "budgets": [
+        {
+          "budget": 1,
+          "candidate_recall_at_k": 0.1,
+          "latency_total_ms": 1592.332,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.220092,
+          "reranked_recall_at_k": 0.1
+        },
+        {
+          "budget": 4,
+          "candidate_recall_at_k": 0.4,
+          "latency_total_ms": 4948.398,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.563788,
+          "reranked_recall_at_k": 0.4
+        },
+        {
+          "budget": 8,
+          "candidate_recall_at_k": 0.8,
+          "latency_total_ms": 9457.766,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.870125,
+          "reranked_recall_at_k": 0.8
+        },
+        {
+          "budget": 16,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 18547.136,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.7
+        },
+        {
+          "budget": 32,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 36590.491,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.4
+        },
+        {
+          "budget": 64,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 72741.83,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.0
+        }
+      ],
+      "dataset_id": "linux",
+      "method_id": "segmn",
+      "model_name": "SEGMN",
+      "reference_kind": "exact",
+      "run_id": "20260826T162435Z-091cdb45",
+      "total_pairs": 160000
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T162601Z-e0c7265c-gnn.json",
+      "budgets": [
+        {
+          "budget": 1,
+          "candidate_recall_at_k": 0.1,
+          "latency_total_ms": 1182.101,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.220092,
+          "reranked_recall_at_k": 0.1
+        },
+        {
+          "budget": 4,
+          "candidate_recall_at_k": 0.4,
+          "latency_total_ms": 4634.019,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.563788,
+          "reranked_recall_at_k": 0.4
+        },
+        {
+          "budget": 8,
+          "candidate_recall_at_k": 0.8,
+          "latency_total_ms": 9276.029,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.870125,
+          "reranked_recall_at_k": 0.8
+        },
+        {
+          "budget": 16,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 18540.56,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.7
+        },
+        {
+          "budget": 32,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 37194.981,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.4
+        },
+        {
+          "budget": 64,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 74625.147,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.0
+        }
+      ],
+      "dataset_id": "linux",
+      "method_id": "graph-fusion",
+      "model_name": "Graph Fusion",
+      "reference_kind": "exact",
+      "run_id": "20260826T162601Z-e0c7265c",
+      "total_pairs": 160000
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260826T162727Z-818134f5-gnn.json",
+      "budgets": [
+        {
+          "budget": 1,
+          "candidate_recall_at_k": 0.1,
+          "latency_total_ms": 1155.105,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.220092,
+          "reranked_recall_at_k": 0.1
+        },
+        {
+          "budget": 4,
+          "candidate_recall_at_k": 0.4,
+          "latency_total_ms": 4622.509,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.563788,
+          "reranked_recall_at_k": 0.4
+        },
+        {
+          "budget": 8,
+          "candidate_recall_at_k": 0.8,
+          "latency_total_ms": 9288.028,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 0.870125,
+          "reranked_recall_at_k": 0.8
+        },
+        {
+          "budget": 16,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 18607.385,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.7
+        },
+        {
+          "budget": 32,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 37021.725,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.3
+        },
+        {
+          "budget": 64,
+          "candidate_recall_at_k": 1.0,
+          "latency_total_ms": 73972.134,
+          "model_selected_ged_regret": 0.0,
+          "reranked_ndcg_at_k": 1.0,
+          "reranked_recall_at_k": 0.0
+        }
+      ],
+      "dataset_id": "linux",
+      "method_id": "graph2region",
+      "model_name": "Graph2Region",
+      "reference_kind": "exact",
+      "run_id": "20260826T162727Z-818134f5",
+      "total_pairs": 160000
+    }
+  ],
+  "run_id": "20260826T160706Z",
+  "top_k": 10
+}

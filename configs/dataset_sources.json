@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "notice": "Dataset files are downloaded from their upstream sources and are not redistributed under this repository's MIT license. Review the upstream dataset terms before reuse or publication.",
+  "benchmark_source": {
+    "name": "GraphSim authors' shared benchmark folder",
+    "url": "https://drive.google.com/drive/folders/1JcAgWKYC41687UeiLaFg-QlPmIpZvWhT?usp=sharing"
+  },
+  "benchmark_files": [
+    {
+      "dataset_id": "aids700nef",
+      "kind": "graph_archive",
+      "filename": "AIDS700nef.zip",
+      "google_drive_id": "1zgyxUcKtyZyXF7OzskhQ2SpF2inTdWQ7",
+      "bytes": 456773,
+      "sha256": "60d92c885f1f2a263bddd5ca59e41defbe06a734240d4ed440d1fc8106f5285e"
+    },
+    {
+      "dataset_id": "aids700nef",
+      "kind": "ged_map",
+      "filename": "aids700nef_ged_astar_gidpair_dist_map.pickle",
+      "google_drive_id": "1fSKwk3XvGyp5RsQkLvsBhDaz38N-KBPE",
+      "bytes": 6838841,
+      "sha256": "189b0395f1850d7c0cf226edb019983881b63aee1ff65413a88077fa437dc567"
+    },
+    {
+      "dataset_id": "aids700nef",
+      "kind": "mcs_map",
+      "filename": "aids700nef_mcs_mccreesh2017_gidpair_dist_map.pickle",
+      "google_drive_id": "1CkNioG2u6pkqRiKpOeh-Z8IAzXHN7nNk",
+      "bytes": 10537916,
+      "sha256": "31d4fb2eb6edfbb5d4d1b9d0341e684f8591c9f4d8cfe358c18db06d5ea02765"
+    },
+    {
+      "dataset_id": "linux",
+      "kind": "graph_archive",
+      "filename": "LINUX.tar.gz",
+      "google_drive_id": "1jQIzS0FRSB3xZHRSM8R5OoGSRGLo9uEW",
+      "bytes": 33257,
+      "sha256": "38be07aad785b27954cd4c87509ebf2c2803c96436f10b3108f6ec5059f6fa57"
+    },
+    {
+      "dataset_id": "linux",
+      "kind": "ged_map",
+      "filename": "linux_ged_astar_gidpair_dist_map.pickle",
+      "google_drive_id": "1r0LRQL8epag2DQmP3_-6ex6OkDg6Ru0Z",
+      "bytes": 21601008,
+      "sha256": "25e3806e556afd7225e1a4b43034a87e1cd737a00a46c150edba5a811e7f654b"
+    },
+    {
+      "dataset_id": "linux",
+      "kind": "mcs_map",
+      "filename": "linux_mcs_mccreesh2017_gidpair_dist_map.pickle",
+      "google_drive_id": "1fNhB7uQGnzGW23veho9y_2GvqxiBAkn_",
+      "bytes": 21601093,
+      "sha256": "67e5b899ae6962106744f7dcdfcb23c5db0d1d4d02d18b6185d5aed73e74d6a4"
+    },
+    {
+      "dataset_id": "imdbmulti",
+      "kind": "graph_archive",
+      "filename": "IMDBMulti.zip",
+      "google_drive_id": "1BRo5d3axRGRx5g73ecYevIWDbIb8xfX0",
+      "bytes": 1215760,
+      "sha256": "8b842c84aa89f7494ec5437bca51174dd129296477357774a473c8a4b763996a"
+    },
+    {
+      "dataset_id": "imdbmulti",
+      "kind": "ged_map",
+      "filename": "imdbmulti_ged_astar_gidpair_dist_map.pickle",
+      "google_drive_id": "1irXCAtxaEFZ8tWJLhttUCdRSHBiCzTfH",
+      "bytes": 49068217,
+      "sha256": "a01d4d9dfa0c5add072d84e73185e0e66fd98876b6a0667459cffa7d9380a664"
+    },
+    {
+      "dataset_id": "imdbmulti",
+      "kind": "mcs_map",
+      "filename": "imdbmulti_mcs_mccreesh2017_gidpair_dist_map.pickle",
+      "google_drive_id": "133lMTI_cmzFG_NNvXsdu_7lzEvwGWxwO",
+      "bytes": 47988120,
+      "sha256": "b34a3bfb0345b4e5df40858d4c4853e153a265a9677abcb125f339b274ac5f5b"
+    },
+    {
+      "dataset_id": "ptc",
+      "kind": "graph_archive",
+      "filename": "PTC.zip",
+      "google_drive_id": "14CZNSV3t8qY-beHntK1OV8hb-9afhXsB",
+      "bytes": 282810,
+      "sha256": "f064b83ff2d72a9529de87e76c6da0c8cafe51071681f0437b35ddfd8811baa7"
+    },
+    {
+      "dataset_id": "ptc",
+      "kind": "ged_map",
+      "filename": "ptc_ged_astar_gidpair_dist_map.pickle",
+      "google_drive_id": "1nNKFSztVb2hXrsvUi20DH85JIbB7IXx3",
+      "bytes": 2414958,
+      "sha256": "3a9230a4a59235951190b09318508714a35a71e49e5832cfa734236aa14f3461"
+    },
+    {
+      "dataset_id": "ptc",
+      "kind": "mcs_map",
+      "filename": "ptc_mcs_mccreesh2017_gidpair_dist_map.pickle",
+      "google_drive_id": "1MQAmNV4ABoOASbdY34uMkJr8R3Osy2Wo",
+      "bytes": 2414958,
+      "sha256": "9b0edde3c4f6a12b8867e72017f9c00ea26dfd17fab0989009e6edfba5a1b563"
+    }
+  ],
+  "tu_datasets": [
+    {
+      "name": "MUTAG",
+      "dataset_id": "mutag",
+      "source": "PyTorch Geometric TUDataset",
+      "registry_url": "https://chrsmrrs.github.io/datasets/",
+      "graphs": 188,
+      "train_graphs": 150,
+      "test_graphs": 38,
+      "target_semantics": "structural_proxy"
+    },
+    {
+      "name": "PROTEINS",
+      "dataset_id": "proteins",
+      "source": "PyTorch Geometric TUDataset",
+      "registry_url": "https://chrsmrrs.github.io/datasets/",
+      "graphs": 1113,
+      "train_graphs": 890,
+      "test_graphs": 223,
+      "target_semantics": "structural_proxy"
+    },
+    {
+      "name": "ENZYMES",
+      "dataset_id": "enzymes",
+      "source": "PyTorch Geometric TUDataset",
+      "registry_url": "https://chrsmrrs.github.io/datasets/",
+      "graphs": 600,
+      "train_graphs": 480,
+      "test_graphs": 120,
+      "target_semantics": "structural_proxy"
+    }
+  ]
+}

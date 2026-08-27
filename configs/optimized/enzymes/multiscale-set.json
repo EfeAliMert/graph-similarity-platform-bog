@@ -1,0 +1,37 @@
+{
+  "best_trial": 5,
+  "created_at": "2026-08-26T20:11:48.324004+00:00",
+  "dataset": "enzymes",
+  "dataset_fingerprint": "a23d9a0dd5d490759d5ce5e93c29749ca1040c43e9a5b67be0c0568679242f66",
+  "dataset_name": "ENZYMES",
+  "dataset_profile_version": "dataset-profile-v1",
+  "final_training": {
+    "status": "not_started",
+    "test_evaluation": "not_run"
+  },
+  "git_commit": "4ed32d3b75a3b84c78713e6143715cbba2ea0edd",
+  "hyperparameters": {
+    "batch_size": 4,
+    "identity_fraction": 0.25,
+    "learning_rate": 0.00011019595911015155,
+    "patience": 3,
+    "zero_fraction": 0.05
+  },
+  "model": "multiscale-set",
+  "objective": "minimize validation normalized-GED similarity MSE",
+  "schema_version": "optimized-config-v1",
+  "search_space_version": "graphsim-v2",
+  "seeds": [
+    379
+  ],
+  "split_seed": 380,
+  "study_name": "multiscale-set__enzymes__normalized_ged__graphsim-v2__a23d9a0dd5d4",
+  "study_storage": "training_logs/hpo/optimization.db",
+  "target_kind": "structural_proxy",
+  "target_source": "derived structural GED proxy",
+  "test_set_used_for_selection": false,
+  "trial_checkpoint": "training_logs/hpo/studies/multiscale-set__enzymes__normalized_ged__graphsim-v2__a23d9a0dd5d4/trials/trial_0005/graphsim.ckpt",
+  "validation_mse": 0.011297,
+  "validation_mse_std": 0.0,
+  "validation_spearman": 0.886625
+}

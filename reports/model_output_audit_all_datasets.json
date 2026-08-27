@@ -1,0 +1,135 @@
+{
+  "aids700nef": {
+    "identity": {
+      "graph-fusion": 0.8028838038444519,
+      "graph2region": 0.8887451887130737,
+      "multiscale-set": 0.4221982705579281,
+      "segmn": 0.9998432397842407,
+      "simgnn": 0.9955090284347534
+    },
+    "models": 5,
+    "reference_kind": "exact",
+    "symmetry_gap": {
+      "graph-fusion": 0.007875531911849976,
+      "graph2region": 0.039164125919341986,
+      "multiscale-set": 0.004316860777546561,
+      "segmn": 0.027088552713394193,
+      "simgnn": 0.005279630422592219
+    },
+    "technical_integrity_passed": 5
+  },
+  "enzymes": {
+    "identity": {
+      "graph-fusion": 0.9991856217384338,
+      "graph2region": 0.24262882769107816,
+      "multiscale-set": 0.7281486192118174,
+      "segmn": 0.48557570576667786,
+      "simgnn": 0.7160024046897888
+    },
+    "models": 5,
+    "reference_kind": null,
+    "symmetry_gap": {
+      "graph-fusion": 0.01683586835861206,
+      "graph2region": 0.0052736997604370395,
+      "multiscale-set": 0.0007652101670294481,
+      "segmn": 2.0563602447509766e-05,
+      "simgnn": 0.0010466361418366345
+    },
+    "technical_integrity_passed": 5
+  },
+  "imdbmulti": {
+    "identity": {
+      "graph-fusion": 0.9536364674568176,
+      "graph2region": 0.9902769923210144,
+      "multiscale-set": 0.9277488601780944,
+      "segmn": 0.9995648264884949,
+      "simgnn": 0.5713622570037842
+    },
+    "models": 5,
+    "reference_kind": "approximate_benchmark",
+    "symmetry_gap": {
+      "graph-fusion": 0.07793968915939331,
+      "graph2region": 0.06490194797515869,
+      "multiscale-set": 0.07421509439701533,
+      "segmn": 0.10484381020069126,
+      "simgnn": 0.011932790279388428
+    },
+    "technical_integrity_passed": 5
+  },
+  "linux": {
+    "identity": {
+      "graph-fusion": 0.9695508480072021,
+      "graph2region": 0.9600837826728821,
+      "multiscale-set": 0.8911180583817926,
+      "segmn": 0.9964369535446167,
+      "simgnn": 0.8669344186782837
+    },
+    "models": 5,
+    "reference_kind": "exact",
+    "symmetry_gap": {
+      "graph-fusion": 0.003948852419853266,
+      "graph2region": 0.10444033145904541,
+      "multiscale-set": 0.0,
+      "segmn": 0.05047355592250824,
+      "simgnn": 0.003877967596054077
+    },
+    "technical_integrity_passed": 5
+  },
+  "mutag": {
+    "identity": {
+      "graph-fusion": 0.9670066833496094,
+      "graph2region": 0.5193751454353333,
+      "multiscale-set": 0.9531336835904356,
+      "segmn": 0.4953777492046356,
+      "simgnn": 0.818254828453064
+    },
+    "models": 5,
+    "reference_kind": null,
+    "symmetry_gap": {
+      "graph-fusion": 0.011589646339416504,
+      "graph2region": 0.014426171779632568,
+      "multiscale-set": 0.005271207227539987,
+      "segmn": 0.00011497735977172852,
+      "simgnn": 0.017127513885498047
+    },
+    "technical_integrity_passed": 5
+  },
+  "proteins": {
+    "identity": {
+      "graph-fusion": 0.9990838766098022,
+      "graph2region": 0.1633886992931366,
+      "multiscale-set": 0.7707563403984852,
+      "segmn": 0.46135199069976807,
+      "simgnn": 0.6756014227867126
+    },
+    "models": 5,
+    "reference_kind": null,
+    "symmetry_gap": {
+      "graph-fusion": 0.02722504734992981,
+      "graph2region": 0.019493713974952698,
+      "multiscale-set": 0.0002674932777233163,
+      "segmn": 0.00014549493789672852,
+      "simgnn": 0.0006857679691165688
+    },
+    "technical_integrity_passed": 5
+  },
+  "ptc": {
+    "identity": {
+      "graph-fusion": 0.3844737410545349,
+      "graph2region": 0.7671865224838257,
+      "multiscale-set": 0.4077588164230373,
+      "segmn": 0.6164600253105164,
+      "simgnn": 0.9676244258880615
+    },
+    "models": 5,
+    "reference_kind": "approximate_benchmark",
+    "symmetry_gap": {
+      "graph-fusion": 0.0009794495999813288,
+      "graph2region": 0.027134016156196566,
+      "multiscale-set": 0.0022594568177286833,
+      "segmn": 0.0043670013546943665,
+      "simgnn": 0.059830427169799805
+    },
+    "technical_integrity_passed": 5
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "budgets": [
+    1,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "generated_at": "2026-08-30T21:11:20.173343+00:00",
+  "metric_semantics_version": "tie-aware-v1",
+  "prefilter": [
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260830T211121Z-48aa01c5.json",
+      "budgets": [
+        {
+          "best_ged_in_candidates": 6.0,
+          "best_ged_regret": 6.0,
+          "budget": 1,
+          "candidate_fraction": 1.3e-05,
+          "exact_best_recalled": false,
+          "precision": 0.0,
+          "recall_at_k": 0.0,
+          "reduction_percent": 99.999
+        },
+        {
+          "best_ged_in_candidates": 2.0,
+          "best_ged_regret": 2.0,
+          "budget": 4,
+          "candidate_fraction": 5.1e-05,
+          "exact_best_recalled": false,
+          "precision": 0.0,
+          "recall_at_k": 0.0,
+          "reduction_percent": 99.995
+        },
+        {
+          "best_ged_in_candidates": 2.0,
+          "best_ged_regret": 2.0,
+          "budget": 8,
+          "candidate_fraction": 0.000102,
+          "exact_best_recalled": false,
+          "precision": 0.0,
+          "recall_at_k": 0.0,
+          "reduction_percent": 99.99
+        },
+        {
+          "best_ged_in_candidates": 2.0,
+          "best_ged_regret": 2.0,
+          "budget": 16,
+          "candidate_fraction": 0.000204,
+          "exact_best_recalled": false,
+          "precision": 0.0,
+          "recall_at_k": 0.0,
+          "reduction_percent": 99.98
+        },
+        {
+          "best_ged_in_candidates": 2.0,
+          "best_ged_regret": 2.0,
+          "budget": 32,
+          "candidate_fraction": 0.000408,
+          "exact_best_recalled": false,
+          "precision": 0.0,
+          "recall_at_k": 0.0,
+          "reduction_percent": 99.959
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 64,
+          "candidate_fraction": 0.000816,
+          "exact_best_recalled": true,
+          "precision": 0.15625,
+          "recall_at_k": 1.0,
+          "reduction_percent": 99.918
+        }
+      ],
+      "dataset_id": "aids700nef",
+      "metric_semantics_version": "tie-aware-v1",
+      "reference_kind": "exact",
+      "relevance_cutoff_ged": 0.0,
+      "relevant_pair_count": 10,
+      "run_id": "20260830T211121Z-48aa01c5",
+      "total_pairs": 78400
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260830T211123Z-b8e88d0a.json",
+      "budgets": [
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 1,
+          "candidate_fraction": 6e-06,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.000112,
+          "reduction_percent": 99.999
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 4,
+          "candidate_fraction": 2.5e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.000449,
+          "reduction_percent": 99.997
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 8,
+          "candidate_fraction": 5e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.000898,
+          "reduction_percent": 99.995
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 16,
+          "candidate_fraction": 0.0001,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.001795,
+          "reduction_percent": 99.99
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 32,
+          "candidate_fraction": 0.0002,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.003591,
+          "reduction_percent": 99.98
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 64,
+          "candidate_fraction": 0.0004,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.007181,
+          "reduction_percent": 99.96
+        }
+      ],
+      "dataset_id": "linux",
+      "metric_semantics_version": "tie-aware-v1",
+      "reference_kind": "exact",
+      "relevance_cutoff_ged": 0.0,
+      "relevant_pair_count": 8912,
+      "run_id": "20260830T211123Z-b8e88d0a",
+      "total_pairs": 160000
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260830T211129Z-ef208335.json",
+      "budgets": [
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 1,
+          "candidate_fraction": 3e-06,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 4.7e-05,
+          "reduction_percent": 100.0
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 4,
+          "candidate_fraction": 1.1e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.000187,
+          "reduction_percent": 99.999
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 8,
+          "candidate_fraction": 2.2e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.000375,
+          "reduction_percent": 99.998
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 16,
+          "candidate_fraction": 4.4e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.000749,
+          "reduction_percent": 99.996
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 32,
+          "candidate_fraction": 8.9e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.001499,
+          "reduction_percent": 99.991
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 64,
+          "candidate_fraction": 0.000178,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.002997,
+          "reduction_percent": 99.982
+        }
+      ],
+      "dataset_id": "imdbmulti",
+      "metric_semantics_version": "tie-aware-v1",
+      "reference_kind": "approximate_benchmark",
+      "relevance_cutoff_ged": 0.0,
+      "relevant_pair_count": 21353,
+      "run_id": "20260830T211129Z-ef208335",
+      "total_pairs": 360000
+    },
+    {
+      "artifact_path": "training_logs/retrieval_ablation/20260830T211129Z-7a8db3e0.json",
+      "budgets": [
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 1,
+          "candidate_fraction": 5.3e-05,
+          "exact_best_recalled": true,
+          "precision": 1.0,
+          "recall_at_k": 0.090909,
+          "reduction_percent": 99.995
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 4,
+          "candidate_fraction": 0.000211,
+          "exact_best_recalled": true,
+          "precision": 0.5,
+          "recall_at_k": 0.181818,
+          "reduction_percent": 99.979
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 8,
+          "candidate_fraction": 0.000422,
+          "exact_best_recalled": true,
+          "precision": 0.375,
+          "recall_at_k": 0.272727,
+          "reduction_percent": 99.958
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 16,
+          "candidate_fraction": 0.000843,
+          "exact_best_recalled": true,
+          "precision": 0.1875,
+          "recall_at_k": 0.272727,
+          "reduction_percent": 99.916
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 32,
+          "candidate_fraction": 0.001686,
+          "exact_best_recalled": true,
+          "precision": 0.125,
+          "recall_at_k": 0.363636,
+          "reduction_percent": 99.831
+        },
+        {
+          "best_ged_in_candidates": 0.0,
+          "best_ged_regret": 0.0,
+          "budget": 64,
+          "candidate_fraction": 0.003373,
+          "exact_best_recalled": true,
+          "precision": 0.078125,
+          "recall_at_k": 0.454545,
+          "reduction_percent": 99.663
+        }
+      ],
+      "dataset_id": "ptc",
+      "metric_semantics_version": "tie-aware-v1",
+      "reference_kind": "approximate_benchmark",
+      "relevance_cutoff_ged": 2.0,
+      "relevant_pair_count": 11,
+      "run_id": "20260830T211129Z-7a8db3e0",
+      "total_pairs": 18975
+    }
+  ],
+  "rerank": [],
+  "run_id": "20260830T211120Z",
+  "top_k": 10
+}

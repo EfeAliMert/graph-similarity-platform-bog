@@ -1,0 +1,58 @@
+{
+  "smoke": {
+    "trials": 2,
+    "startup_trials": 1,
+    "confirmation_top_k": 1,
+    "confirmation_seeds": [379],
+    "timeout_seconds": 900,
+    "resources": {
+      "simgnn": 1,
+      "multiscale-set": 80,
+      "segmn": 50,
+      "graph-fusion": 50,
+      "graph2region": 50
+    }
+  },
+  "quick": {
+    "trials": 8,
+    "startup_trials": 4,
+    "confirmation_top_k": 2,
+    "confirmation_seeds": [379],
+    "timeout_seconds": 7200,
+    "resources": {
+      "simgnn": 3,
+      "multiscale-set": 300,
+      "segmn": 250,
+      "graph-fusion": 250,
+      "graph2region": 250
+    }
+  },
+  "standard": {
+    "trials": 24,
+    "startup_trials": 8,
+    "confirmation_top_k": 3,
+    "confirmation_seeds": [379, 2026, 3407],
+    "timeout_seconds": 43200,
+    "resources": {
+      "simgnn": 8,
+      "multiscale-set": 800,
+      "segmn": 1000,
+      "graph-fusion": 1000,
+      "graph2region": 1000
+    }
+  },
+  "research": {
+    "trials": 50,
+    "startup_trials": 12,
+    "confirmation_top_k": 5,
+    "confirmation_seeds": [379, 2026, 3407],
+    "timeout_seconds": null,
+    "resources": {
+      "simgnn": 20,
+      "multiscale-set": 1600,
+      "segmn": 3000,
+      "graph-fusion": 3000,
+      "graph2region": 3000
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.DS_Store
+.venvs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated reports, renders, and local scratch files.
+/output/
+/tmp/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+/Models&Datasets/
+/Models/
+/Models
+training_logs/
+
+.coverage
+htmlcov/

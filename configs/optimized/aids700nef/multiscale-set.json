@@ -1,0 +1,46 @@
+{
+  "best_trial": 32,
+  "created_at": "2026-08-25T22:50:14.706980+00:00",
+  "dataset": "aids700nef",
+  "dataset_fingerprint": "a42538c9c25a6aeec6b37185b3ba7df8439894554f4673c850cd4948dc17dfe2",
+  "dataset_name": "AIDS700nef",
+  "dataset_profile_version": "dataset-profile-v1",
+  "final_training": {
+    "checkpoint": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt",
+    "checkpoint_fingerprint": "9c54d32ddb4cf3cd8288d966e68ecd018b5ec4efdf23d42247c54a604a25cc78",
+    "completed_at": "2026-08-26T00:07:39.906870+00:00",
+    "hpo_sidecar": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.hpo.json",
+    "job_id": "788586c1facb",
+    "seed": 379,
+    "status": "completed",
+    "test_evaluation": "not_run"
+  },
+  "git_commit": "f6b14e4b790e64636454f4625f76562f288438c4",
+  "hyperparameters": {
+    "batch_size": 8,
+    "identity_fraction": 0.05,
+    "learning_rate": 0.00012283604487699023,
+    "patience": 5,
+    "zero_fraction": 0.1
+  },
+  "model": "multiscale-set",
+  "objective": "minimize validation normalized-GED similarity MSE",
+  "schema_version": "optimized-config-v1",
+  "search_space_version": "graphsim-v2",
+  "seeds": [
+    379,
+    2026,
+    3407
+  ],
+  "split_seed": 380,
+  "study_name": "multiscale-set__aids700nef__normalized_ged__graphsim-v2__a42538c9c25a",
+  "study_storage": "training_logs/hpo/optimization.db",
+  "target_kind": "exact",
+  "target_source": "exact A* GED benchmark",
+  "test_set_used_for_selection": false,
+  "trial_checkpoint": "training_logs/hpo/studies/multiscale-set__aids700nef__normalized_ged__graphsim-v2__a42538c9c25a/trials/trial_0032/graphsim.ckpt",
+  "updated_at": "2026-08-26T00:07:39.907071+00:00",
+  "validation_mse": 0.01545,
+  "validation_mse_std": 0.001294385053477777,
+  "validation_spearman": 0.8316120000000001
+}

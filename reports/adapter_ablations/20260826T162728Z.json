@@ -1,0 +1,104 @@
+{
+  "evaluation_pairs": 50,
+  "generated_at": "2026-08-26T16:27:28.710879+00:00",
+  "rows": [
+    {
+      "ablation": "segmn-projection",
+      "all_pairs": {
+        "evaluated_samples": 50,
+        "mae_ged": 1.56415,
+        "mse_similarity": 0.004905557,
+        "ndcg_at_k": 0.921881,
+        "spearman_ged": 0.750471
+      },
+      "artifact_path": "training_logs/benchmarks/20260826T162830Z-7bea546c.json",
+      "dataset_id": "aids700nef",
+      "evaluated_samples": 50,
+      "projected_pairs": null,
+      "projected_samples": 0,
+      "reference_kind": "exact",
+      "unprojected_pairs": {
+        "mae_ged": 1.56415,
+        "mae_ged_ci95": [
+          1.045359,
+          2.209453
+        ],
+        "mse_similarity": 0.004905557,
+        "ndcg_at_k": 0.921881,
+        "samples": 50,
+        "spearman_ged": 0.750471
+      }
+    },
+    {
+      "ablation": "graph2region-compatibility",
+      "corrected": {
+        "artifact_path": "training_logs/benchmarks/20260826T162932Z-e655031a.json",
+        "evaluated_samples": 50,
+        "mae_ged": 2.42162,
+        "mse_similarity": 0.021924146,
+        "ndcg_at_k": 0.8152,
+        "spearman_ged": 0.510979
+      },
+      "dataset_id": "aids700nef",
+      "original_equation": {
+        "artifact_path": "training_logs/benchmarks/20260826T163035Z-096b95e7.json",
+        "evaluated_samples": 50,
+        "mae_ged": 3.194981,
+        "mse_similarity": 0.021915784,
+        "ndcg_at_k": 0.816851,
+        "spearman_ged": 0.344767
+      },
+      "reference_kind": "exact"
+    },
+    {
+      "ablation": "segmn-projection",
+      "all_pairs": {
+        "evaluated_samples": 50,
+        "mae_ged": 0.573866,
+        "mse_similarity": 0.002251903,
+        "ndcg_at_k": 0.989106,
+        "spearman_ged": 0.965879
+      },
+      "artifact_path": "training_logs/benchmarks/20260826T163141Z-0fff2300.json",
+      "dataset_id": "linux",
+      "evaluated_samples": 50,
+      "projected_pairs": null,
+      "projected_samples": 0,
+      "reference_kind": "exact",
+      "unprojected_pairs": {
+        "mae_ged": 0.573866,
+        "mae_ged_ci95": [
+          0.437233,
+          0.712676
+        ],
+        "mse_similarity": 0.002251903,
+        "ndcg_at_k": 0.989106,
+        "samples": 50,
+        "spearman_ged": 0.965879
+      }
+    },
+    {
+      "ablation": "graph2region-compatibility",
+      "corrected": {
+        "artifact_path": "training_logs/benchmarks/20260826T163248Z-0947d8cf.json",
+        "evaluated_samples": 50,
+        "mae_ged": 1.360405,
+        "mse_similarity": 0.010609648,
+        "ndcg_at_k": 0.952716,
+        "spearman_ged": 0.821375
+      },
+      "dataset_id": "linux",
+      "original_equation": {
+        "artifact_path": "training_logs/benchmarks/20260826T163356Z-4194b468.json",
+        "evaluated_samples": 50,
+        "mae_ged": 1.360405,
+        "mse_similarity": 0.010609648,
+        "ndcg_at_k": 0.952716,
+        "spearman_ged": 0.821375
+      },
+      "reference_kind": "exact"
+    }
+  ],
+  "run_id": "20260826T162728Z",
+  "seed": 379
+}

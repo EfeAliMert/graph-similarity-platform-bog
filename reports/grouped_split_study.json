@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-08-26T16:33:56.325328+00:00",
+  "seed": 379,
+  "synthetic_grouped_subjects": {
+    "note": "Twelve graphs from six subjects. Pair-disjoint validation can still share a subject/graph identity; subject-disjoint splits graphs first.",
+    "pair_disjoint": {
+      "graph_overlap": 11,
+      "pair_overlap": 0,
+      "split_sha256": "6a814878bec7020d7644d26636d1249ce6b18f0206782c0f15fc35e9f626c441",
+      "strategy": "pair-disjoint",
+      "training_graphs": 12,
+      "training_pairs": 53,
+      "validation_graphs": 11,
+      "validation_pairs": 13
+    },
+    "seed": 379,
+    "subject_disjoint": {
+      "graph_overlap": 0,
+      "pair_overlap": 0,
+      "split_sha256": "3495bf5f3d2acb240fdca6da1aba44aeb6acabce6af8da0c76483a398c4670ad",
+      "strategy": "subject-disjoint",
+      "training_graphs": 9,
+      "training_pairs": 36,
+      "validation_graphs": 3,
+      "validation_pairs": 3
+    }
+  }
+}

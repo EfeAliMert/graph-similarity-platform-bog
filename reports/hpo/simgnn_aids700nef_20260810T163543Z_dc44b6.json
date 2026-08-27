@@ -1,0 +1,57 @@
+{
+  "active_checkpoint": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_aids700nef.pt",
+  "best_trial": {
+    "checkpoint": "training_logs/hpo/simgnn/aids700nef/20260810T163543Z_dc44b6/trial_001/model.pt",
+    "config": {
+      "batch_size": 64,
+      "dropout": 0.4,
+      "learning_rate": 0.0015,
+      "weight_decay": 0.0005
+    },
+    "index": 1,
+    "return_code": 0,
+    "status": "completed",
+    "validation_mse": 0.021015
+  },
+  "budget": 1,
+  "completed_trials": 2,
+  "created_at": "2026-08-10T16:36:01.178975+00:00",
+  "dataset_id": "aids700nef",
+  "model_id": "simgnn",
+  "objective": "minimum validation similarity MSE",
+  "promoted": false,
+  "promoted_files": [],
+  "requested_trials": 2,
+  "seed": 3407,
+  "strategy": "deterministic shuffled grid search",
+  "study_id": "20260810T163543Z_dc44b6",
+  "test_set_used_for_selection": false,
+  "trials": [
+    {
+      "checkpoint": "training_logs/hpo/simgnn/aids700nef/20260810T163543Z_dc44b6/trial_000/model.pt",
+      "config": {
+        "batch_size": 128,
+        "dropout": 0.5,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0005
+      },
+      "index": 0,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.031305
+    },
+    {
+      "checkpoint": "training_logs/hpo/simgnn/aids700nef/20260810T163543Z_dc44b6/trial_001/model.pt",
+      "config": {
+        "batch_size": 64,
+        "dropout": 0.4,
+        "learning_rate": 0.0015,
+        "weight_decay": 0.0005
+      },
+      "index": 1,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.021015
+    }
+  ]
+}

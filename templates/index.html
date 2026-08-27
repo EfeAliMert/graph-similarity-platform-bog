@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Graph Similarity Platform</title>
+    <script>
+      try {
+        if (localStorage.getItem("graph-sim-theme") === "dark") {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch (_error) {
+        // The platform still works when browser storage is unavailable.
+      }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v={{ asset_version }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='itu-inspired.css') }}?v={{ asset_version }}">
+  </head>
+  <body>
+    <div
+      id="loadingOverlay"
+      class="loading-overlay"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <div class="loading-panel">
+        <div class="loading-copy">
+          <span class="loading-kicker">Graph Similarity Platform</span>
+          <strong id="loadingTitle">Loading</strong>
+          <span id="loadingDetail">Reading datasets and models...</span>
+        </div>
+        <div id="loadingTrack" class="loading-track" aria-hidden="true"><span id="loadingProgressFill"></span></div>
+        <div id="loadingProgressMeta" class="loading-progress-meta" hidden>
+          <span id="loadingStage">Preparing</span>
+          <strong id="loadingProgressValue">0%</strong>
+        </div>
+      </div>
+    </div>
+
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div>
+          <p id="topbarEyebrow" class="eyebrow">Graph Similarity</p>
+          <h1 id="topbarTitle">Graph Similarity Platform</h1>
+        </div>
+      </div>
+      <label class="theme-control" for="themeSelect">
+        <span>Theme</span>
+        <select id="themeSelect" class="theme-select" aria-label="Interface theme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </header>
+
+    <nav class="section-tabs" aria-label="Platform sections">
+      <a class="is-active" href="#workbench-title">Graph pair</a>
+      <a href="#visualizer-title">Preview</a>
+      <a href="#results-title">Model results</a>
+      <a href="#accuracy-title">GED evaluation</a>
+      <a href="#dataset-upload-title">Datasets</a>
+      <a href="#matrix-title">Experiments</a>
+    </nav>
+
+    <main class="layout">
+      <section class="workbench" aria-labelledby="workbench-title">
+        <div class="section-heading primary-control-panel">
+          <div>
+            <p class="eyebrow">Benchmark Pair</p>
+            <h2 id="workbench-title">Graph pair</h2>
+          </div>
+          <div class="actions">
+            <label class="control-field">
+              <span>Dataset</span>
+              <select id="datasetSelect" class="select" aria-label="Original dataset">
+                {% for dataset in datasets %}
+                <option value="{{ dataset.id }}">
+                  {{ dataset.name }} | {{ dataset.tasks|join('/') }} | train {{ dataset.train_graphs }} test {{ dataset.test_graphs }}
+                </option>
+                {% endfor %}
+              </select>
+            </label>
+            <label class="control-field control-field--graph">
+              <span>Graph A</span>
+              <select id="leftGraphSelect" class="select select--graph" aria-label="Graph A"></select>
+            </label>
+            <label class="control-field control-field--graph">
+              <span>Graph B</span>
+              <select id="rightGraphSelect" class="select select--graph" aria-label="Graph B"></select>
+            </label>
+            <label class="control-field control-field--compact">
+              <span>Best By</span>
+              <select id="bestMethodSelect" class="select select--compact" aria-label="Best pair model">
+                <option value="exact-ged">GED Benchmark</option>
+                <option value="structure-search">Structure Search</option>
+                {% for method in methods %}
+                <option value="{{ method.id }}">{{ method.name }}</option>
+                {% endfor %}
+              </select>
+            </label>
+            <label class="control-field control-field--compact">
+              <span>Scope</span>
+              <select id="bestPairScope" class="select select--compact" aria-label="Best pair scope">
+                <option value="train-test">train/test</option>
+                <option value="all">all</option>
+              </select>
+            </label>
+            <label class="control-field control-field--number">
+              <span>Scan</span>
+              <input id="bestPairLimit" class="number-input" type="number" min="1" max="100" value="8" aria-label="Candidate pairs to score">
+            </label>
+            <button id="findBestBtn" class="button button--secondary" type="button" title="Find the most similar graph pair">Find Best</button>
+            <button id="loadDatasetBtn" class="button button--secondary" type="button" title="Load selected original dataset pair">Load Pair</button>
+            <button id="swapBtn" class="button button--ghost" type="button" title="Swap graph editors">Swap A/B</button>
+            <button id="formatBtn" class="button button--ghost" type="button" title="Format JSON">Format JSON</button>
+            <label class="control-field control-field--hpo">
+              <span>Run Mode</span>
+              <select id="hpoModeSelect" class="select select--compact" aria-label="Hyperparameter optimization mode">
+                <option value="checkpoint" title="Use the current saved checkpoints without optimization or training">Checkpoint Only</option>
+                <option value="quick" selected title="Run 2 low-budget HPO trials for a fast functional check">Quick HPO · 2</option>
+                <option value="balanced" title="Run up to 24 HPO trials with three confirmation seeds">Balanced HPO · 24</option>
+                <option value="research" title="Run up to 50 HPO trials with three confirmation seeds">Research HPO · 50</option>
+              </select>
+            </label>
+            <button id="runBtn" class="button button--primary" type="button" title="Run selected checkpoint-backed models">Run Models</button>
+          </div>
+        </div>
+
+        <div id="message" class="message" role="status" aria-live="polite"></div>
+
+        <div class="pair-strip" aria-label="Loaded graph pair">
+          <div>
+            <span>Dataset</span>
+            <b id="pairDataset">{{ default_meta.dataset or default_meta.source }}</b>
+          </div>
+          <div>
+            <span>Graph A</span>
+            <code id="pairLeft">{{ default_meta.left_graph or 'manual input' }}</code>
+          </div>
+          <div>
+            <span>Graph B</span>
+            <code id="pairRight">{{ default_meta.right_graph or 'manual input' }}</code>
+          </div>
+        </div>
+
+        <div id="bestPairPanel" class="best-pair-panel" aria-live="polite"></div>
+
+        <section id="graph-preview" class="graph-visualizer" aria-labelledby="visualizer-title">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">Preview</p>
+              <h2 id="visualizer-title">Graph preview</h2>
+            </div>
+            <div id="previewMeta" class="meta-pill">
+              {{ default_meta.left_graph or 'manual input' }} vs {{ default_meta.right_graph or 'manual input' }}
+            </div>
+          </div>
+          <div class="preview-grid">
+            <article class="preview-card">
+              <div class="preview-card__top">
+                <div>
+                  <h3>Graph A</h3>
+                  <code id="previewLeftName">{{ default_meta.left_graph or 'manual input' }}</code>
+                </div>
+                <div id="previewLeftStats" class="preview-stats"></div>
+              </div>
+              <svg id="previewLargeLeft" class="graph-preview graph-preview--large" viewBox="0 0 420 280" role="img" aria-label="Graph A large preview"></svg>
+              <div id="previewLeftLegend" class="label-legend"></div>
+            </article>
+
+            <article class="preview-card">
+              <div class="preview-card__top">
+                <div>
+                  <h3>Graph B</h3>
+                  <code id="previewRightName">{{ default_meta.right_graph or 'manual input' }}</code>
+                </div>
+                <div id="previewRightStats" class="preview-stats"></div>
+              </div>
+              <svg id="previewLargeRight" class="graph-preview graph-preview--large" viewBox="0 0 420 280" role="img" aria-label="Graph B large preview"></svg>
+              <div id="previewRightLegend" class="label-legend"></div>
+            </article>
+          </div>
+        </section>
+
+        <div class="editor-grid">
+          <article class="editor-panel">
+            <div class="panel-title">
+              <h3>Graph A</h3>
+              <div id="statsLeft" class="stats-line"></div>
+            </div>
+            <textarea id="leftGraph" spellcheck="false">{{ default_left }}</textarea>
+            <svg id="previewLeft" class="graph-preview" viewBox="0 0 260 200" role="img" aria-label="Graph A preview"></svg>
+          </article>
+
+          <article class="editor-panel">
+            <div class="panel-title">
+              <h3>Graph B</h3>
+              <div id="statsRight" class="stats-line"></div>
+            </div>
+            <textarea id="rightGraph" spellcheck="false">{{ default_right }}</textarea>
+            <svg id="previewRight" class="graph-preview" viewBox="0 0 260 200" role="img" aria-label="Graph B preview"></svg>
+          </article>
+        </div>
+
+        <div class="method-strip" aria-label="Similarity models">
+          {% for method in methods %}
+          <label class="method-toggle" style="--accent: {{ method.accent }}">
+            <input type="checkbox" name="method" value="{{ method.id }}" checked>
+            <span>
+              <strong>{{ method.name }}</strong>
+              <small>{{ method.paper }} · {{ method.family }}</small>
+            </span>
+          </label>
+          {% endfor %}
+        </div>
+
+        <section class="results" aria-labelledby="results-title">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">Real Models</p>
+              <h2 id="results-title">Model results</h2>
+            </div>
+            <div id="sampleMeta" class="meta-pill">
+              {% if default_meta.dataset %}
+              {{ default_meta.dataset }} | {{ default_meta.left_graph }} vs {{ default_meta.right_graph }}
+              {% else %}
+              {{ default_meta.source }}
+              {% endif %}
+            </div>
+          </div>
+          <div id="groundTruthPanel" class="ground-truth-panel"></div>
+          <div id="resultsTable" class="results-table"></div>
+        </section>
+
+        <section class="results accuracy-info" aria-labelledby="accuracy-title">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">Research Protocol</p>
+              <h2 id="accuracy-title">GED evaluation</h2>
+            </div>
+            <div class="actions">
+              <label class="control-field control-field--compact">
+                <span>Sampling</span>
+                <select id="accuracySampleMode" class="select select--compact" aria-label="Benchmark sampling strategy">
+                  <option value="stratified">Stratified</option>
+                  <option value="random">Random</option>
+                  <option value="all">All up to limit</option>
+                </select>
+              </label>
+              <label class="control-field control-field--number">
+                <span>Pairs</span>
+                <input id="accuracySampleSize" class="number-input" type="number" min="1" max="200" value="12" aria-label="Benchmark pair count">
+              </label>
+              <label class="control-field control-field--number">
+                <span>Top k</span>
+                <input id="accuracyTopK" class="number-input" type="number" min="1" max="50" value="5" aria-label="Ranking metric k">
+              </label>
+              <label class="control-field control-field--number control-field--seed">
+                <span>Seed</span>
+                <input id="accuracySeed" class="number-input number-input--seed" type="number" min="0" max="2147483647" value="379" aria-label="Benchmark random seed">
+              </label>
+              <button id="evaluateBtn" class="button button--secondary" type="button" title="Run the selected benchmark protocol">Run Benchmark</button>
+              <button id="exportJsonBtn" class="button button--ghost" type="button" disabled title="Download benchmark JSON">JSON</button>
+              <button id="exportCsvBtn" class="button button--ghost" type="button" disabled title="Download benchmark CSV">CSV</button>
+            </div>
+          </div>
+          <div id="accuracyTable" class="accuracy-table"></div>
+        </section>
+
+        <section class="results retrieval-info" aria-labelledby="retrieval-title">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">Two-Stage Retrieval</p>
+              <h2 id="retrieval-title">Retrieval Ablation</h2>
+            </div>
+            <div class="actions">
+              <label class="control-field control-field--compact">
+                <span>Reranker</span>
+                <select id="retrievalModelSelect" class="select select--compact" aria-label="Checkpoint-backed reranking model">
+                  <option value="ensemble-all">All-model canonical ensemble</option>
+                  {% for method in methods %}
+                  <option value="{{ method.id }}">{{ method.name }}</option>
+                  {% endfor %}
+                </select>
+              </label>
+              <label class="control-field control-field--budgets">
+                <span>Candidate budgets</span>
+                <input id="retrievalBudgets" class="text-input" type="text" value="1,4,8,16" aria-label="Comma-separated candidate budgets">
+              </label>
+              <label class="control-field control-field--number">
+                <span>Top k</span>
+                <input id="retrievalTopK" class="number-input" type="number" min="1" max="100" value="10" aria-label="GED benchmark relevant pair count">
+              </label>
+              <button id="runRetrievalBtn" class="button button--ghost" type="button" title="Measure structural prefilter candidate recall">Prefilter</button>
+              <button id="runRerankingBtn" class="button button--secondary" type="button" title="Run the real checkpoint-backed GNN reranker">Run GNN</button>
+            </div>
+          </div>
+          <div id="retrievalPanel" class="retrieval-panel"></div>
+        </section>
+
+        <section class="results dataset-upload" aria-labelledby="dataset-upload-title">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">Local Storage</p>
+              <h2 id="dataset-upload-title">Dataset Library</h2>
+            </div>
+          </div>
+          <form id="datasetUploadForm" class="dataset-upload-form">
+            <label class="control-field">
+              <span>Name</span>
+              <input id="uploadDatasetName" class="text-input" name="name" type="text" maxlength="120" required placeholder="Research Dataset">
+            </label>
+            <label class="control-field">
+              <span>ID</span>
+              <input id="uploadDatasetId" class="text-input" name="dataset_id" type="text" maxlength="64" placeholder="auto-generated">
+            </label>
+            <label class="control-field">
+              <span>Domain</span>
+              <input id="uploadDatasetDomain" class="text-input" name="domain" type="text" maxlength="160" placeholder="Graph collection">
+            </label>
+            <label class="file-field">
+              <span>Graph archive</span>
+              <input id="uploadDatasetArchive" name="archive" type="file" required accept=".zip,.tar,.gz,.tgz,application/zip,application/x-tar,application/gzip">
+            </label>
+            <label class="file-field">
+              <span>GED CSV / JSON</span>
+              <input id="uploadDatasetGed" name="ground_truth" type="file" accept=".csv,.json,text/csv,application/json">
+            </label>
+            <button id="uploadDatasetBtn" class="button button--primary" type="submit" title="Store and register dataset">Upload Dataset</button>
+          </form>
+          <div id="datasetUploadStatus" class="upload-status" role="status" aria-live="polite"></div>
+        </section>
+
+        <section class="results matrix-info" aria-labelledby="matrix-title">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">Multi-Seed Evidence</p>
+              <h2 id="matrix-title">Research Matrix</h2>
+            </div>
+            <button id="refreshMatrixBtn" class="button button--ghost" type="button" title="Refresh the latest multi-seed experiment summary">Refresh</button>
+          </div>
+          <div id="matrixPanel" class="matrix-panel"></div>
+        </section>
+
+        <section class="results dataset-info" aria-labelledby="dataset-title">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">Dataset</p>
+              <h2 id="dataset-title">Original Benchmark</h2>
+            </div>
+          </div>
+          <div id="datasetDetails" class="dataset-details"></div>
+        </section>
+      </section>
+
+      <aside class="library" aria-labelledby="library-title">
+        <div class="section-heading section-heading--compact">
+          <div>
+            <p class="eyebrow">Workspace</p>
+            <h2 id="library-title">Local Archives</h2>
+          </div>
+        </div>
+
+        <div class="archive-list">
+          {% for archive in archives %}
+          <div class="archive-row">
+            <span>{{ archive.name }}</span>
+            <code>{{ archive.path }}</code>
+            <b class="{{ 'is-on' if archive.available else 'is-off' }}">{{ 'ready' if archive.available else 'missing' }}</b>
+          </div>
+          {% endfor %}
+        </div>
+      </aside>
+    </main>
+
+    <div id="infoTooltip" class="info-tooltip-popover" role="tooltip" hidden></div>
+
+    <script id="initialMeta" type="application/json">{{ default_meta|tojson }}</script>
+    <script src="{{ url_for('static', filename='app.js') }}?v={{ asset_version }}"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "best_trial": 19,
+  "created_at": "2026-08-26T00:50:12.705795+00:00",
+  "dataset": "aids700nef",
+  "dataset_fingerprint": "a42538c9c25a6aeec6b37185b3ba7df8439894554f4673c850cd4948dc17dfe2",
+  "dataset_name": "AIDS700nef",
+  "dataset_profile_version": "dataset-profile-v1",
+  "final_training": {
+    "checkpoint": "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt",
+    "checkpoint_fingerprint": "c7aa5163fd124ac0951ceed68d3487949746a88420d940235fd4f748833991c6",
+    "completed_at": "2026-08-26T00:55:27.913729+00:00",
+    "hpo_sidecar": "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt.hpo.json",
+    "job_id": "c91ba3001140",
+    "seed": 379,
+    "status": "completed",
+    "test_evaluation": "not_run"
+  },
+  "git_commit": "4d1fa264698a000fd2a1c6648ec50035eab9465e",
+  "hyperparameters": {
+    "batch_size": 8,
+    "edge_cap": 16,
+    "identity_probability": 0.2,
+    "learning_rate": 9.401877452836936e-05,
+    "node_cap": 10
+  },
+  "model": "segmn",
+  "objective": "minimize validation normalized-GED similarity MSE",
+  "schema_version": "optimized-config-v1",
+  "search_space_version": "segmn-v2",
+  "seeds": [
+    379,
+    2026,
+    3407
+  ],
+  "split_seed": 380,
+  "study_name": "segmn__aids700nef__normalized_ged__segmn-v2__a42538c9c25a",
+  "study_storage": "training_logs/hpo/optimization.db",
+  "target_kind": "exact",
+  "target_source": "exact A* GED benchmark",
+  "test_set_used_for_selection": false,
+  "trial_checkpoint": "training_logs/hpo/studies/segmn__aids700nef__normalized_ged__segmn-v2__a42538c9c25a/trials/trial_0019/model.pt",
+  "updated_at": "2026-08-26T00:55:27.913885+00:00",
+  "validation_mse": 0.019041333333333334,
+  "validation_mse_std": 0.0035009797993641087,
+  "validation_spearman": 0.8707156666666668
+}

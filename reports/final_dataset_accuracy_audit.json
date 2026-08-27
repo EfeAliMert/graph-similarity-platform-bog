@@ -1,0 +1,434 @@
+{
+  "aids700nef": {
+    "dataset_id": "aids700nef",
+    "evaluation_pairs": 50,
+    "mode": "evaluate-existing",
+    "models": [
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "graph-fusion",
+        "mae_ged": 1.210825,
+        "mae_ged_pair_bootstrap_ci95": [
+          0.886239,
+          1.499975
+        ],
+        "mse_similarity_x1e3": 4.794403,
+        "name": "Graph Fusion",
+        "ndcg_at_k": 0.932977,
+        "pair_split_verified": true,
+        "spearman_ged": 0.81925,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "graph2region",
+        "mae_ged": 2.42162,
+        "mae_ged_pair_bootstrap_ci95": [
+          1.827103,
+          3.10224
+        ],
+        "mse_similarity_x1e3": 21.924146,
+        "name": "Graph2Region",
+        "ndcg_at_k": 0.8152,
+        "pair_split_verified": true,
+        "spearman_ged": 0.510979,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "multiscale-set",
+        "mae_ged": 2.413357,
+        "mae_ged_pair_bootstrap_ci95": [
+          1.927858,
+          3.070461
+        ],
+        "mse_similarity_x1e3": 18.419311,
+        "name": "Multi-Scale Convolutional Set Matching",
+        "ndcg_at_k": 0.896534,
+        "pair_split_verified": true,
+        "spearman_ged": 0.586345,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "segmn",
+        "mae_ged": 1.56415,
+        "mae_ged_pair_bootstrap_ci95": [
+          1.076447,
+          2.203361
+        ],
+        "mse_similarity_x1e3": 4.905557,
+        "name": "SEGMN",
+        "ndcg_at_k": 0.921881,
+        "pair_split_verified": true,
+        "spearman_ged": 0.750471,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "simgnn",
+        "mae_ged": 1.830641,
+        "mae_ged_pair_bootstrap_ci95": [
+          1.431489,
+          2.245789
+        ],
+        "mse_similarity_x1e3": 13.132869,
+        "name": "SimGNN",
+        "ndcg_at_k": 0.904134,
+        "pair_split_verified": true,
+        "spearman_ged": 0.704635,
+        "status": "evaluated"
+      }
+    ],
+    "reference_kind": "exact"
+  },
+  "imdbmulti": {
+    "dataset_id": "imdbmulti",
+    "evaluation_pairs": 50,
+    "mode": "evaluate-existing",
+    "models": [
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "graph-fusion",
+        "mae_ged": 70.390645,
+        "mae_ged_pair_bootstrap_ci95": [
+          26.140252,
+          131.903748
+        ],
+        "mse_similarity_x1e3": 21.999862,
+        "name": "Graph Fusion",
+        "ndcg_at_k": 0.914508,
+        "pair_split_verified": true,
+        "spearman_ged": 0.824886,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "graph2region",
+        "mae_ged": 80.12518,
+        "mae_ged_pair_bootstrap_ci95": [
+          34.620273,
+          147.205664
+        ],
+        "mse_similarity_x1e3": 14.975775,
+        "name": "Graph2Region",
+        "ndcg_at_k": 0.924731,
+        "pair_split_verified": true,
+        "spearman_ged": 0.912899,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "multiscale-set",
+        "mae_ged": 68.412474,
+        "mae_ged_pair_bootstrap_ci95": [
+          28.806663,
+          133.103266
+        ],
+        "mse_similarity_x1e3": 13.102723,
+        "name": "Multi-Scale Convolutional Set Matching",
+        "ndcg_at_k": 0.965956,
+        "pair_split_verified": true,
+        "spearman_ged": 0.881937,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "segmn",
+        "mae_ged": 54.471122,
+        "mae_ged_pair_bootstrap_ci95": [
+          24.220975,
+          102.804871
+        ],
+        "mse_similarity_x1e3": 8.803353,
+        "name": "SEGMN",
+        "ndcg_at_k": 0.965299,
+        "pair_split_verified": true,
+        "spearman_ged": 0.898583,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "simgnn",
+        "mae_ged": 81.0877,
+        "mae_ged_pair_bootstrap_ci95": [
+          42.090416,
+          137.752706
+        ],
+        "mse_similarity_x1e3": 87.589611,
+        "name": "SimGNN",
+        "ndcg_at_k": 0.917872,
+        "pair_split_verified": true,
+        "spearman_ged": 0.935767,
+        "status": "evaluated"
+      }
+    ],
+    "reference_kind": "approximate_benchmark"
+  },
+  "linux": {
+    "dataset_id": "linux",
+    "evaluation_pairs": 50,
+    "mode": "evaluate-existing",
+    "models": [
+      {
+        "checkpoint_seeds": [
+          3407
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "graph-fusion",
+        "mae_ged": 0.805275,
+        "mae_ged_pair_bootstrap_ci95": [
+          0.577648,
+          1.060586
+        ],
+        "mse_similarity_x1e3": 4.452213,
+        "name": "Graph Fusion",
+        "ndcg_at_k": 0.996252,
+        "pair_split_verified": true,
+        "spearman_ged": 0.935768,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "graph2region",
+        "mae_ged": 1.360405,
+        "mae_ged_pair_bootstrap_ci95": [
+          1.057997,
+          1.719087
+        ],
+        "mse_similarity_x1e3": 10.609648,
+        "name": "Graph2Region",
+        "ndcg_at_k": 0.952716,
+        "pair_split_verified": true,
+        "spearman_ged": 0.821375,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          3407
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "multiscale-set",
+        "mae_ged": 1.084162,
+        "mae_ged_pair_bootstrap_ci95": [
+          0.875685,
+          1.298878
+        ],
+        "mse_similarity_x1e3": 11.012762,
+        "name": "Multi-Scale Convolutional Set Matching",
+        "ndcg_at_k": 0.935328,
+        "pair_split_verified": true,
+        "spearman_ged": 0.908221,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "segmn",
+        "mae_ged": 0.573866,
+        "mae_ged_pair_bootstrap_ci95": [
+          0.452144,
+          0.713649
+        ],
+        "mse_similarity_x1e3": 2.251903,
+        "name": "SEGMN",
+        "ndcg_at_k": 0.989106,
+        "pair_split_verified": true,
+        "spearman_ged": 0.965879,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          3407
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "simgnn",
+        "mae_ged": 1.006579,
+        "mae_ged_pair_bootstrap_ci95": [
+          0.784241,
+          1.241549
+        ],
+        "mse_similarity_x1e3": 11.412284,
+        "name": "SimGNN",
+        "ndcg_at_k": 0.775788,
+        "pair_split_verified": true,
+        "spearman_ged": 0.915048,
+        "status": "evaluated"
+      }
+    ],
+    "reference_kind": "exact"
+  },
+  "ptc": {
+    "dataset_id": "ptc",
+    "evaluation_pairs": 50,
+    "mode": "evaluate-existing",
+    "models": [
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "graph-fusion",
+        "mae_ged": 17.114154,
+        "mae_ged_pair_bootstrap_ci95": [
+          7.564649,
+          32.349734
+        ],
+        "mse_similarity_x1e3": 8.960377,
+        "name": "Graph Fusion",
+        "ndcg_at_k": 0.936387,
+        "pair_split_verified": true,
+        "spearman_ged": 0.935366,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "graph2region",
+        "mae_ged": 21.334525,
+        "mae_ged_pair_bootstrap_ci95": [
+          15.989365,
+          27.669939
+        ],
+        "mse_similarity_x1e3": 31.182235,
+        "name": "Graph2Region",
+        "ndcg_at_k": 0.614522,
+        "pair_split_verified": true,
+        "spearman_ged": 0.560144,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "multiscale-set",
+        "mae_ged": 8.013453,
+        "mae_ged_pair_bootstrap_ci95": [
+          6.249063,
+          10.35213
+        ],
+        "mse_similarity_x1e3": 11.186433,
+        "name": "Multi-Scale Convolutional Set Matching",
+        "ndcg_at_k": 0.878565,
+        "pair_split_verified": true,
+        "spearman_ged": 0.950444,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "segmn",
+        "mae_ged": 14.838236,
+        "mae_ged_pair_bootstrap_ci95": [
+          9.365054,
+          21.617767
+        ],
+        "mse_similarity_x1e3": 19.463081,
+        "name": "SEGMN",
+        "ndcg_at_k": 0.889526,
+        "pair_split_verified": true,
+        "spearman_ged": 0.801124,
+        "status": "evaluated"
+      },
+      {
+        "checkpoint_seeds": [
+          379
+        ],
+        "evaluated_seeds": [
+          379
+        ],
+        "id": "simgnn",
+        "mae_ged": 42.700638,
+        "mae_ged_pair_bootstrap_ci95": [
+          16.433583,
+          82.006058
+        ],
+        "mse_similarity_x1e3": 10.589863,
+        "name": "SimGNN",
+        "ndcg_at_k": 0.959177,
+        "pair_split_verified": true,
+        "spearman_ged": 0.932677,
+        "status": "evaluated"
+      }
+    ],
+    "reference_kind": "approximate_benchmark"
+  }
+}

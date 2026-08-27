@@ -1,0 +1,13 @@
+{
+  "left": {
+    "edges": [[0, 1], [1, 2], [2, 0], [2, 3]],
+    "labels": ["C", "C", "N", "O"]
+  },
+  "right": {
+    "edges": [[0, 1], [1, 2], [2, 3], [3, 0], [1, 3]],
+    "labels": ["C", "N", "N", "O"]
+  },
+  "meta": {
+    "source": "graph_similarity_platform/datasets/sample_pair.json"
+  }
+}

@@ -1,0 +1,460 @@
+{
+  "evaluation_pairs": 50,
+  "expected_seeds": [
+    379
+  ],
+  "generated_at": "2026-08-23T01:33:40.122113+00:00",
+  "manifest_path": "training_logs/research_matrix/20260823T013338Z/manifest.json",
+  "matrix_complete": false,
+  "rows": [
+    {
+      "complete": false,
+      "dataset_id": "aids700nef",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": null,
+          "training_status": "planned"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null,
+        "std": null
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "imdbmulti",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": null,
+          "training_status": "planned"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null,
+        "std": null
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "linux",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": null,
+          "training_status": "planned"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null,
+        "std": null
+      }
+    },
+    {
+      "complete": false,
+      "dataset_id": "ptc",
+      "evaluated_seeds": [],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_split_verified": false,
+      "runs": [
+        {
+          "benchmark_run_id": null,
+          "benchmark_status": null,
+          "metrics": {},
+          "pair_split_verified": null,
+          "seed": 379,
+          "size_generalization": [],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": null,
+          "training_status": "planned"
+        }
+      ],
+      "seed_coverage": 0.0,
+      "size_generalization": [],
+      "training_duration_seconds": {
+        "count": 0,
+        "max": null,
+        "mean": null,
+        "min": null,
+        "std": null
+      }
+    }
+  ],
+  "run_id": "20260823T013338Z"
+}

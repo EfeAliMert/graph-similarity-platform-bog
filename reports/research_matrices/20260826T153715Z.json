@@ -1,0 +1,4753 @@
+{
+  "evaluation_pairs": 50,
+  "expected_seeds": [
+    379
+  ],
+  "generated_at": "2026-08-30T21:03:18.465851+00:00",
+  "manifest_path": "training_logs/research_matrix/20260826T153715Z/manifest.json",
+  "matrix_complete": true,
+  "mode": "evaluate-existing",
+  "rows": [
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "aids700nef",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.66496,
+          "mean": 0.66496,
+          "min": 0.66496,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1166.796,
+          "mean": 1166.796,
+          "min": 1166.796,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1215.441,
+          "mean": 1215.441,
+          "min": 1215.441,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 1.210825,
+          "mean": 1.210825,
+          "min": 1.210825,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 4.794403,
+          "mean": 4.794403,
+          "min": 4.794403,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.932977,
+          "mean": 0.932977,
+          "min": 0.932977,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 287.25,
+          "mean": 287.25,
+          "min": 287.25,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.6,
+          "mean": 0.6,
+          "min": 0.6,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 1.608685,
+          "mean": 1.608685,
+          "min": 1.608685,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.81925,
+          "mean": 0.81925,
+          "min": 0.81925,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.853,
+          "mean": 0.853,
+          "min": 0.853,
+          "std": null
+        }
+      },
+      "model_id": "graph-fusion",
+      "model_name": "Graph Fusion",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            0.886239,
+            1.499975
+          ],
+          "mae_similarity": [
+            0.038465,
+            0.063923
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "exact",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T154319Z-0f151b31",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              0.886239,
+              1.499975
+            ],
+            "mae_similarity_ci95": [
+              0.038465,
+              0.063923
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.66496,
+            "latency_p50_ms": 1166.796,
+            "latency_p95_ms": 1215.441,
+            "mae_ged": 1.210825,
+            "mse_similarity_x1e3": 4.794403,
+            "ndcg_at_k": 0.932977,
+            "peak_rss_mb": 287.25,
+            "precision_at_10": 0.6,
+            "rmse_ged": 1.608685,
+            "spearman_ged": 0.81925,
+            "throughput_pairs_per_second": 0.853
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 8.5,
+              "average_size_min": 5.5,
+              "bucket": "small",
+              "mae_ged": 1.343719,
+              "mse_similarity_x1e3": 5.469688,
+              "samples": 19
+            },
+            {
+              "average_size_max": 9.5,
+              "average_size_min": 9.0,
+              "bucket": "medium",
+              "mae_ged": 0.916043,
+              "mse_similarity_x1e3": 3.422239,
+              "samples": 20
+            },
+            {
+              "average_size_max": 10.0,
+              "average_size_min": 10.0,
+              "bucket": "large",
+              "mae_ged": 1.517246,
+              "mse_similarity_x1e3": 6.122845,
+              "samples": 11
+            }
+          ],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.517246,
+            "mean": 1.517246,
+            "min": 1.517246,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 6.122845,
+            "mean": 6.122845,
+            "min": 6.122845,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 0.916043,
+            "mean": 0.916043,
+            "min": 0.916043,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 3.422239,
+            "mean": 3.422239,
+            "min": 3.422239,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.343719,
+            "mean": 1.343719,
+            "min": 1.343719,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 5.469688,
+            "mean": 5.469688,
+            "min": 5.469688,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "exact A* GED",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "aids700nef",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.393477,
+          "mean": 0.393477,
+          "min": 0.393477,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1179.349,
+          "mean": 1179.349,
+          "min": 1179.349,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1230.506,
+          "mean": 1230.506,
+          "min": 1230.506,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 2.42162,
+          "mean": 2.42162,
+          "min": 2.42162,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 21.924146,
+          "mean": 21.924146,
+          "min": 21.924146,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.8152,
+          "mean": 0.8152,
+          "min": 0.8152,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 284.766,
+          "mean": 284.766,
+          "min": 284.766,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.2,
+          "mean": 0.2,
+          "min": 0.2,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 3.409329,
+          "mean": 3.409329,
+          "min": 3.409329,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.510979,
+          "mean": 0.510979,
+          "min": 0.510979,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.847,
+          "mean": 0.847,
+          "min": 0.847,
+          "std": null
+        }
+      },
+      "model_id": "graph2region",
+      "model_name": "Graph2Region",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            1.827103,
+            3.10224
+          ],
+          "mae_similarity": [
+            0.076444,
+            0.136543
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "exact",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T154422Z-d771f861",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              1.827103,
+              3.10224
+            ],
+            "mae_similarity_ci95": [
+              0.076444,
+              0.136543
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.393477,
+            "latency_p50_ms": 1179.349,
+            "latency_p95_ms": 1230.506,
+            "mae_ged": 2.42162,
+            "mse_similarity_x1e3": 21.924146,
+            "ndcg_at_k": 0.8152,
+            "peak_rss_mb": 284.766,
+            "precision_at_10": 0.2,
+            "rmse_ged": 3.409329,
+            "spearman_ged": 0.510979,
+            "throughput_pairs_per_second": 0.847
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 8.5,
+              "average_size_min": 5.5,
+              "bucket": "small",
+              "mae_ged": 2.479286,
+              "mse_similarity_x1e3": 18.811874,
+              "samples": 19
+            },
+            {
+              "average_size_max": 9.5,
+              "average_size_min": 9.0,
+              "bucket": "medium",
+              "mae_ged": 1.742334,
+              "mse_similarity_x1e3": 11.090681,
+              "samples": 20
+            },
+            {
+              "average_size_max": 10.0,
+              "average_size_min": 10.0,
+              "bucket": "large",
+              "mae_ged": 3.557079,
+              "mse_similarity_x1e3": 46.997098,
+              "samples": 11
+            }
+          ],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 3.557079,
+            "mean": 3.557079,
+            "min": 3.557079,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 46.997098,
+            "mean": 46.997098,
+            "min": 46.997098,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.742334,
+            "mean": 1.742334,
+            "min": 1.742334,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 11.090681,
+            "mean": 11.090681,
+            "min": 11.090681,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 2.479286,
+            "mean": 2.479286,
+            "min": 2.479286,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 18.811874,
+            "mean": 18.811874,
+            "min": 18.811874,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "exact A* GED",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "aids700nef",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.448774,
+          "mean": 0.448774,
+          "min": 0.448774,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 2825.543,
+          "mean": 2825.543,
+          "min": 2825.543,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 3046.215,
+          "mean": 3046.215,
+          "min": 3046.215,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 2.413357,
+          "mean": 2.413357,
+          "min": 2.413357,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 18.419311,
+          "mean": 18.419311,
+          "min": 18.419311,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.896534,
+          "mean": 0.896534,
+          "min": 0.896534,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 624.906,
+          "mean": 624.906,
+          "min": 624.906,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.6,
+          "mean": 0.6,
+          "min": 0.6,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 3.079269,
+          "mean": 3.079269,
+          "min": 3.079269,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.586345,
+          "mean": 0.586345,
+          "min": 0.586345,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.345,
+          "mean": 0.345,
+          "min": 0.345,
+          "std": null
+        }
+      },
+      "model_id": "multiscale-set",
+      "model_name": "Multi-Scale Convolutional Set Matching",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            1.927858,
+            3.070461
+          ],
+          "mae_similarity": [
+            0.085353,
+            0.129406
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "exact",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T154114Z-a503413f",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              1.927858,
+              3.070461
+            ],
+            "mae_similarity_ci95": [
+              0.085353,
+              0.129406
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.448774,
+            "latency_p50_ms": 2825.543,
+            "latency_p95_ms": 3046.215,
+            "mae_ged": 2.413357,
+            "mse_similarity_x1e3": 18.419311,
+            "ndcg_at_k": 0.896534,
+            "peak_rss_mb": 624.906,
+            "precision_at_10": 0.6,
+            "rmse_ged": 3.079269,
+            "spearman_ged": 0.586345,
+            "throughput_pairs_per_second": 0.345
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 8.5,
+              "average_size_min": 5.5,
+              "bucket": "small",
+              "mae_ged": 2.313778,
+              "mse_similarity_x1e3": 8.680723,
+              "samples": 19
+            },
+            {
+              "average_size_max": 9.5,
+              "average_size_min": 9.0,
+              "bucket": "medium",
+              "mae_ged": 1.935041,
+              "mse_similarity_x1e3": 13.445282,
+              "samples": 20
+            },
+            {
+              "average_size_max": 10.0,
+              "average_size_min": 10.0,
+              "bucket": "large",
+              "mae_ged": 3.455021,
+              "mse_similarity_x1e3": 44.284197,
+              "samples": 11
+            }
+          ],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 3.455021,
+            "mean": 3.455021,
+            "min": 3.455021,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 44.284197,
+            "mean": 44.284197,
+            "min": 44.284197,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.935041,
+            "mean": 1.935041,
+            "min": 1.935041,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 13.445282,
+            "mean": 13.445282,
+            "min": 13.445282,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 2.313778,
+            "mean": 2.313778,
+            "min": 2.313778,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 8.680723,
+            "mean": 8.680723,
+            "min": 8.680723,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "exact A* GED",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "aids700nef",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.591075,
+          "mean": 0.591075,
+          "min": 0.591075,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1125.106,
+          "mean": 1125.106,
+          "min": 1125.106,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1181.227,
+          "mean": 1181.227,
+          "min": 1181.227,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 1.56415,
+          "mean": 1.56415,
+          "min": 1.56415,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 4.905557,
+          "mean": 4.905557,
+          "min": 4.905557,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.921881,
+          "mean": 0.921881,
+          "min": 0.921881,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 292.516,
+          "mean": 292.516,
+          "min": 292.516,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.6,
+          "mean": 0.6,
+          "min": 0.6,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 2.625254,
+          "mean": 2.625254,
+          "min": 2.625254,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.750471,
+          "mean": 0.750471,
+          "min": 0.750471,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.874,
+          "mean": 0.874,
+          "min": 0.874,
+          "std": null
+        }
+      },
+      "model_id": "segmn",
+      "model_name": "SEGMN",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            1.076447,
+            2.203361
+          ],
+          "mae_similarity": [
+            0.03954,
+            0.066993
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "exact",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T154216Z-69621336",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              1.076447,
+              2.203361
+            ],
+            "mae_similarity_ci95": [
+              0.03954,
+              0.066993
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.591075,
+            "latency_p50_ms": 1125.106,
+            "latency_p95_ms": 1181.227,
+            "mae_ged": 1.56415,
+            "mse_similarity_x1e3": 4.905557,
+            "ndcg_at_k": 0.921881,
+            "peak_rss_mb": 292.516,
+            "precision_at_10": 0.6,
+            "rmse_ged": 2.625254,
+            "spearman_ged": 0.750471,
+            "throughput_pairs_per_second": 0.874
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 8.5,
+              "average_size_min": 5.5,
+              "bucket": "small",
+              "mae_ged": 2.218348,
+              "mse_similarity_x1e3": 5.813077,
+              "samples": 19
+            },
+            {
+              "average_size_max": 9.5,
+              "average_size_min": 9.0,
+              "bucket": "medium",
+              "mae_ged": 1.009205,
+              "mse_similarity_x1e3": 3.372134,
+              "samples": 20
+            },
+            {
+              "average_size_max": 10.0,
+              "average_size_min": 10.0,
+              "bucket": "large",
+              "mae_ged": 1.44316,
+              "mse_similarity_x1e3": 6.126065,
+              "samples": 11
+            }
+          ],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.44316,
+            "mean": 1.44316,
+            "min": 1.44316,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 6.126065,
+            "mean": 6.126065,
+            "min": 6.126065,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.009205,
+            "mean": 1.009205,
+            "min": 1.009205,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 3.372134,
+            "mean": 3.372134,
+            "min": 3.372134,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 2.218348,
+            "mean": 2.218348,
+            "min": 2.218348,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 5.813077,
+            "mean": 5.813077,
+            "min": 5.813077,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "exact A* GED",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "aids700nef",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.561865,
+          "mean": 0.561865,
+          "min": 0.561865,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1648.751,
+          "mean": 1648.751,
+          "min": 1648.751,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1760.501,
+          "mean": 1760.501,
+          "min": 1760.501,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 1.830641,
+          "mean": 1.830641,
+          "min": 1.830641,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 13.132869,
+          "mean": 13.132869,
+          "min": 13.132869,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.904134,
+          "mean": 0.904134,
+          "min": 0.904134,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 279.562,
+          "mean": 279.562,
+          "min": 279.562,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.5,
+          "mean": 0.5,
+          "min": 0.5,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 2.399499,
+          "mean": 2.399499,
+          "min": 2.399499,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.704635,
+          "mean": 0.704635,
+          "min": 0.704635,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.591,
+          "mean": 0.591,
+          "min": 0.591,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            1.431489,
+            2.245789
+          ],
+          "mae_similarity": [
+            0.061017,
+            0.105788
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "exact",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T153844Z-09c42a48",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              1.431489,
+              2.245789
+            ],
+            "mae_similarity_ci95": [
+              0.061017,
+              0.105788
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.561865,
+            "latency_p50_ms": 1648.751,
+            "latency_p95_ms": 1760.501,
+            "mae_ged": 1.830641,
+            "mse_similarity_x1e3": 13.132869,
+            "ndcg_at_k": 0.904134,
+            "peak_rss_mb": 279.562,
+            "precision_at_10": 0.5,
+            "rmse_ged": 2.399499,
+            "spearman_ged": 0.704635,
+            "throughput_pairs_per_second": 0.591
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 8.5,
+              "average_size_min": 5.5,
+              "bucket": "small",
+              "mae_ged": 1.69621,
+              "mse_similarity_x1e3": 8.970356,
+              "samples": 19
+            },
+            {
+              "average_size_max": 9.5,
+              "average_size_min": 9.0,
+              "bucket": "medium",
+              "mae_ged": 2.100909,
+              "mse_similarity_x1e3": 17.002305,
+              "samples": 20
+            },
+            {
+              "average_size_max": 10.0,
+              "average_size_min": 10.0,
+              "bucket": "large",
+              "mae_ged": 1.571443,
+              "mse_similarity_x1e3": 13.287326,
+              "samples": 11
+            }
+          ],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.571443,
+            "mean": 1.571443,
+            "min": 1.571443,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 13.287326,
+            "mean": 13.287326,
+            "min": 13.287326,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 2.100909,
+            "mean": 2.100909,
+            "min": 2.100909,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 17.002305,
+            "mean": 17.002305,
+            "min": 17.002305,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.69621,
+            "mean": 1.69621,
+            "min": 1.69621,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 8.970356,
+            "mean": 8.970356,
+            "min": 8.970356,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "exact A* GED",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "imdbmulti",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.66968,
+          "mean": 0.66968,
+          "min": 0.66968,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1367.938,
+          "mean": 1367.938,
+          "min": 1367.938,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1435.015,
+          "mean": 1435.015,
+          "min": 1435.015,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 70.390645,
+          "mean": 70.390645,
+          "min": 70.390645,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 21.999862,
+          "mean": 21.999862,
+          "min": 21.999862,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.914508,
+          "mean": 0.914508,
+          "min": 0.914508,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 304.672,
+          "mean": 304.672,
+          "min": 304.672,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.7,
+          "mean": 0.7,
+          "min": 0.7,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 206.866559,
+          "mean": 206.866559,
+          "min": 206.866559,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.824886,
+          "mean": 0.824886,
+          "min": 0.824886,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.725,
+          "mean": 0.725,
+          "min": 0.725,
+          "std": null
+        }
+      },
+      "model_id": "graph-fusion",
+      "model_name": "Graph Fusion",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            26.140252,
+            131.903748
+          ],
+          "mae_similarity": [
+            0.058904,
+            0.122532
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "approximate_benchmark",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T155829Z-dde8924f",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              26.140252,
+              131.903748
+            ],
+            "mae_similarity_ci95": [
+              0.058904,
+              0.122532
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.66968,
+            "latency_p50_ms": 1367.938,
+            "latency_p95_ms": 1435.015,
+            "mae_ged": 70.390645,
+            "mse_similarity_x1e3": 21.999862,
+            "ndcg_at_k": 0.914508,
+            "peak_rss_mb": 304.672,
+            "precision_at_10": 0.7,
+            "rmse_ged": 206.866559,
+            "spearman_ged": 0.824886,
+            "throughput_pairs_per_second": 0.725
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 9.0,
+              "average_size_min": 7.0,
+              "bucket": "small",
+              "mae_ged": 1.228037,
+              "mse_similarity_x1e3": 1.258321,
+              "samples": 17
+            },
+            {
+              "average_size_max": 13.0,
+              "average_size_min": 9.5,
+              "bucket": "medium",
+              "mae_ged": 25.859163,
+              "mse_similarity_x1e3": 47.223999,
+              "samples": 17
+            },
+            {
+              "average_size_max": 48.0,
+              "average_size_min": 14.0,
+              "bucket": "large",
+              "mae_ged": 191.190615,
+              "mse_similarity_x1e3": 17.237104,
+              "samples": 16
+            }
+          ],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 191.190615,
+            "mean": 191.190615,
+            "min": 191.190615,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 17.237104,
+            "mean": 17.237104,
+            "min": 17.237104,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 25.859163,
+            "mean": 25.859163,
+            "min": 25.859163,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 47.223999,
+            "mean": 47.223999,
+            "min": 47.223999,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.228037,
+            "mean": 1.228037,
+            "min": 1.228037,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 1.258321,
+            "mean": 1.258321,
+            "min": 1.258321,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "approximate GED benchmark upper bound",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "imdbmulti",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.758423,
+          "mean": 0.758423,
+          "min": 0.758423,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1384.181,
+          "mean": 1384.181,
+          "min": 1384.181,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1520.439,
+          "mean": 1520.439,
+          "min": 1520.439,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 80.12518,
+          "mean": 80.12518,
+          "min": 80.12518,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 14.975775,
+          "mean": 14.975775,
+          "min": 14.975775,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.924731,
+          "mean": 0.924731,
+          "min": 0.924731,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 299.969,
+          "mean": 299.969,
+          "min": 299.969,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.7,
+          "mean": 0.7,
+          "min": 0.7,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 229.497438,
+          "mean": 229.497438,
+          "min": 229.497438,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.912899,
+          "mean": 0.912899,
+          "min": 0.912899,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.71,
+          "mean": 0.71,
+          "min": 0.71,
+          "std": null
+        }
+      },
+      "model_id": "graph2region",
+      "model_name": "Graph2Region",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            34.620273,
+            147.205664
+          ],
+          "mae_similarity": [
+            0.075326,
+            0.114123
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "approximate_benchmark",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T155945Z-69fec4cc",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              34.620273,
+              147.205664
+            ],
+            "mae_similarity_ci95": [
+              0.075326,
+              0.114123
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.758423,
+            "latency_p50_ms": 1384.181,
+            "latency_p95_ms": 1520.439,
+            "mae_ged": 80.12518,
+            "mse_similarity_x1e3": 14.975775,
+            "ndcg_at_k": 0.924731,
+            "peak_rss_mb": 299.969,
+            "precision_at_10": 0.7,
+            "rmse_ged": 229.497438,
+            "spearman_ged": 0.912899,
+            "throughput_pairs_per_second": 0.71
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 9.0,
+              "average_size_min": 7.0,
+              "bucket": "small",
+              "mae_ged": 3.156713,
+              "mse_similarity_x1e3": 10.793791,
+              "samples": 17
+            },
+            {
+              "average_size_max": 13.0,
+              "average_size_min": 9.5,
+              "bucket": "medium",
+              "mae_ged": 26.514572,
+              "mse_similarity_x1e3": 9.724455,
+              "samples": 17
+            },
+            {
+              "average_size_max": 48.0,
+              "average_size_min": 14.0,
+              "bucket": "large",
+              "mae_ged": 218.865446,
+              "mse_similarity_x1e3": 24.99866,
+              "samples": 16
+            }
+          ],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 218.865446,
+            "mean": 218.865446,
+            "min": 218.865446,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 24.99866,
+            "mean": 24.99866,
+            "min": 24.99866,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 26.514572,
+            "mean": 26.514572,
+            "min": 26.514572,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 9.724455,
+            "mean": 9.724455,
+            "min": 9.724455,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 3.156713,
+            "mean": 3.156713,
+            "min": 3.156713,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 10.793791,
+            "mean": 10.793791,
+            "min": 10.793791,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "approximate GED benchmark upper bound",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "imdbmulti",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.728995,
+          "mean": 0.728995,
+          "min": 0.728995,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 3044.598,
+          "mean": 3044.598,
+          "min": 3044.598,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 3214.943,
+          "mean": 3214.943,
+          "min": 3214.943,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 68.412474,
+          "mean": 68.412474,
+          "min": 68.412474,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 13.102723,
+          "mean": 13.102723,
+          "min": 13.102723,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.965956,
+          "mean": 0.965956,
+          "min": 0.965956,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 1129.547,
+          "mean": 1129.547,
+          "min": 1129.547,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.8,
+          "mean": 0.8,
+          "min": 0.8,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 193.182376,
+          "mean": 193.182376,
+          "min": 193.182376,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.881937,
+          "mean": 0.881937,
+          "min": 0.881937,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.325,
+          "mean": 0.325,
+          "min": 0.325,
+          "std": null
+        }
+      },
+      "model_id": "multiscale-set",
+      "model_name": "Multi-Scale Convolutional Set Matching",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            28.806663,
+            133.103266
+          ],
+          "mae_similarity": [
+            0.051602,
+            0.099103
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "approximate_benchmark",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T155604Z-7b2233c8",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              28.806663,
+              133.103266
+            ],
+            "mae_similarity_ci95": [
+              0.051602,
+              0.099103
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.728995,
+            "latency_p50_ms": 3044.598,
+            "latency_p95_ms": 3214.943,
+            "mae_ged": 68.412474,
+            "mse_similarity_x1e3": 13.102723,
+            "ndcg_at_k": 0.965956,
+            "peak_rss_mb": 1129.547,
+            "precision_at_10": 0.8,
+            "rmse_ged": 193.182376,
+            "spearman_ged": 0.881937,
+            "throughput_pairs_per_second": 0.325
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 9.0,
+              "average_size_min": 7.0,
+              "bucket": "small",
+              "mae_ged": 2.887684,
+              "mse_similarity_x1e3": 6.879902,
+              "samples": 17
+            },
+            {
+              "average_size_max": 13.0,
+              "average_size_min": 9.5,
+              "bucket": "medium",
+              "mae_ged": 26.668089,
+              "mse_similarity_x1e3": 20.789644,
+              "samples": 17
+            },
+            {
+              "average_size_max": 48.0,
+              "average_size_min": 14.0,
+              "bucket": "large",
+              "mae_ged": 182.385974,
+              "mse_similarity_x1e3": 11.547118,
+              "samples": 16
+            }
+          ],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 182.385974,
+            "mean": 182.385974,
+            "min": 182.385974,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 11.547118,
+            "mean": 11.547118,
+            "min": 11.547118,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 26.668089,
+            "mean": 26.668089,
+            "min": 26.668089,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 20.789644,
+            "mean": 20.789644,
+            "min": 20.789644,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 2.887684,
+            "mean": 2.887684,
+            "min": 2.887684,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 6.879902,
+            "mean": 6.879902,
+            "min": 6.879902,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "approximate GED benchmark upper bound",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "imdbmulti",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.755137,
+          "mean": 0.755137,
+          "min": 0.755137,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1280.377,
+          "mean": 1280.377,
+          "min": 1280.377,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1358.892,
+          "mean": 1358.892,
+          "min": 1358.892,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 54.471122,
+          "mean": 54.471122,
+          "min": 54.471122,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 8.803353,
+          "mean": 8.803353,
+          "min": 8.803353,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.965299,
+          "mean": 0.965299,
+          "min": 0.965299,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 325.609,
+          "mean": 325.609,
+          "min": 325.609,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.8,
+          "mean": 0.8,
+          "min": 0.8,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 153.877507,
+          "mean": 153.877507,
+          "min": 153.877507,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.898583,
+          "mean": 0.898583,
+          "min": 0.898583,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.771,
+          "mean": 0.771,
+          "min": 0.771,
+          "std": null
+        }
+      },
+      "model_id": "segmn",
+      "model_name": "SEGMN",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            24.220975,
+            102.804871
+          ],
+          "mae_similarity": [
+            0.037962,
+            0.07781
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "approximate_benchmark",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T155714Z-19c765d8",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              24.220975,
+              102.804871
+            ],
+            "mae_similarity_ci95": [
+              0.037962,
+              0.07781
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.755137,
+            "latency_p50_ms": 1280.377,
+            "latency_p95_ms": 1358.892,
+            "mae_ged": 54.471122,
+            "mse_similarity_x1e3": 8.803353,
+            "ndcg_at_k": 0.965299,
+            "peak_rss_mb": 325.609,
+            "precision_at_10": 0.8,
+            "rmse_ged": 153.877507,
+            "spearman_ged": 0.898583,
+            "throughput_pairs_per_second": 0.771
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 9.0,
+              "average_size_min": 7.0,
+              "bucket": "small",
+              "mae_ged": 8.67215,
+              "mse_similarity_x1e3": 11.993831,
+              "samples": 17
+            },
+            {
+              "average_size_max": 13.0,
+              "average_size_min": 9.5,
+              "bucket": "medium",
+              "mae_ged": 22.526556,
+              "mse_similarity_x1e3": 5.838723,
+              "samples": 17
+            },
+            {
+              "average_size_max": 48.0,
+              "average_size_min": 14.0,
+              "bucket": "large",
+              "mae_ged": 137.07363,
+              "mse_similarity_x1e3": 8.563391,
+              "samples": 16
+            }
+          ],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 137.07363,
+            "mean": 137.07363,
+            "min": 137.07363,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 8.563391,
+            "mean": 8.563391,
+            "min": 8.563391,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 22.526556,
+            "mean": 22.526556,
+            "min": 22.526556,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 5.838723,
+            "mean": 5.838723,
+            "min": 5.838723,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 8.67215,
+            "mean": 8.67215,
+            "min": 8.67215,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 11.993831,
+            "mean": 11.993831,
+            "min": 11.993831,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "approximate GED benchmark upper bound",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "imdbmulti",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.811012,
+          "mean": 0.811012,
+          "min": 0.811012,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1665.325,
+          "mean": 1665.325,
+          "min": 1665.325,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1803.705,
+          "mean": 1803.705,
+          "min": 1803.705,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 81.0877,
+          "mean": 81.0877,
+          "min": 81.0877,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 87.589611,
+          "mean": 87.589611,
+          "min": 87.589611,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.917872,
+          "mean": 0.917872,
+          "min": 0.917872,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 281.312,
+          "mean": 281.312,
+          "min": 281.312,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.7,
+          "mean": 0.7,
+          "min": 0.7,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 194.908656,
+          "mean": 194.908656,
+          "min": 194.908656,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.935767,
+          "mean": 0.935767,
+          "min": 0.935767,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.588,
+          "mean": 0.588,
+          "min": 0.588,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            42.090416,
+            137.752706
+          ],
+          "mae_similarity": [
+            0.230064,
+            0.302261
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "approximate_benchmark",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T155324Z-b050c988",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              42.090416,
+              137.752706
+            ],
+            "mae_similarity_ci95": [
+              0.230064,
+              0.302261
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.811012,
+            "latency_p50_ms": 1665.325,
+            "latency_p95_ms": 1803.705,
+            "mae_ged": 81.0877,
+            "mse_similarity_x1e3": 87.589611,
+            "ndcg_at_k": 0.917872,
+            "peak_rss_mb": 281.312,
+            "precision_at_10": 0.7,
+            "rmse_ged": 194.908656,
+            "spearman_ged": 0.935767,
+            "throughput_pairs_per_second": 0.588
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 9.0,
+              "average_size_min": 7.0,
+              "bucket": "small",
+              "mae_ged": 7.877277,
+              "mse_similarity_x1e3": 101.145216,
+              "samples": 17
+            },
+            {
+              "average_size_max": 13.0,
+              "average_size_min": 9.5,
+              "bucket": "medium",
+              "mae_ged": 41.072275,
+              "mse_similarity_x1e3": 109.646018,
+              "samples": 17
+            },
+            {
+              "average_size_max": 48.0,
+              "average_size_min": 14.0,
+              "bucket": "large",
+              "mae_ged": 201.390164,
+              "mse_similarity_x1e3": 49.751847,
+              "samples": 16
+            }
+          ],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 201.390164,
+            "mean": 201.390164,
+            "min": 201.390164,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 49.751847,
+            "mean": 49.751847,
+            "min": 49.751847,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 41.072275,
+            "mean": 41.072275,
+            "min": 41.072275,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 109.646018,
+            "mean": 109.646018,
+            "min": 109.646018,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 7.877277,
+            "mean": 7.877277,
+            "min": 7.877277,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 101.145216,
+            "mean": 101.145216,
+            "min": 101.145216,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "approximate GED benchmark upper bound",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        3407
+      ],
+      "complete": true,
+      "dataset_id": "linux",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.82715,
+          "mean": 0.82715,
+          "min": 0.82715,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1197.817,
+          "mean": 1197.817,
+          "min": 1197.817,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1284.399,
+          "mean": 1284.399,
+          "min": 1284.399,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 0.805275,
+          "mean": 0.805275,
+          "min": 0.805275,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 4.452213,
+          "mean": 4.452213,
+          "min": 4.452213,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.996252,
+          "mean": 0.996252,
+          "min": 0.996252,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 286.328,
+          "mean": 286.328,
+          "min": 286.328,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.8,
+          "mean": 0.8,
+          "min": 0.8,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 1.218906,
+          "mean": 1.218906,
+          "min": 1.218906,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.935768,
+          "mean": 0.935768,
+          "min": 0.935768,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.821,
+          "mean": 0.821,
+          "min": 0.821,
+          "std": null
+        }
+      },
+      "model_id": "graph-fusion",
+      "model_name": "Graph Fusion",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            0.577648,
+            1.060586
+          ],
+          "mae_similarity": [
+            0.040056,
+            0.06202
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "exact",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T155042Z-4f4e01ce",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              0.577648,
+              1.060586
+            ],
+            "mae_similarity_ci95": [
+              0.040056,
+              0.06202
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.82715,
+            "latency_p50_ms": 1197.817,
+            "latency_p95_ms": 1284.399,
+            "mae_ged": 0.805275,
+            "mse_similarity_x1e3": 4.452213,
+            "ndcg_at_k": 0.996252,
+            "peak_rss_mb": 286.328,
+            "precision_at_10": 0.8,
+            "rmse_ged": 1.218906,
+            "spearman_ged": 0.935768,
+            "throughput_pairs_per_second": 0.821
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 7.5,
+              "average_size_min": 5.5,
+              "bucket": "small",
+              "mae_ged": 0.96035,
+              "mse_similarity_x1e3": 6.446562,
+              "samples": 23
+            },
+            {
+              "average_size_max": 8.0,
+              "average_size_min": 8.0,
+              "bucket": "medium",
+              "mae_ged": 0.53881,
+              "mse_similarity_x1e3": 2.289364,
+              "samples": 13
+            },
+            {
+              "average_size_max": 10.0,
+              "average_size_min": 8.5,
+              "bucket": "large",
+              "mae_ged": 0.797941,
+              "mse_similarity_x1e3": 3.184143,
+              "samples": 14
+            }
+          ],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 0.797941,
+            "mean": 0.797941,
+            "min": 0.797941,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 3.184143,
+            "mean": 3.184143,
+            "min": 3.184143,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 0.53881,
+            "mean": 0.53881,
+            "min": 0.53881,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 2.289364,
+            "mean": 2.289364,
+            "min": 2.289364,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 0.96035,
+            "mean": 0.96035,
+            "min": 0.96035,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 6.446562,
+            "mean": 6.446562,
+            "min": 6.446562,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "exact A* GED",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "linux",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.658625,
+          "mean": 0.658625,
+          "min": 0.658625,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1187.424,
+          "mean": 1187.424,
+          "min": 1187.424,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1280.427,
+          "mean": 1280.427,
+          "min": 1280.427,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 1.360405,
+          "mean": 1.360405,
+          "min": 1.360405,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 10.609648,
+          "mean": 10.609648,
+          "min": 10.609648,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.952716,
+          "mean": 0.952716,
+          "min": 0.952716,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 284.125,
+          "mean": 284.125,
+          "min": 284.125,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.7,
+          "mean": 0.7,
+          "min": 0.7,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 1.815334,
+          "mean": 1.815334,
+          "min": 1.815334,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.821375,
+          "mean": 0.821375,
+          "min": 0.821375,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.831,
+          "mean": 0.831,
+          "min": 0.831,
+          "std": null
+        }
+      },
+      "model_id": "graph2region",
+      "model_name": "Graph2Region",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            1.057997,
+            1.719087
+          ],
+          "mae_similarity": [
+            0.07334,
+            0.102222
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "exact",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T155151Z-7422cf0d",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              1.057997,
+              1.719087
+            ],
+            "mae_similarity_ci95": [
+              0.07334,
+              0.102222
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.658625,
+            "latency_p50_ms": 1187.424,
+            "latency_p95_ms": 1280.427,
+            "mae_ged": 1.360405,
+            "mse_similarity_x1e3": 10.609648,
+            "ndcg_at_k": 0.952716,
+            "peak_rss_mb": 284.125,
+            "precision_at_10": 0.7,
+            "rmse_ged": 1.815334,
+            "spearman_ged": 0.821375,
+            "throughput_pairs_per_second": 0.831
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 7.5,
+              "average_size_min": 5.5,
+              "bucket": "small",
+              "mae_ged": 1.194928,
+              "mse_similarity_x1e3": 8.406486,
+              "samples": 23
+            },
+            {
+              "average_size_max": 8.0,
+              "average_size_min": 8.0,
+              "bucket": "medium",
+              "mae_ged": 1.595146,
+              "mse_similarity_x1e3": 15.905483,
+              "samples": 13
+            },
+            {
+              "average_size_max": 10.0,
+              "average_size_min": 8.5,
+              "bucket": "large",
+              "mae_ged": 1.414288,
+              "mse_similarity_x1e3": 9.311569,
+              "samples": 14
+            }
+          ],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.414288,
+            "mean": 1.414288,
+            "min": 1.414288,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 9.311569,
+            "mean": 9.311569,
+            "min": 9.311569,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.595146,
+            "mean": 1.595146,
+            "min": 1.595146,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 15.905483,
+            "mean": 15.905483,
+            "min": 15.905483,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.194928,
+            "mean": 1.194928,
+            "min": 1.194928,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 8.406486,
+            "mean": 8.406486,
+            "min": 8.406486,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "exact A* GED",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        3407
+      ],
+      "complete": true,
+      "dataset_id": "linux",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.789645,
+          "mean": 0.789645,
+          "min": 0.789645,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 2803.606,
+          "mean": 2803.606,
+          "min": 2803.606,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 3122.514,
+          "mean": 3122.514,
+          "min": 3122.514,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 1.084162,
+          "mean": 1.084162,
+          "min": 1.084162,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 11.012762,
+          "mean": 11.012762,
+          "min": 11.012762,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.935328,
+          "mean": 0.935328,
+          "min": 0.935328,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 766.0,
+          "mean": 766.0,
+          "min": 766.0,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.7,
+          "mean": 0.7,
+          "min": 0.7,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 1.307964,
+          "mean": 1.307964,
+          "min": 1.307964,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.908221,
+          "mean": 0.908221,
+          "min": 0.908221,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.35,
+          "mean": 0.35,
+          "min": 0.35,
+          "std": null
+        }
+      },
+      "model_id": "multiscale-set",
+      "model_name": "Multi-Scale Convolutional Set Matching",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            0.875685,
+            1.298878
+          ],
+          "mae_similarity": [
+            0.06345,
+            0.099704
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "exact",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T154824Z-c52da025",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              0.875685,
+              1.298878
+            ],
+            "mae_similarity_ci95": [
+              0.06345,
+              0.099704
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.789645,
+            "latency_p50_ms": 2803.606,
+            "latency_p95_ms": 3122.514,
+            "mae_ged": 1.084162,
+            "mse_similarity_x1e3": 11.012762,
+            "ndcg_at_k": 0.935328,
+            "peak_rss_mb": 766.0,
+            "precision_at_10": 0.7,
+            "rmse_ged": 1.307964,
+            "spearman_ged": 0.908221,
+            "throughput_pairs_per_second": 0.35
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 7.5,
+              "average_size_min": 5.5,
+              "bucket": "small",
+              "mae_ged": 1.245331,
+              "mse_similarity_x1e3": 16.011638,
+              "samples": 23
+            },
+            {
+              "average_size_max": 8.0,
+              "average_size_min": 8.0,
+              "bucket": "medium",
+              "mae_ged": 0.678624,
+              "mse_similarity_x1e3": 4.585255,
+              "samples": 13
+            },
+            {
+              "average_size_max": 10.0,
+              "average_size_min": 8.5,
+              "bucket": "large",
+              "mae_ged": 1.195955,
+              "mse_similarity_x1e3": 8.768722,
+              "samples": 14
+            }
+          ],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.195955,
+            "mean": 1.195955,
+            "min": 1.195955,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 8.768722,
+            "mean": 8.768722,
+            "min": 8.768722,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 0.678624,
+            "mean": 0.678624,
+            "min": 0.678624,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 4.585255,
+            "mean": 4.585255,
+            "min": 4.585255,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.245331,
+            "mean": 1.245331,
+            "min": 1.245331,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 16.011638,
+            "mean": 16.011638,
+            "min": 16.011638,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "exact A* GED",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "linux",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.883898,
+          "mean": 0.883898,
+          "min": 0.883898,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1161.857,
+          "mean": 1161.857,
+          "min": 1161.857,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1328.189,
+          "mean": 1328.189,
+          "min": 1328.189,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 0.573866,
+          "mean": 0.573866,
+          "min": 0.573866,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 2.251903,
+          "mean": 2.251903,
+          "min": 2.251903,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.989106,
+          "mean": 0.989106,
+          "min": 0.989106,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 289.859,
+          "mean": 289.859,
+          "min": 289.859,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.9,
+          "mean": 0.9,
+          "min": 0.9,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 0.74524,
+          "mean": 0.74524,
+          "min": 0.74524,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.965879,
+          "mean": 0.965879,
+          "min": 0.965879,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.833,
+          "mean": 0.833,
+          "min": 0.833,
+          "std": null
+        }
+      },
+      "model_id": "segmn",
+      "model_name": "SEGMN",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            0.452144,
+            0.713649
+          ],
+          "mae_similarity": [
+            0.030466,
+            0.045618
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "exact",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T154933Z-aa3ee22a",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              0.452144,
+              0.713649
+            ],
+            "mae_similarity_ci95": [
+              0.030466,
+              0.045618
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.883898,
+            "latency_p50_ms": 1161.857,
+            "latency_p95_ms": 1328.189,
+            "mae_ged": 0.573866,
+            "mse_similarity_x1e3": 2.251903,
+            "ndcg_at_k": 0.989106,
+            "peak_rss_mb": 289.859,
+            "precision_at_10": 0.9,
+            "rmse_ged": 0.74524,
+            "spearman_ged": 0.965879,
+            "throughput_pairs_per_second": 0.833
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 7.5,
+              "average_size_min": 5.5,
+              "bucket": "small",
+              "mae_ged": 0.515571,
+              "mse_similarity_x1e3": 2.141616,
+              "samples": 23
+            },
+            {
+              "average_size_max": 8.0,
+              "average_size_min": 8.0,
+              "bucket": "medium",
+              "mae_ged": 0.546843,
+              "mse_similarity_x1e3": 2.243856,
+              "samples": 13
+            },
+            {
+              "average_size_max": 10.0,
+              "average_size_min": 8.5,
+              "bucket": "large",
+              "mae_ged": 0.694732,
+              "mse_similarity_x1e3": 2.440562,
+              "samples": 14
+            }
+          ],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 0.694732,
+            "mean": 0.694732,
+            "min": 0.694732,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 2.440562,
+            "mean": 2.440562,
+            "min": 2.440562,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 0.546843,
+            "mean": 0.546843,
+            "min": 0.546843,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 2.243856,
+            "mean": 2.243856,
+            "min": 2.243856,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 0.515571,
+            "mean": 0.515571,
+            "min": 0.515571,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 2.141616,
+            "mean": 2.141616,
+            "min": 2.141616,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "exact A* GED",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        3407
+      ],
+      "complete": true,
+      "dataset_id": "linux",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.791037,
+          "mean": 0.791037,
+          "min": 0.791037,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1582.788,
+          "mean": 1582.788,
+          "min": 1582.788,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1674.605,
+          "mean": 1674.605,
+          "min": 1674.605,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 1.006579,
+          "mean": 1.006579,
+          "min": 1.006579,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 11.412284,
+          "mean": 11.412284,
+          "min": 11.412284,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.775788,
+          "mean": 0.775788,
+          "min": 0.775788,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 279.641,
+          "mean": 279.641,
+          "min": 279.641,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.5,
+          "mean": 0.5,
+          "min": 0.5,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 1.303096,
+          "mean": 1.303096,
+          "min": 1.303096,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.915048,
+          "mean": 0.915048,
+          "min": 0.915048,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.621,
+          "mean": 0.621,
+          "min": 0.621,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            0.784241,
+            1.241549
+          ],
+          "mae_similarity": [
+            0.058526,
+            0.09868
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "exact",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T154552Z-c08154ad",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              0.784241,
+              1.241549
+            ],
+            "mae_similarity_ci95": [
+              0.058526,
+              0.09868
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.791037,
+            "latency_p50_ms": 1582.788,
+            "latency_p95_ms": 1674.605,
+            "mae_ged": 1.006579,
+            "mse_similarity_x1e3": 11.412284,
+            "ndcg_at_k": 0.775788,
+            "peak_rss_mb": 279.641,
+            "precision_at_10": 0.5,
+            "rmse_ged": 1.303096,
+            "spearman_ged": 0.915048,
+            "throughput_pairs_per_second": 0.621
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 7.5,
+              "average_size_min": 5.5,
+              "bucket": "small",
+              "mae_ged": 0.966475,
+              "mse_similarity_x1e3": 12.450704,
+              "samples": 23
+            },
+            {
+              "average_size_max": 8.0,
+              "average_size_min": 8.0,
+              "bucket": "medium",
+              "mae_ged": 1.049041,
+              "mse_similarity_x1e3": 13.856867,
+              "samples": 13
+            },
+            {
+              "average_size_max": 10.0,
+              "average_size_min": 8.5,
+              "bucket": "large",
+              "mae_ged": 1.033035,
+              "mse_similarity_x1e3": 7.43634,
+              "samples": 14
+            }
+          ],
+          "target_source": "exact A* GED",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.033035,
+            "mean": 1.033035,
+            "min": 1.033035,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 7.43634,
+            "mean": 7.43634,
+            "min": 7.43634,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 1.049041,
+            "mean": 1.049041,
+            "min": 1.049041,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 13.856867,
+            "mean": 13.856867,
+            "min": 13.856867,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 0.966475,
+            "mean": 0.966475,
+            "min": 0.966475,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 12.450704,
+            "mean": 12.450704,
+            "min": 12.450704,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "exact A* GED",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "ptc",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.802449,
+          "mean": 0.802449,
+          "min": 0.802449,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1293.386,
+          "mean": 1293.386,
+          "min": 1293.386,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1396.276,
+          "mean": 1396.276,
+          "min": 1396.276,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 17.114154,
+          "mean": 17.114154,
+          "min": 17.114154,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 8.960377,
+          "mean": 8.960377,
+          "min": 8.960377,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.936387,
+          "mean": 0.936387,
+          "min": 0.936387,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 288.312,
+          "mean": 288.312,
+          "min": 288.312,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.6,
+          "mean": 0.6,
+          "min": 0.6,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 50.025761,
+          "mean": 50.025761,
+          "min": 50.025761,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.935366,
+          "mean": 0.935366,
+          "min": 0.935366,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.766,
+          "mean": 0.766,
+          "min": 0.766,
+          "std": null
+        }
+      },
+      "model_id": "graph-fusion",
+      "model_name": "Graph Fusion",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            7.564649,
+            32.349734
+          ],
+          "mae_similarity": [
+            0.044531,
+            0.086028
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "approximate_benchmark",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T160557Z-17c577e4",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              7.564649,
+              32.349734
+            ],
+            "mae_similarity_ci95": [
+              0.044531,
+              0.086028
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.802449,
+            "latency_p50_ms": 1293.386,
+            "latency_p95_ms": 1396.276,
+            "mae_ged": 17.114154,
+            "mse_similarity_x1e3": 8.960377,
+            "ndcg_at_k": 0.936387,
+            "peak_rss_mb": 288.312,
+            "precision_at_10": 0.6,
+            "rmse_ged": 50.025761,
+            "spearman_ged": 0.935366,
+            "throughput_pairs_per_second": 0.766
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 20.5,
+              "average_size_min": 8.0,
+              "bucket": "small",
+              "mae_ged": 6.430644,
+              "mse_similarity_x1e3": 20.363054,
+              "samples": 18
+            },
+            {
+              "average_size_max": 28.0,
+              "average_size_min": 22.0,
+              "bucket": "medium",
+              "mae_ged": 9.075047,
+              "mse_similarity_x1e3": 3.133296,
+              "samples": 15
+            },
+            {
+              "average_size_max": 65.5,
+              "average_size_min": 32.0,
+              "bucket": "large",
+              "mae_ged": 35.519435,
+              "mse_similarity_x1e3": 2.028497,
+              "samples": 17
+            }
+          ],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 35.519435,
+            "mean": 35.519435,
+            "min": 35.519435,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 2.028497,
+            "mean": 2.028497,
+            "min": 2.028497,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 9.075047,
+            "mean": 9.075047,
+            "min": 9.075047,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 3.133296,
+            "mean": 3.133296,
+            "min": 3.133296,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 6.430644,
+            "mean": 6.430644,
+            "min": 6.430644,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 20.363054,
+            "mean": 20.363054,
+            "min": 20.363054,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "approximate GED benchmark upper bound",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "ptc",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.397551,
+          "mean": 0.397551,
+          "min": 0.397551,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1260.263,
+          "mean": 1260.263,
+          "min": 1260.263,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1367.265,
+          "mean": 1367.265,
+          "min": 1367.265,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 21.334525,
+          "mean": 21.334525,
+          "min": 21.334525,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 31.182235,
+          "mean": 31.182235,
+          "min": 31.182235,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.614522,
+          "mean": 0.614522,
+          "min": 0.614522,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 284.359,
+          "mean": 284.359,
+          "min": 284.359,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.4,
+          "mean": 0.4,
+          "min": 0.4,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 30.576633,
+          "mean": 30.576633,
+          "min": 30.576633,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.560144,
+          "mean": 0.560144,
+          "min": 0.560144,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.782,
+          "mean": 0.782,
+          "min": 0.782,
+          "std": null
+        }
+      },
+      "model_id": "graph2region",
+      "model_name": "Graph2Region",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            15.989365,
+            27.669939
+          ],
+          "mae_similarity": [
+            0.111352,
+            0.170745
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "approximate_benchmark",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T160706Z-ebd770b2",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              15.989365,
+              27.669939
+            ],
+            "mae_similarity_ci95": [
+              0.111352,
+              0.170745
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.397551,
+            "latency_p50_ms": 1260.263,
+            "latency_p95_ms": 1367.265,
+            "mae_ged": 21.334525,
+            "mse_similarity_x1e3": 31.182235,
+            "ndcg_at_k": 0.614522,
+            "peak_rss_mb": 284.359,
+            "precision_at_10": 0.4,
+            "rmse_ged": 30.576633,
+            "spearman_ged": 0.560144,
+            "throughput_pairs_per_second": 0.782
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 20.5,
+              "average_size_min": 8.0,
+              "bucket": "small",
+              "mae_ged": 8.576879,
+              "mse_similarity_x1e3": 17.629764,
+              "samples": 18
+            },
+            {
+              "average_size_max": 28.0,
+              "average_size_min": 22.0,
+              "bucket": "medium",
+              "mae_ged": 19.001983,
+              "mse_similarity_x1e3": 29.433693,
+              "samples": 15
+            },
+            {
+              "average_size_max": 65.5,
+              "average_size_min": 32.0,
+              "bucket": "large",
+              "mae_ged": 36.900746,
+              "mse_similarity_x1e3": 47.074741,
+              "samples": 17
+            }
+          ],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 36.900746,
+            "mean": 36.900746,
+            "min": 36.900746,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 47.074741,
+            "mean": 47.074741,
+            "min": 47.074741,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 19.001983,
+            "mean": 19.001983,
+            "min": 19.001983,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 29.433693,
+            "mean": 29.433693,
+            "min": 29.433693,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 8.576879,
+            "mean": 8.576879,
+            "min": 8.576879,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 17.629764,
+            "mean": 17.629764,
+            "min": 17.629764,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "approximate GED benchmark upper bound",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "ptc",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.843265,
+          "mean": 0.843265,
+          "min": 0.843265,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 2719.156,
+          "mean": 2719.156,
+          "min": 2719.156,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 2852.31,
+          "mean": 2852.31,
+          "min": 2852.31,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 8.013453,
+          "mean": 8.013453,
+          "min": 8.013453,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 11.186433,
+          "mean": 11.186433,
+          "min": 11.186433,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.878565,
+          "mean": 0.878565,
+          "min": 0.878565,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 524.891,
+          "mean": 524.891,
+          "min": 524.891,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.6,
+          "mean": 0.6,
+          "min": 0.6,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 10.995855,
+          "mean": 10.995855,
+          "min": 10.995855,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.950444,
+          "mean": 0.950444,
+          "min": 0.950444,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.363,
+          "mean": 0.363,
+          "min": 0.363,
+          "std": null
+        }
+      },
+      "model_id": "multiscale-set",
+      "model_name": "Multi-Scale Convolutional Set Matching",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            6.249063,
+            10.35213
+          ],
+          "mae_similarity": [
+            0.039348,
+            0.08737
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "approximate_benchmark",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T160336Z-561571eb",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              6.249063,
+              10.35213
+            ],
+            "mae_similarity_ci95": [
+              0.039348,
+              0.08737
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.843265,
+            "latency_p50_ms": 2719.156,
+            "latency_p95_ms": 2852.31,
+            "mae_ged": 8.013453,
+            "mse_similarity_x1e3": 11.186433,
+            "ndcg_at_k": 0.878565,
+            "peak_rss_mb": 524.891,
+            "precision_at_10": 0.6,
+            "rmse_ged": 10.995855,
+            "spearman_ged": 0.950444,
+            "throughput_pairs_per_second": 0.363
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 20.5,
+              "average_size_min": 8.0,
+              "bucket": "small",
+              "mae_ged": 3.990874,
+              "mse_similarity_x1e3": 22.133612,
+              "samples": 18
+            },
+            {
+              "average_size_max": 28.0,
+              "average_size_min": 22.0,
+              "bucket": "medium",
+              "mae_ged": 6.779283,
+              "mse_similarity_x1e3": 5.903321,
+              "samples": 15
+            },
+            {
+              "average_size_max": 65.5,
+              "average_size_min": 32.0,
+              "bucket": "large",
+              "mae_ged": 13.361626,
+              "mse_similarity_x1e3": 4.256872,
+              "samples": 17
+            }
+          ],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 13.361626,
+            "mean": 13.361626,
+            "min": 13.361626,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 4.256872,
+            "mean": 4.256872,
+            "min": 4.256872,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 6.779283,
+            "mean": 6.779283,
+            "min": 6.779283,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 5.903321,
+            "mean": 5.903321,
+            "min": 5.903321,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 3.990874,
+            "mean": 3.990874,
+            "min": 3.990874,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 22.133612,
+            "mean": 22.133612,
+            "min": 22.133612,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "approximate GED benchmark upper bound",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "ptc",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.626586,
+          "mean": 0.626586,
+          "min": 0.626586,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1306.387,
+          "mean": 1306.387,
+          "min": 1306.387,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1425.995,
+          "mean": 1425.995,
+          "min": 1425.995,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 14.838236,
+          "mean": 14.838236,
+          "min": 14.838236,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 19.463081,
+          "mean": 19.463081,
+          "min": 19.463081,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.889526,
+          "mean": 0.889526,
+          "min": 0.889526,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 315.906,
+          "mean": 315.906,
+          "min": 315.906,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.6,
+          "mean": 0.6,
+          "min": 0.6,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 25.746697,
+          "mean": 25.746697,
+          "min": 25.746697,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.801124,
+          "mean": 0.801124,
+          "min": 0.801124,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.745,
+          "mean": 0.745,
+          "min": 0.745,
+          "std": null
+        }
+      },
+      "model_id": "segmn",
+      "model_name": "SEGMN",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            9.365054,
+            21.617767
+          ],
+          "mae_similarity": [
+            0.072252,
+            0.125687
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "approximate_benchmark",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T160448Z-f3702a39",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              9.365054,
+              21.617767
+            ],
+            "mae_similarity_ci95": [
+              0.072252,
+              0.125687
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.626586,
+            "latency_p50_ms": 1306.387,
+            "latency_p95_ms": 1425.995,
+            "mae_ged": 14.838236,
+            "mse_similarity_x1e3": 19.463081,
+            "ndcg_at_k": 0.889526,
+            "peak_rss_mb": 315.906,
+            "precision_at_10": 0.6,
+            "rmse_ged": 25.746697,
+            "spearman_ged": 0.801124,
+            "throughput_pairs_per_second": 0.745
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 20.5,
+              "average_size_min": 8.0,
+              "bucket": "small",
+              "mae_ged": 3.927387,
+              "mse_similarity_x1e3": 12.013234,
+              "samples": 18
+            },
+            {
+              "average_size_max": 28.0,
+              "average_size_min": 22.0,
+              "bucket": "medium",
+              "mae_ged": 6.278255,
+              "mse_similarity_x1e3": 7.700753,
+              "samples": 15
+            },
+            {
+              "average_size_max": 65.5,
+              "average_size_min": 32.0,
+              "bucket": "large",
+              "mae_ged": 33.943823,
+              "mse_similarity_x1e3": 37.729678,
+              "samples": 17
+            }
+          ],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 33.943823,
+            "mean": 33.943823,
+            "min": 33.943823,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 37.729678,
+            "mean": 37.729678,
+            "min": 37.729678,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 6.278255,
+            "mean": 6.278255,
+            "min": 6.278255,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 7.700753,
+            "mean": 7.700753,
+            "min": 7.700753,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 3.927387,
+            "mean": 3.927387,
+            "min": 3.927387,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 12.013234,
+            "mean": 12.013234,
+            "min": 12.013234,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "approximate GED benchmark upper bound",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    },
+    {
+      "checkpoint_seeds": [
+        379
+      ],
+      "complete": true,
+      "dataset_id": "ptc",
+      "evaluated_seeds": [
+        379
+      ],
+      "expected_seeds": [
+        379
+      ],
+      "metrics": {
+        "kendall_ged": {
+          "count": 1,
+          "max": 0.799184,
+          "mean": 0.799184,
+          "min": 0.799184,
+          "std": null
+        },
+        "latency_p50_ms": {
+          "count": 1,
+          "max": 1667.507,
+          "mean": 1667.507,
+          "min": 1667.507,
+          "std": null
+        },
+        "latency_p95_ms": {
+          "count": 1,
+          "max": 1823.773,
+          "mean": 1823.773,
+          "min": 1823.773,
+          "std": null
+        },
+        "mae_ged": {
+          "count": 1,
+          "max": 42.700638,
+          "mean": 42.700638,
+          "min": 42.700638,
+          "std": null
+        },
+        "mse_similarity_x1e3": {
+          "count": 1,
+          "max": 10.589863,
+          "mean": 10.589863,
+          "min": 10.589863,
+          "std": null
+        },
+        "ndcg_at_k": {
+          "count": 1,
+          "max": 0.959177,
+          "mean": 0.959177,
+          "min": 0.959177,
+          "std": null
+        },
+        "peak_rss_mb": {
+          "count": 1,
+          "max": 279.969,
+          "mean": 279.969,
+          "min": 279.969,
+          "std": null
+        },
+        "precision_at_10": {
+          "count": 1,
+          "max": 0.7,
+          "mean": 0.7,
+          "min": 0.7,
+          "std": null
+        },
+        "rmse_ged": {
+          "count": 1,
+          "max": 132.595262,
+          "mean": 132.595262,
+          "min": 132.595262,
+          "std": null
+        },
+        "spearman_ged": {
+          "count": 1,
+          "max": 0.932677,
+          "mean": 0.932677,
+          "min": 0.932677,
+          "std": null
+        },
+        "throughput_pairs_per_second": {
+          "count": 1,
+          "max": 0.587,
+          "mean": 0.587,
+          "min": 0.587,
+          "std": null
+        }
+      },
+      "model_id": "simgnn",
+      "model_name": "SimGNN",
+      "pair_bootstrap_ci95_by_seed": [
+        {
+          "evaluated_samples": 50,
+          "mae_ged": [
+            16.433583,
+            82.006058
+          ],
+          "mae_similarity": [
+            0.058655,
+            0.096134
+          ],
+          "seed": 379
+        }
+      ],
+      "pair_split_verified": true,
+      "reference_kind": "approximate_benchmark",
+      "runs": [
+        {
+          "benchmark_run_id": "20260826T160114Z-d03a50a5",
+          "benchmark_status": "evaluated",
+          "evidence": {
+            "evaluated_samples": 50,
+            "mae_ged_ci95": [
+              16.433583,
+              82.006058
+            ],
+            "mae_similarity_ci95": [
+              0.058655,
+              0.096134
+            ]
+          },
+          "metrics": {
+            "kendall_ged": 0.799184,
+            "latency_p50_ms": 1667.507,
+            "latency_p95_ms": 1823.773,
+            "mae_ged": 42.700638,
+            "mse_similarity_x1e3": 10.589863,
+            "ndcg_at_k": 0.959177,
+            "peak_rss_mb": 279.969,
+            "precision_at_10": 0.7,
+            "rmse_ged": 132.595262,
+            "spearman_ged": 0.932677,
+            "throughput_pairs_per_second": 0.587
+          },
+          "pair_split_verified": true,
+          "seed": 379,
+          "size_generalization": [
+            {
+              "average_size_max": 20.5,
+              "average_size_min": 8.0,
+              "bucket": "small",
+              "mae_ged": 6.784071,
+              "mse_similarity_x1e3": 15.228542,
+              "samples": 18
+            },
+            {
+              "average_size_max": 28.0,
+              "average_size_min": 22.0,
+              "bucket": "medium",
+              "mae_ged": 14.581447,
+              "mse_similarity_x1e3": 6.05356,
+              "samples": 15
+            },
+            {
+              "average_size_max": 65.5,
+              "average_size_min": 32.0,
+              "bucket": "large",
+              "mae_ged": 105.540996,
+              "mse_similarity_x1e3": 9.680943,
+              "samples": 17
+            }
+          ],
+          "target_source": "approximate GED benchmark upper bound",
+          "training_duration_seconds": 0.0,
+          "training_status": "completed"
+        }
+      ],
+      "seed_coverage": 1.0,
+      "size_generalization": [
+        {
+          "bucket": "large",
+          "mae_ged": {
+            "count": 1,
+            "max": 105.540996,
+            "mean": 105.540996,
+            "min": 105.540996,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 9.680943,
+            "mean": 9.680943,
+            "min": 9.680943,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "medium",
+          "mae_ged": {
+            "count": 1,
+            "max": 14.581447,
+            "mean": 14.581447,
+            "min": 14.581447,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 6.05356,
+            "mean": 6.05356,
+            "min": 6.05356,
+            "std": null
+          },
+          "runs": 1
+        },
+        {
+          "bucket": "small",
+          "mae_ged": {
+            "count": 1,
+            "max": 6.784071,
+            "mean": 6.784071,
+            "min": 6.784071,
+            "std": null
+          },
+          "mse_similarity_x1e3": {
+            "count": 1,
+            "max": 15.228542,
+            "mean": 15.228542,
+            "min": 15.228542,
+            "std": null
+          },
+          "runs": 1
+        }
+      ],
+      "target_source": "approximate GED benchmark upper bound",
+      "training_duration_seconds": {
+        "count": 1,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "std": null
+      },
+      "training_skipped": true
+    }
+  ],
+  "run_id": "20260826T153715Z"
+}

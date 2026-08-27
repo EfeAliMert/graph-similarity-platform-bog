@@ -1,0 +1,94 @@
+{
+  "active_checkpoint": "Models&Datasets/Graph2Region-main/checkpoints/aids700nef/g2r_aids700nef_best.pt",
+  "best_trial": {
+    "checkpoint": "training_logs/hpo/graph2region/aids700nef/20260822T235518Z_ee97f9/trial_000/model.pt",
+    "config": {
+      "batch_size": 16,
+      "learning_rate": 0.001
+    },
+    "index": 0,
+    "return_code": 0,
+    "status": "completed",
+    "validation_mse": 0.07516176998615265
+  },
+  "budget": 8,
+  "completed_trials": 3,
+  "created_at": "2026-08-22T23:55:35.260773+00:00",
+  "dataset_id": "aids700nef",
+  "improved_over_incumbent": true,
+  "incumbent_pair_split": {
+    "candidate_pairs": 156520,
+    "pair_overlap": 0,
+    "seed": 3408,
+    "split_sha256": "bfa9f1d42fa52a9349c02cd0901a2547c465e6faf07a7c26ee0a1a756c3105be",
+    "strategy": "deterministic normalized-GED-stratified pair holdout",
+    "training_pairs": 156456,
+    "validation_pairs": 64
+  },
+  "incumbent_validation_mse": 0.08446325361728668,
+  "model_id": "graph2region",
+  "objective": "minimum validation similarity MSE",
+  "pair_split": {
+    "candidate_pairs": 156520,
+    "pair_overlap": 0,
+    "seed": 3408,
+    "split_sha256": "bfa9f1d42fa52a9349c02cd0901a2547c465e6faf07a7c26ee0a1a756c3105be",
+    "strategy": "deterministic normalized-GED-stratified pair holdout",
+    "training_pairs": 156456,
+    "validation_pairs": 64
+  },
+  "promoted": true,
+  "promoted_files": [
+    "Models&Datasets/Graph2Region-main/checkpoints/aids700nef/g2r_aids700nef_best.pt"
+  ],
+  "requested_trials": 3,
+  "seed": 379,
+  "split_seed": 3408,
+  "strategy": "deterministic shuffled grid search",
+  "study_id": "20260822T235518Z_ee97f9",
+  "target": {
+    "dataset_id": "aids700nef",
+    "exact": true,
+    "pairs": 392000,
+    "path": "Models&Datasets/drive-download-20260630T100606Z-3-001/aids700nef_ged_astar_gidpair_dist_map.pickle",
+    "target_semantics": null,
+    "target_source": "exact benchmark GED"
+  },
+  "test_set_used_for_selection": false,
+  "trials": [
+    {
+      "checkpoint": "training_logs/hpo/graph2region/aids700nef/20260822T235518Z_ee97f9/trial_000/model.pt",
+      "config": {
+        "batch_size": 16,
+        "learning_rate": 0.001
+      },
+      "index": 0,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.07516176998615265
+    },
+    {
+      "checkpoint": "training_logs/hpo/graph2region/aids700nef/20260822T235518Z_ee97f9/trial_001/model.pt",
+      "config": {
+        "batch_size": 16,
+        "learning_rate": 0.002
+      },
+      "index": 1,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.07591749727725983
+    },
+    {
+      "checkpoint": "training_logs/hpo/graph2region/aids700nef/20260822T235518Z_ee97f9/trial_002/model.pt",
+      "config": {
+        "batch_size": 8,
+        "learning_rate": 0.0003
+      },
+      "index": 2,
+      "return_code": 0,
+      "status": "completed",
+      "validation_mse": 0.08298393338918686
+    }
+  ],
+  "validation_protocol_comparable": true
+}
