@@ -1,0 +1,206 @@
+diff --git a/src/main.py b/src/main.py
+index d4d55e9..c5e373f 100644
+--- a/src/main.py
++++ b/src/main.py
+@@ -16,7 +16,8 @@ def main():
+         trainer.load()
+     else:
+         trainer.fit()
+-    trainer.score()
++    if not args.skip_test:
++        trainer.score()
+     if args.save_path:
+         trainer.save()
+ 
+diff --git a/src/param_parser.py b/src/param_parser.py
+index 722bb9c..949b55c 100644
+--- a/src/param_parser.py
++++ b/src/param_parser.py
+@@ -19,6 +19,11 @@ def parameter_parser():
+                         default="./dataset/test/",
+ 	                help="Folder with testing graph pair jsons.")
+ 
++    parser.add_argument("--validation-graphs",
++                        nargs="?",
++                        default=None,
++                        help="Folder with validation graph pair jsons used for best-checkpoint selection.")
++
+     parser.add_argument("--epochs",
+                         type=int,
+                         default=5,
+@@ -90,4 +95,13 @@ def parameter_parser():
+                         default=None,
+                         help="Load a pretrained model")
+ 
++    parser.add_argument("--seed",
++                        type=int,
++                        default=379,
++                        help="Random seed. Default is 379.")
++
++    parser.add_argument("--skip-test",
++                        action="store_true",
++                        help="Skip test scoring during validation-only HPO.")
++
+     return parser.parse_args()
+diff --git a/src/simgnn.py b/src/simgnn.py
+index 01a77be..8f0b5ba 100644
+--- a/src/simgnn.py
++++ b/src/simgnn.py
+@@ -1,6 +1,8 @@
+ """SimGNN class and runner."""
+ 
+ import glob
++import copy
++from pathlib import Path
+ import torch
+ import random
+ import numpy as np
+@@ -122,6 +124,9 @@ class SimGNNTrainer(object):
+         :param args: Arguments object.
+         """
+         self.args = args
++        random.seed(self.args.seed)
++        np.random.seed(self.args.seed)
++        torch.manual_seed(self.args.seed)
+         self.initial_label_enumeration()
+         self.setup_model()
+ 
+@@ -138,7 +143,12 @@ class SimGNNTrainer(object):
+         print("\nEnumerating unique labels.\n")
+         self.training_graphs = glob.glob(self.args.training_graphs + "*.json")
+         self.testing_graphs = glob.glob(self.args.testing_graphs + "*.json")
+-        graph_pairs = self.training_graphs + self.testing_graphs
++        self.validation_graphs = (
++            glob.glob(self.args.validation_graphs + "*.json")
++            if self.args.validation_graphs
++            else []
++        )
++        graph_pairs = self.training_graphs + self.validation_graphs + self.testing_graphs
+         self.global_labels = set()
+         for graph_pair in tqdm(graph_pairs):
+             data = process_pair(graph_pair)
+@@ -203,14 +213,16 @@ class SimGNNTrainer(object):
+         :return loss: Loss on the batch.
+         """
+         self.optimizer.zero_grad()
+-        losses = 0
++        losses = []
+         for graph_pair in batch:
+             data = process_pair(graph_pair)
+             data = self.transfer_to_torch(data)
+-            target = data["target"]
+-            prediction = self.model(data)
+-            losses = losses + torch.nn.functional.mse_loss(data["target"], prediction)
+-        losses.backward(retain_graph=True)
++            prediction = self.model(data).view(-1)
++            losses.append(
++                torch.nn.functional.mse_loss(data["target"].view(-1), prediction)
++            )
++        losses = torch.stack(losses).mean()
++        losses.backward()
+         self.optimizer.step()
+         loss = losses.item()
+         return loss
+@@ -227,6 +239,8 @@ class SimGNNTrainer(object):
+ 
+         self.model.train()
+         epochs = trange(self.args.epochs, leave=True, desc="Epoch")
++        best_validation_loss = float("inf")
++        best_state = None
+         for epoch in epochs:
+             batches = self.create_batches()
+             self.loss_sum = 0
+@@ -237,6 +251,52 @@ class SimGNNTrainer(object):
+                 self.loss_sum = self.loss_sum + loss_score * len(batch)
+                 loss = self.loss_sum/main_index
+                 epochs.set_description("Epoch (Loss=%g)" % round(loss, 5))
++            if self.validation_graphs:
++                validation_loss, validation_spearman, validation_mae = (
++                    self.evaluate_similarity_metrics(self.validation_graphs)
++                )
++                print(
++                    "\nEpoch {} validation similarity MSE: {:.6f}. "
++                    "validation_spearman={:.6f} validation_mae={:.6f}".format(
++                        epoch + 1,
++                        validation_loss,
++                        validation_spearman,
++                        validation_mae,
++                    )
++                )
++                if validation_loss < best_validation_loss:
++                    best_validation_loss = validation_loss
++                    best_state = copy.deepcopy(self.model.state_dict())
++            self.model.train()
++        if best_state is not None:
++            self.model.load_state_dict(best_state)
++            print(
++                "\nRestored best validation checkpoint (MSE={:.6f}).".format(
++                    best_validation_loss
++                )
++            )
++
++    def evaluate_similarity_mse(self, graph_pairs):
++        return self.evaluate_similarity_metrics(graph_pairs)[0]
++
++    def evaluate_similarity_metrics(self, graph_pairs):
++        self.model.eval()
++        predictions = []
++        targets = []
++        with torch.no_grad():
++            for graph_pair in graph_pairs:
++                data = self.transfer_to_torch(process_pair(graph_pair))
++                prediction = self.model(data).view(-1)
++                predictions.append(float(prediction.item()))
++                targets.append(float(data["target"].view(-1).item()))
++        if not predictions:
++            return float("inf"), 0.0, float("inf")
++        errors = np.asarray(predictions) - np.asarray(targets)
++        return (
++            float(np.mean(errors ** 2)),
++            _spearman_correlation(predictions, targets),
++            float(np.mean(np.abs(errors))),
++        )
+ 
+     def score(self):
+         """
+@@ -266,7 +326,40 @@ class SimGNNTrainer(object):
+         print("\nModel test error: " +str(round(model_error, 5))+".")
+ 
+     def save(self):
++        Path(self.args.save_path).parent.mkdir(parents=True, exist_ok=True)
+         torch.save(self.model.state_dict(), self.args.save_path)
+ 
+     def load(self):
+         self.model.load_state_dict(torch.load(self.args.load_path))
++
++
++def _spearman_correlation(left, right):
++    if len(left) != len(right) or len(left) < 2:
++        return 0.0
++    left_ranks = _average_ranks(left)
++    right_ranks = _average_ranks(right)
++    left_mean = np.mean(left_ranks)
++    right_mean = np.mean(right_ranks)
++    numerator = np.sum(
++        (left_ranks - left_mean) * (right_ranks - right_mean)
++    )
++    denominator = np.sqrt(
++        np.sum((left_ranks - left_mean) ** 2)
++        * np.sum((right_ranks - right_mean) ** 2)
++    )
++    return float(numerator / denominator) if denominator > 0 else 0.0
++
++
++def _average_ranks(values):
++    ordered = sorted(enumerate(values), key=lambda item: (float(item[1]), item[0]))
++    ranks = np.zeros(len(values), dtype=float)
++    cursor = 0
++    while cursor < len(ordered):
++        end = cursor + 1
++        while end < len(ordered) and float(ordered[end][1]) == float(ordered[cursor][1]):
++            end += 1
++        average_rank = (cursor + 1 + end) / 2.0
++        for position in range(cursor, end):
++            ranks[ordered[position][0]] = average_rank
++        cursor = end
++    return ranks

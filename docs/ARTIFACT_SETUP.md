@@ -1,8 +1,9 @@
 # Local Artifact Setup
 
 The Git repository contains the Flask application, adapters, training scripts,
-tests, and documentation. It does not contain the five model repositories,
-dataset archives, Python environments, or trained checkpoints.
+compatibility patches, tests, and documentation. It does not contain the five
+model repositories, dataset archives, Python environments, or trained
+checkpoints.
 
 This guide explains what has to be added for real inference. A source-only
 clone can start the site and run the normal tests, but model cards cannot show
@@ -86,38 +87,28 @@ Models&Datasets/
   Graph2Region-main/
 ```
 
-The sources recorded in the local inventory are:
+The pinned sources installed by the project are:
 
 | Model | Upstream or paper link | Local source identity |
 | --- | --- | --- |
-| SimGNN | <https://github.com/benedekrozemberczki/SimGNN> | Extracted local snapshot; Git commit was not recoverable |
-| GraphSim | <https://github.com/yunshengb/GraphSim> | Extracted local snapshot with TensorFlow/networkx compatibility edits; Git commit was not recoverable |
-| SEGMN | <https://arxiv.org/abs/2411.03624> | Supplied local archive; no verifiable Git remote was found |
+| SimGNN | <https://github.com/benedekrozemberczki/SimGNN> | `be3ee6193a7c286336260f6479a6aee8bdc56f8c` plus `patches/models/simgnn.patch` |
+| GraphSim | <https://github.com/yunshengb/GraphSim> | `f73ba796e0d20ee1b1fa0f509f2fcb1df3ac5a28` plus `patches/models/graphsim.patch` |
+| SEGMN | <https://github.com/tourist-wwj/SEGMN> | `20836355d1cba3303dc8861341cba26bedf22e54` |
 | Graph Fusion | <https://github.com/LLiRarry/GFM-code> | Commit `a10c8870b79351963b61f9f3c113e2545ebdc23d` |
-| Graph2Region | <https://github.com/liuzhouyang/Graph2Region> | Extracted local snapshot plus `dataset_g2r.py` compatibility shim; Git commit was not recoverable |
+| Graph2Region | <https://github.com/liuzhouyang/Graph2Region> | `bea81c379811c42fe7fc9e533bcff68260bb3e20` plus `patches/models/graph2region.patch` |
 
-The public repositories can be placed at the required paths with:
+Install every source at the expected path with:
 
 ```bash
-mkdir -p 'Models&Datasets'
-git clone https://github.com/benedekrozemberczki/SimGNN.git 'Models&Datasets/SimGNN-v_00001'
-git clone https://github.com/yunshengb/GraphSim.git 'Models&Datasets/GraphSim-master'
-git clone https://github.com/LLiRarry/GFM-code.git 'Models&Datasets/GFM-code'
-git clone https://github.com/liuzhouyang/Graph2Region.git 'Models&Datasets/Graph2Region-main'
-git -C 'Models&Datasets/GFM-code' checkout a10c8870b79351963b61f9f3c113e2545ebdc23d
+make models
+make models-verify
 ```
 
-There is no clone command for SEGMN because the development archive had no
-verified repository URL. Place the reviewed source snapshot at
-`Models&Datasets/SEGMN-main`.
-
-Cloning the current SimGNN, GraphSim, or Graph2Region default branch does not
-reproduce the exact development snapshot. GraphSim needs the narrow legacy
-compatibility edits used by the local runner, and Graph2Region needs
-`Models&Datasets/Graph2Region-main/dataset_g2r.py`. Until those snapshots or
-patches are published under suitable terms, they must be transferred from the
-audited local artifact set. This is a known reproducibility limit, not a setup
-step that should be guessed.
+The source manifest is `configs/model_sources.json`. The installer checks out
+the recorded commit instead of the moving default branch, applies only the
+project patches listed in the table, and writes a local provenance marker. It
+is safe to run again: compatible folders are verified and retained. An
+incomplete or unexpected existing folder is never overwritten automatically.
 
 Check the main entrypoints:
 
@@ -129,6 +120,9 @@ test -f 'Models&Datasets/GFM-code/model/Regression.py'
 test -f 'Models&Datasets/Graph2Region-main/run.py'
 test -f 'Models&Datasets/Graph2Region-main/dataset_g2r.py'
 ```
+
+These commands install source code, not trained weights. Each model still
+needs a dataset-specific checkpoint before its card can report `Executed`.
 
 ## 3. Install the Datasets
 
@@ -352,14 +346,10 @@ If a source-only clone shows `Runtime missing`, `Repository missing`, or
 `Checkpoint required`, that is expected. The platform should report the
 missing artifact instead of fabricating a model score.
 
-## Current Reproducibility Limit
+## Current Artifact Limit
 
-The platform code and Python requirements are versioned, but four third-party
-source snapshots do not have recoverable Git commits in the local manifest.
-SEGMN also lacks a verified public code remote. Therefore the current repository
-supports an audited local reconstruction, not a fully automatic download of
-the exact five-source snapshot.
-
-Closing this gap requires license-compatible patch files or source snapshot
-hashes for SimGNN, GraphSim, SEGMN, and Graph2Region. Until then, keep the
-artifact provenance visible in any shared result.
+The five source repositories are now reproducible through `make models`.
+Trained weights are still intentionally excluded from Git. A fresh clone can
+prepare and train every model, but it cannot reproduce a reported prediction
+until the matching dataset-specific checkpoint is restored or trained again.
+Keep that distinction visible in any shared result.

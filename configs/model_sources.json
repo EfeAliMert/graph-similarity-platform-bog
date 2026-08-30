@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "simgnn",
+      "name": "SimGNN",
+      "repository": "https://github.com/benedekrozemberczki/SimGNN.git",
+      "commit": "be3ee6193a7c286336260f6479a6aee8bdc56f8c",
+      "path": "Models&Datasets/SimGNN-v_00001",
+      "patch": "patches/models/simgnn.patch",
+      "required_files": [
+        "LICENSE",
+        "src/main.py",
+        "src/param_parser.py",
+        "src/simgnn.py"
+      ],
+      "content_checks": [
+        {
+          "path": "src/param_parser.py",
+          "contains": "--validation-graphs"
+        },
+        {
+          "path": "src/simgnn.py",
+          "contains": "evaluate_similarity_metrics"
+        }
+      ]
+    },
+    {
+      "id": "multiscale-set",
+      "name": "GraphSim",
+      "repository": "https://github.com/yunshengb/GraphSim.git",
+      "commit": "f73ba796e0d20ee1b1fa0f509f2fcb1df3ac5a28",
+      "path": "Models&Datasets/GraphSim-master",
+      "patch": "patches/models/graphsim.patch",
+      "required_files": [
+        "model/Siamese/run.py",
+        "model/Siamese/tf_compat.py",
+        "src/data.py"
+      ],
+      "content_checks": [
+        {
+          "path": "model/Siamese/config.py",
+          "contains": "from tf_compat import tf"
+        }
+      ]
+    },
+    {
+      "id": "segmn",
+      "name": "SEGMN",
+      "repository": "https://github.com/tourist-wwj/SEGMN.git",
+      "commit": "20836355d1cba3303dc8861341cba26bedf22e54",
+      "path": "Models&Datasets/SEGMN-main",
+      "patch": null,
+      "required_files": [
+        "main.py",
+        "model/SEGMN.py",
+        "model/Crossgraphattention.py"
+      ],
+      "content_checks": []
+    },
+    {
+      "id": "graph-fusion",
+      "name": "Graph Fusion",
+      "repository": "https://github.com/LLiRarry/GFM-code.git",
+      "commit": "a10c8870b79351963b61f9f3c113e2545ebdc23d",
+      "path": "Models&Datasets/GFM-code",
+      "patch": null,
+      "required_files": [
+        "model/Regression.py",
+        "model/models.py"
+      ],
+      "content_checks": [
+        {
+          "path": "model/models.py",
+          "contains": "class GMS"
+        }
+      ]
+    },
+    {
+      "id": "graph2region",
+      "name": "Graph2Region",
+      "repository": "https://github.com/liuzhouyang/Graph2Region.git",
+      "commit": "bea81c379811c42fe7fc9e533bcff68260bb3e20",
+      "path": "Models&Datasets/Graph2Region-main",
+      "patch": "patches/models/graph2region.patch",
+      "required_files": [
+        "LICENSE",
+        "run.py",
+        "models.py",
+        "dataset_g2r.py"
+      ],
+      "content_checks": [
+        {
+          "path": "models.py",
+          "contains": "corrected_ged_geometry"
+        },
+        {
+          "path": "models.py",
+          "contains": "deterministic_positional_encoding"
+        }
+      ]
+    }
+  ]
+}

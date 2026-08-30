@@ -103,6 +103,7 @@ def main() -> None:
     research_paths = [
         BASE_DIR / "LICENSE",
         BASE_DIR / "configs" / "dataset_sources.json",
+        BASE_DIR / "configs" / "model_sources.json",
         BASE_DIR / "docs" / "ARTIFACT_SETUP.md",
         BASE_DIR / "docs" / "ADDING_NEW_DATASETS.md",
         BASE_DIR / "docs" / "DATASETS.md",
@@ -111,6 +112,7 @@ def main() -> None:
         BASE_DIR / "docs" / "RESEARCH_PROTOCOL.md",
         BASE_DIR / "docs" / "HPO_ARCHITECTURE.md",
         BASE_DIR / "scripts" / "fetch_datasets.py",
+        BASE_DIR / "scripts" / "fetch_models.py",
         BASE_DIR / "reports" / "checkpoint_audit.json",
         BASE_DIR / "reports" / "checkpoint_audit.md",
         BASE_DIR / "reports" / "model_output_audit.json",
@@ -128,6 +130,7 @@ def main() -> None:
         BASE_DIR / "reports" / "adapter_ablations",
         BASE_DIR / "reports" / "hpo",
         BASE_DIR / "configs" / "optimized",
+        BASE_DIR / "patches" / "models",
     ):
         if directory.exists():
             research_paths.extend(

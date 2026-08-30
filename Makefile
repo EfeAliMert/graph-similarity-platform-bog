@@ -2,7 +2,7 @@ PYTHON ?= python3
 PYG_PYTHON := .venvs/gnn-pyg/bin/python
 GRAPHSIM_PYTHON := .venvs/graphsim/bin/python
 
-.PHONY: run test test-artifacts check preflight manifest matrix-plan matrix-full matrix-existing study hpo checkpoint-audit model-audit graphsim-calibrate setup datasets datasets-verify
+.PHONY: run test test-artifacts check preflight manifest matrix-plan matrix-full matrix-existing study hpo checkpoint-audit model-audit graphsim-calibrate setup models models-verify datasets datasets-verify
 
 run:
 	$(PYG_PYTHON) app.py
@@ -58,6 +58,12 @@ setup:
 	$(GRAPHSIM_PYTHON) -m pip install pip==25.3
 	$(GRAPHSIM_PYTHON) -m pip install -r requirements-graphsim.txt
 	$(GRAPHSIM_PYTHON) scripts/repair_macos_wheel_tags.py
+
+models:
+	$(PYTHON) scripts/fetch_models.py
+
+models-verify:
+	$(PYTHON) scripts/fetch_models.py --verify-only
 
 datasets:
 	$(PYG_PYTHON) scripts/fetch_datasets.py

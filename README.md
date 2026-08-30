@@ -11,6 +11,7 @@ evaluation seed, so they must not be presented as paper-result reproduction.
 
 ```bash
 make setup
+make models
 make datasets
 make run
 ```
@@ -24,12 +25,14 @@ and checkpoint bundle is installed; that command fails if an artifact is
 missing.
 
 Third-party model code, dataset bytes, and weights are not stored in Git.
-`make datasets` downloads the registered datasets from their upstream sources
-and verifies every GED benchmark file against `configs/dataset_sources.json`.
-Put the model repos under `Models&Datasets/`; see `docs/ARTIFACT_SETUP.md` for
-the exact layout.
+`make models` clones all five model repositories at the pinned commits and
+applies the narrow compatibility patches tracked by this project. `make
+datasets` downloads the registered datasets and verifies every GED benchmark
+file against `configs/dataset_sources.json`. See `docs/ARTIFACT_SETUP.md` for
+the exact source identities and artifact boundaries.
 
 ```bash
+make models-verify
 make checkpoint-audit
 make preflight
 ```

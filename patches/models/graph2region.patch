@@ -1,0 +1,115 @@
+diff --git a/dataset_g2r.py b/dataset_g2r.py
+new file mode 100644
+index 0000000..6b0986f
+--- /dev/null
++++ b/dataset_g2r.py
+@@ -0,0 +1,3 @@
++from dataset import get_hard_test
++
++__all__ = ["get_hard_test"]
+diff --git a/inference.py b/inference.py
+index dbd21f0..b74224d 100644
+--- a/inference.py
++++ b/inference.py
+@@ -110,7 +110,7 @@ def get_preds(model, loader, source, target, test, device, args):
+             if args.norm_ged == 'norm':
+                 pred = model.predict_norm_ged(r_g1, r_g2).unsqueeze(-1)
+                 if args.score_rep:
+-                    score_rep = 2 * model.score_fc(diffs.permute(1,0,-1).flatten(1))/(torch.FloatTensor(g1_size).unsqueeze(-1).cuda() + torch.FloatTensor(g2_size).unsqueeze(-1).cuda())
++                    score_rep = 2 * model.score_fc(diffs.permute(1,0,-1).flatten(1))/(torch.FloatTensor(g1_size).unsqueeze(-1).to(device) + torch.FloatTensor(g2_size).unsqueeze(-1).to(device))
+                     pred = model.gamma_1 * pred + model.beta_1 * score_rep
+                 gt.append(torch.exp(-torch.FloatTensor(norm_geds)))
+             elif args.norm_ged == 'bunke':
+@@ -119,7 +119,7 @@ def get_preds(model, loader, source, target, test, device, args):
+             if args.norm_mcs == 'norm':
+                 pred = model.predict_norm_mcs(r_g1, r_g2).unsqueeze(-1)
+                 if args.score_rep:
+-                    score_rep = 2 * model.score_fc(inters.permute(1,0,-1).flatten(1))/(torch.FloatTensor(g1_size).unsqueeze(-1).cuda() + torch.FloatTensor(g2_size).unsqueeze(-1).cuda())
++                    score_rep = 2 * model.score_fc(inters.permute(1,0,-1).flatten(1))/(torch.FloatTensor(g1_size).unsqueeze(-1).to(device) + torch.FloatTensor(g2_size).unsqueeze(-1).to(device))
+                     pred = model.gamma_2 * pred + model.beta_2 * score_rep
+                 gt.append(torch.FloatTensor(norm_mcs))
+             elif args.norm_mcs == 'bunke':
+diff --git a/models.py b/models.py
+index 730b747..6e5e3dc 100644
+--- a/models.py
++++ b/models.py
+@@ -29,6 +29,12 @@ class G2R(Module):
+         elif args.alpha_type == 'linear':
+             self.alpha = Linear(1, 1)
+         self.alpha_type = args.alpha_type
++        self.corrected_ged_geometry = bool(
++            getattr(args, 'corrected_ged_geometry', False)
++        )
++        self.deterministic_positional_encoding = bool(
++            getattr(args, 'deterministic_positional_encoding', False)
++        )
+         self.weights = Parameter(torch.zeros([args.num_tasks]))
+         
+         self.dataset_name = args.dataset_name
+@@ -66,9 +72,12 @@ class G2R(Module):
+         # walking length, number of nodes, number of permutations
+         coors = torch.zeros((self.length_pe, x.size(0), self.num_perms)).to(x.device) # initialize container
+         # assign each node a random index
+-        idx = torch.tensor(random.choices(range(self.max_num_nodes), k = x.size(0)), requires_grad=False)
++        if self.deterministic_positional_encoding:
++            idx = torch.arange(x.size(0), dtype=torch.long) % self.max_num_nodes
++        else:
++            idx = torch.tensor(random.choices(range(self.max_num_nodes), k = x.size(0)), requires_grad=False)
+         # generate k permutation according to the random index
+-        coors[0] = self.perm(idx.cuda()).detach()
++        coors[0] = self.perm(idx.to(x.device)).detach()
+         # 2. propagate the max number
+         for i in range(self.length_pe-1):
+             coors[i+1] = self.pe_prop(coors[i], edge_index)
+@@ -119,6 +128,20 @@ class G2R(Module):
+     def predict_norm_ged(self, region1, region2):
+         # based on bunke ged
+         inter = self.intersection(region1, region2)
++        if self.corrected_ged_geometry:
++            vol_inter = self.cal_volume(inter)
++            vol_r1 = self.cal_volume(region1)
++            vol_r2 = self.cal_volume(region2)
++            bunke_ged = torch.clamp(vol_r1 + vol_r2 - 2.0 * vol_inter, min=0.0)
++            average_volume = torch.clamp((vol_r1 + vol_r2) / 2.0, min=1e-8)
++            if self.alpha_type == 'learnable':
++                return torch.exp(-self.alpha * bunke_ged / average_volume)
++            elif self.alpha_type == 'none':
++                return torch.exp(-bunke_ged / average_volume)
++            elif self.alpha_type == 'linear':
++                return torch.exp(-self.alpha(bunke_ged.unsqueeze(-1)).squeeze(1) / average_volume)
++            elif self.alpha_type == 'sigmoid':
++                return torch.exp(-torch.sigmoid(self.alpha) * bunke_ged / average_volume)
+         vol_inter = self.cal_volume(inter) - 1.0
+         vol_r1 = self.cal_volume(region1)
+         vol_r2 = self.cal_volume(region2)
+diff --git a/run.py b/run.py
+index cb4169b..3f4fb0e 100644
+--- a/run.py
++++ b/run.py
+@@ -126,7 +126,7 @@ def train(model, optimizer, graphs, trainset, logger, run, epoch, args):
+             if args.norm_ged == 'norm':
+                 pred = model.predict_norm_ged(r_g1, r_g2).unsqueeze(-1)
+                 if args.score_rep:
+-                    score_rep = 2 * model.score_fc(diffs.permute(1,0,-1).flatten(1))/(torch.FloatTensor(g1_size).unsqueeze(-1).cuda() + torch.FloatTensor(g2_size).unsqueeze(-1).cuda())
++                    score_rep = 2 * model.score_fc(diffs.permute(1,0,-1).flatten(1))/(torch.FloatTensor(g1_size).unsqueeze(-1).to(device) + torch.FloatTensor(g2_size).unsqueeze(-1).to(device))
+                     pred = model.gamma_1 * pred + model.beta_1 * score_rep
+                 else:
+                     pred = pred
+@@ -137,7 +137,7 @@ def train(model, optimizer, graphs, trainset, logger, run, epoch, args):
+             if args.norm_mcs == 'norm':
+                 pred = model.predict_norm_mcs(r_g1, r_g2).unsqueeze(-1)
+                 if args.score_rep:
+-                    score_rep = 2 * model.score_fc(inters.permute(1,0,-1).flatten(1))/(torch.FloatTensor(g1_size).unsqueeze(-1).cuda() + torch.FloatTensor(g2_size).unsqueeze(-1).cuda())
++                    score_rep = 2 * model.score_fc(inters.permute(1,0,-1).flatten(1))/(torch.FloatTensor(g1_size).unsqueeze(-1).to(device) + torch.FloatTensor(g2_size).unsqueeze(-1).to(device))
+                     pred = model.gamma_2 * pred + model.beta_2 * score_rep
+                 else:
+                     pred = pred
+@@ -239,7 +239,7 @@ def runG2R(args):
+                 break
+         path = f'{logd}/{args.name}_{args.dataset_name}_best.pt'
+         del model
+-        model = G2R(args).cuda()
++        model = G2R(args).to(device)
+         model.load_state_dict(torch.load(path))
+         mse_test, mae_test, kendall, spearman,\
+              p10, runtime = test(model, testloader, graphs, graphs_test, trainset, valset, testset, device, args)

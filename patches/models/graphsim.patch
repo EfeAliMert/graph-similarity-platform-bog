@@ -1,0 +1,262 @@
+diff --git a/model/Siamese/aggregators.py b/model/Siamese/aggregators.py
+index 5a0989f..b623c56 100644
+--- a/model/Siamese/aggregators.py
++++ b/model/Siamese/aggregators.py
+@@ -2,7 +2,7 @@
+ Credit: https://github.com/williamleif/GraphSAGE/blob/master/graphsage/aggregators.py
+ """
+ 
+-import tensorflow as tf
++from tf_compat import tf
+ 
+ from .layers import Layer, Dense
+ from .inits import glorot, zeros
+@@ -411,7 +411,7 @@ class SeqAggregator(Layer):
+         self.input_dim = input_dim
+         self.output_dim = output_dim
+         self.neigh_input_dim = neigh_input_dim
+-        self.cell = tf.contrib.rnn.BasicLSTMCell(self.hidden_dim)
++        self.cell = tf.nn.rnn_cell.BasicLSTMCell(self.hidden_dim)
+ 
+     def _call(self, inputs):
+         self_vecs, neigh_vecs = inputs
+diff --git a/model/Siamese/config.py b/model/Siamese/config.py
+index c35629e..222a739 100644
+--- a/model/Siamese/config.py
++++ b/model/Siamese/config.py
+@@ -1,14 +1,21 @@
+-import tensorflow as tf
++from tf_compat import tf
++import os
+ 
+ # Hyper-parameters.
+ flags = tf.app.flags
+ 
+ # For data preprocessing.
+ """ dataset: aids80nef, aids700nef, linux, imdbmulti, ptc, reddit10k. """
+-dataset = 'aids80nef'
++dataset = os.environ.get('GRAPHSIM_DATASET', 'aids700nef').lower()
+ dataset_train = dataset
+ dataset_val_test = dataset
+-if 'aids' in dataset or dataset in ['alkane', 'webeasy', 'nci109', 'ptc', 'mutag']:
++if os.environ.get('GRAPHSIM_UNIVERSAL') == '1':
++    use_node_features = os.environ.get('GRAPHSIM_NODE_FEATURES') == '1'
++    node_feat_name = 'type' if use_node_features else None
++    node_feat_encoder = 'onehot' if use_node_features else 'constant_1'
++    max_nodes = int(os.environ.get('GRAPHSIM_MAX_NODES', '90'))
++    num_glabels = 2
++elif 'aids' in dataset or dataset in ['alkane', 'webeasy', 'nci109', 'ptc', 'mutag']:
+     node_feat_name = 'type'
+     node_feat_encoder = 'onehot'
+     max_nodes = 10
+@@ -56,7 +63,9 @@ model = 'siamese_regression'
+ flags.DEFINE_string('model', model, 'Model string.')
+ """ model_name: 'SimGNN', 'GSimCNN', None. """
+ flags.DEFINE_string('model_name', 'Our Model', 'Model name string.')
+-flags.DEFINE_integer('batch_size', 1, 'Number of graph pairs in a batch.')
++flags.DEFINE_integer(
++    'batch_size', int(os.environ.get('GRAPHSIM_BATCH_SIZE', '1')),
++    'Number of graph pairs in a batch.')
+ flags.DEFINE_boolean('ds_norm', True,
+                      'Whether to normalize the distance or not '
+                      'when choosing the ground truth distance.')
+diff --git a/model/Siamese/inits.py b/model/Siamese/inits.py
+index cd6f608..9ee389d 100644
+--- a/model/Siamese/inits.py
++++ b/model/Siamese/inits.py
+@@ -1,4 +1,4 @@
+-import tensorflow as tf
++from tf_compat import tf
+ import numpy as np
+ 
+ 
+@@ -17,7 +17,7 @@ def glorot(shape, name=None):
+ 
+ def xavier(shape, name):
+     initial = tf.get_variable(name, shape,
+-                              initializer=tf.contrib.layers.xavier_initializer())
++                              initializer=tf.glorot_uniform_initializer())
+     return initial
+ 
+ 
+diff --git a/model/Siamese/layers.py b/model/Siamese/layers.py
+index 5f4c222..7776c60 100644
+--- a/model/Siamese/layers.py
++++ b/model/Siamese/layers.py
+@@ -1,7 +1,7 @@
+ from config import FLAGS
+ from utils_siamese import dot, is_transductive
+ from inits import *
+-import tensorflow as tf
++from tf_compat import tf
+ 
+ 
+ class Layer(object):
+diff --git a/model/Siamese/layers_factory.py b/model/Siamese/layers_factory.py
+index 0797188..c4aada7 100644
+--- a/model/Siamese/layers_factory.py
++++ b/model/Siamese/layers_factory.py
+@@ -2,7 +2,7 @@ from config import FLAGS
+ from layers import GraphConvolution, GraphConvolutionAttention, Coarsening, Average, \
+     Attention, Dot, Dist, NTN, SLM, Dense, Padding, MNE, MNEMatch, CNN, ANPM, ANPMD, ANNH, \
+     GraphConvolutionCollector, MNEResize, PadandTruncate, Supersource
+-import tensorflow as tf
++from tf_compat import tf
+ import numpy as np
+ from math import exp
+ 
+diff --git a/model/Siamese/model.py b/model/Siamese/model.py
+index 9594005..49b5fd6 100644
+--- a/model/Siamese/model.py
++++ b/model/Siamese/model.py
+@@ -2,7 +2,7 @@ from config import FLAGS
+ from layers_factory import create_layers
+ from utils_siamese import get_flags
+ import numpy as np
+-import tensorflow as tf
++from tf_compat import tf
+ from warnings import warn
+ 
+ 
+diff --git a/model/Siamese/model_regression.py b/model/Siamese/model_regression.py
+index db84d6b..189ad53 100644
+--- a/model/Siamese/model_regression.py
++++ b/model/Siamese/model_regression.py
+@@ -6,11 +6,12 @@ from inits import glorot
+ from dist_sim_kernel import create_ds_kernel
+ from dist_sim_calculator import get_gs_ds_mat
+ import numpy as np
+-import tensorflow as tf
++from tf_compat import tf
+ from fake_generator_ged import graph_generator
+ from fake_generator_mcs import graph_generator_mcs
+ from data_siamese import ModelGraph
+ from utils import save, load, get_save_path, create_dir_if_not_exists
++import os
+ 
+ 
+ class SiameseRegressionModel(Model):
+@@ -31,7 +32,10 @@ class SiameseRegressionModel(Model):
+         super(SiameseRegressionModel, self).__init__()
+         self.ds_kernel = create_ds_kernel(
+             FLAGS.ds_kernel, get_flags('yeta'), get_flags('scale'))
+-        self.train_triples = self._load_train_triples(data, dist_sim_calculator)
++        if os.environ.get('GRAPHSIM_INFERENCE_ONLY') == '1':
++            self.train_triples = None
++        else:
++            self.train_triples = self._load_train_triples(data, dist_sim_calculator)
+ 
+     def pred_sim_without_act(self):
+         return self.val_test_pred_score
+diff --git a/model/Siamese/run.py b/model/Siamese/run.py
+index 9c27249..c7dfd9f 100755
+--- a/model/Siamese/run.py
++++ b/model/Siamese/run.py
+@@ -11,7 +11,7 @@ from dist_sim_calculator import DistSimCalculator
+ from models_factory import create_model
+ from saver import Saver
+ from eval import Eval
+-import tensorflow as tf
++from tf_compat import tf
+ from time import time
+ import os, traceback
+ 
+diff --git a/model/Siamese/saver.py b/model/Siamese/saver.py
+index da2fc9c..4977f56 100644
+--- a/model/Siamese/saver.py
++++ b/model/Siamese/saver.py
+@@ -1,7 +1,7 @@
+ from config import FLAGS
+ from utils import get_ts, create_dir_if_not_exists, save_as_dict
+ from utils_siamese import get_siamese_dir, get_model_info_as_str, need_val
+-import tensorflow as tf
++from tf_compat import tf
+ from glob import glob
+ from os import system
+ from collections import OrderedDict
+diff --git a/model/Siamese/tf_compat.py b/model/Siamese/tf_compat.py
+new file mode 100644
+index 0000000..1af522a
+--- /dev/null
++++ b/model/Siamese/tf_compat.py
+@@ -0,0 +1,7 @@
++"""TensorFlow 1.x compatibility runtime for the original GraphSim code."""
++
++import tensorflow.compat.v1 as tf
++
++
++tf.disable_v2_behavior()
++
+diff --git a/model/Siamese/utils_siamese.py b/model/Siamese/utils_siamese.py
+index c7b574e..7b3ccee 100644
+--- a/model/Siamese/utils_siamese.py
++++ b/model/Siamese/utils_siamese.py
+@@ -1,7 +1,7 @@
+ from config import FLAGS
+ import sys
+ from os.path import dirname, abspath
+-import tensorflow as tf
++from tf_compat import tf
+ 
+ cur_folder = dirname(abspath(__file__))
+ sys.path.insert(0, '{}/../../src'.format(cur_folder))
+diff --git a/src/data.py b/src/data.py
+index b965e74..b6d56c5 100644
+--- a/src/data.py
++++ b/src/data.py
+@@ -199,6 +199,24 @@ class PTCData(Data):
+         assert (self.glabels is not None)  # real graph labels
+ 
+ 
++class GenericGEXFData(Data):
++    def __init__(self, dataset, train):
++        self.dataset = dataset
++        self.train = train
++        super(GenericGEXFData, self).__init__(
++            '{}_{}'.format(dataset, get_train_str(train))
++        )
++
++    def init(self):
++        datadir = '{}/{}/{}'.format(
++            get_data_path(), self.dataset, get_train_str(self.train))
++        self.graphs = iterate_get_graphs(datadir)
++        for graph in self.graphs:
++            graph.graph['glabel'] = int(graph.graph['gid']) % 2
++        self.glabels = None
++        print('Loaded {} generic graphs from {}'.format(len(self.graphs), datadir))
++
++
+ def get_proc_graphs(datadir, train):
+     datadir = '{}/{}/{}'.format(
+         get_data_path(), datadir, get_train_str(train))
+diff --git a/src/utils.py b/src/utils.py
+index 31f61e3..eac5fa1 100644
+--- a/src/utils.py
++++ b/src/utils.py
+@@ -36,7 +36,8 @@ def load_data(name, train):
+         from data import PTCData
+         return PTCData(train)
+     else:
+-        raise RuntimeError('Not recognized data %s' % name)
++        from data import GenericGEXFData
++        return GenericGEXFData(name, train)
+ 
+ 
+ def get_train_str(train_bool):
+@@ -363,11 +364,12 @@ def prompt_get_computer_name():
+ 
+ def check_nx_version():
+     import networkx as nx
+-    nxvg = '1.10'
+-    nxva = nx.__version__
+-    if nxvg != nxva:
++    minimum = (1, 10)
++    current = tuple(int(part) for part in nx.__version__.split('.')[:2])
++    if current < minimum:
+         raise RuntimeError(
+-            'Wrong networkx version! Need {} instead of {}'.format(nxvg, nxva))
++            'Wrong networkx version! Need at least 1.10 instead of {}'.format(
++                nx.__version__))
+ 
+ 
+ def format_float(f, multiply_by=None):

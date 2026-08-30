@@ -275,11 +275,14 @@ repositories. Then create the environments:
 
 ```bash
 make setup
+make models
+make models-verify
 .venvs/gnn-pyg/bin/python -m pip check
 .venvs/graphsim/bin/python -m pip check
 ```
 
-`make setup` does not download the third-party repositories.
+`make setup` installs Python packages. `make models` downloads the five pinned
+third-party repositories and applies the platform compatibility patches.
 
 With Flask running, inspect the five generated training plans:
 
