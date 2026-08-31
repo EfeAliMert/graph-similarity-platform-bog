@@ -67,9 +67,11 @@ models-verify:
 
 datasets:
 	$(PYG_PYTHON) scripts/fetch_datasets.py
+	$(PYG_PYTHON) scripts/prepare_model_datasets.py
 
 datasets-verify:
 	$(PYG_PYTHON) scripts/fetch_datasets.py --verify-only
+	$(PYG_PYTHON) scripts/prepare_model_datasets.py --verify-only
 
 checkpoints:
 	$(PYTHON) scripts/fetch_checkpoints.py

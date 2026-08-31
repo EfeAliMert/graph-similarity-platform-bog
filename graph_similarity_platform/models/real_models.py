@@ -824,11 +824,8 @@ def _run_simgnn_adapter(
         return None
     local_path = BASE_DIR / model["local_path"]
     checkpoint = _preferred_checkpoint(local_path, model, dataset_id)
-    training_graphs = local_path / "original_datasets" / dataset_id / "train"
-    validation_graphs = local_path / "original_datasets" / dataset_id / "validation"
-    testing_graphs = local_path / "original_datasets" / dataset_id / "test"
     python_path = _resolve_python(model["python"])
-    if python_path is None or checkpoint is None or not training_graphs.exists() or not testing_graphs.exists():
+    if python_path is None or checkpoint is None:
         return None
 
     payload = {
@@ -849,12 +846,8 @@ def _run_simgnn_adapter(
             str(payload_path),
             "--checkpoint",
             str(checkpoint),
-            "--training-graphs",
-            f"{training_graphs}/",
-            "--validation-graphs",
-            f"{validation_graphs}/" if validation_graphs.exists() else "",
-            "--testing-graphs",
-            f"{testing_graphs}/",
+            "--dataset",
+            str(dataset_id),
         ]
         metrics, failure = _execute_json_adapter(command, BASE_DIR, 30, "SimGNN")
         if failure is not None:

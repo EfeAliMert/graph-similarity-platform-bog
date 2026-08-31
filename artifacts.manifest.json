@@ -988,9 +988,9 @@
       "sha256": "d3c76b290d270cfde7ad8df907caff44505ba5070408260a66e59343576a6d8d"
     },
     {
-      "bytes": 2807,
+      "bytes": 2905,
       "path": "configs/model_sources.json",
-      "sha256": "aba5a95f0927a203c7dae8fa532847879c1e0f9a233a26b29242c8abaa664528"
+      "sha256": "cf8d5f3c7614b2da28e5e23e9cd4449594d9b3b809aaa25d92783f66dd6be870"
     },
     {
       "bytes": 1790,
@@ -1173,9 +1173,9 @@
       "sha256": "ef2fd81b617e61cdcb38e0e6ca0ca2feda3a601bfc9234dfb2681a789ca13e50"
     },
     {
-      "bytes": 12027,
+      "bytes": 12249,
       "path": "docs/ARTIFACT_SETUP.md",
-      "sha256": "92a0d7e86011fb0cfd40be0bee8049cb6bbc20176027a54127bf7d3d89aad8e9"
+      "sha256": "3f8d4517c7f65277f97bfe532eff8680b95c41c32e2e66037340008d21a134dc"
     },
     {
       "bytes": 2005,
@@ -1208,9 +1208,9 @@
       "sha256": "4b86c7e04b23a33e0914f7cada0c3253929a8963f2e7d8faab2a58a8bf515641"
     },
     {
-      "bytes": 9163,
+      "bytes": 9451,
       "path": "patches/models/graphsim.patch",
-      "sha256": "c03b5678413a71587c9cbb90f94ef75eeb73ad0eeb5d2db99093d2abdddcc72b"
+      "sha256": "f42e1b60f220630eeac7e659327ee1591b726ccc9e7f5a188ac91a31e12624e0"
     },
     {
       "bytes": 7719,
@@ -1240,7 +1240,7 @@
     {
       "bytes": 130506,
       "path": "reports/checkpoint_audit.json",
-      "sha256": "6dfb61bf9b782030d83d22a9877720f2c1fcd60e146ed64c5e80fd1e832b419e"
+      "sha256": "e9a2955554b5738e4908afd4388da4e7ad8fd096d49406884d3f26e7d8ddc288"
     },
     {
       "bytes": 5257,
@@ -1436,9 +1436,14 @@
       "bytes": 9958,
       "path": "scripts/fetch_models.py",
       "sha256": "3835cb63779fd351b4e4c0c50aa1cfdd09e45957d40c79fb8ca8bcd9ce4b631d"
+    },
+    {
+      "bytes": 4160,
+      "path": "scripts/prepare_model_datasets.py",
+      "sha256": "e2256107d59eed6dd11f6d0ca0be1c844eaa69eb09d59f2bb0fd6c7282353dd6"
     }
   ],
-  "generated_at": "2026-08-31T00:05:40.076828+00:00",
+  "generated_at": "2026-08-31T00:47:38.715692+00:00",
   "repositories": [
     {
       "declared_repository": "https://github.com/benedekrozemberczki/SimGNN",
@@ -1495,6 +1500,7 @@
     "docs/RESEARCH_PROTOCOL.md",
     "docs/HPO_ARCHITECTURE.md",
     "scripts/fetch_datasets.py",
+    "scripts/prepare_model_datasets.py",
     "scripts/fetch_models.py",
     "scripts/fetch_checkpoints.py",
     "scripts/build_checkpoint_bundle.py",

@@ -29,7 +29,8 @@ Third-party model code, dataset bytes, and weights are not stored in Git.
 `make models` clones all five model repositories at the pinned commits and
 applies the narrow compatibility patches tracked by this project. `make
 datasets` downloads the registered datasets and verifies every GED benchmark
-file against `configs/dataset_sources.json`. `make checkpoints` restores the
+file against `configs/dataset_sources.json`; it also prepares the derived GEXF
+layout required by the GraphSim adapter. `make checkpoints` restores the
 35 locally trained model/dataset checkpoints from the versioned GitHub Release
 and verifies the archive and every extracted file. These are project weights,
 not author-released pretrained weights. See `docs/ARTIFACT_SETUP.md` for the

@@ -114,6 +114,7 @@ def main() -> None:
         BASE_DIR / "docs" / "RESEARCH_PROTOCOL.md",
         BASE_DIR / "docs" / "HPO_ARCHITECTURE.md",
         BASE_DIR / "scripts" / "fetch_datasets.py",
+        BASE_DIR / "scripts" / "prepare_model_datasets.py",
         BASE_DIR / "scripts" / "fetch_models.py",
         BASE_DIR / "scripts" / "fetch_checkpoints.py",
         BASE_DIR / "scripts" / "build_checkpoint_bundle.py",

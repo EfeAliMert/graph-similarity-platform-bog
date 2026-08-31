@@ -5,6 +5,7 @@ import json
 import math
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 import torch
@@ -13,44 +14,71 @@ import torch
 ROOT = Path(__file__).resolve().parents[2]
 SIMGNN_ROOT = ROOT / "Models&Datasets" / "SimGNN-v_00001"
 SIMGNN_SRC = SIMGNN_ROOT / "src"
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(SIMGNN_SRC))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from param_parser import parameter_parser  # noqa: E402
-from simgnn import SimGNNTrainer  # noqa: E402
+from simgnn import SimGNN  # noqa: E402
 from checkpoint_provenance import load_verified_hpo  # noqa: E402
+from prepare_simgnn_original_dataset import (  # noqa: E402
+    dataset_spec,
+    load_graphs,
+)
 from universal_dataset import ensure_training_distances  # noqa: E402
+from graph_similarity_platform.adapters.simgnn_utils import (  # noqa: E402
+    checkpoint_hyperparameters,
+    edge_index,
+    normalize_graph_labels,
+)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--payload", required=True)
     parser.add_argument("--checkpoint", required=True)
-    parser.add_argument("--training-graphs", required=True)
+    parser.add_argument("--dataset", required=True)
+    parser.add_argument("--training-graphs")
     parser.add_argument("--validation-graphs")
-    parser.add_argument("--testing-graphs", required=True)
+    parser.add_argument("--testing-graphs")
     args = parser.parse_args()
 
     payload = json.loads(Path(args.payload).read_text())
     hpo, hpo_status = load_verified_hpo(Path(args.checkpoint), ROOT)
     best_trial = hpo.get("best_trial") or {}
     hyperparameters = best_trial.get("config") or hpo.get("hyperparameters") or {}
+    state_dict = torch.load(Path(args.checkpoint), map_location="cpu")
+    if not isinstance(state_dict, dict):
+        raise ValueError("SimGNN checkpoint does not contain a model state dictionary.")
+    hyperparameters = checkpoint_hyperparameters(state_dict, hyperparameters)
     trainer_args = build_args(
-        args.training_graphs,
+        args.training_graphs or "",
         args.validation_graphs,
-        args.testing_graphs,
+        args.testing_graphs or "",
         args.checkpoint,
         hyperparameters,
     )
-    trainer = SimGNNTrainer(trainer_args)
-    trainer.load()
-    trainer.model.eval()
+    labels = dataset_labels(args.dataset)
+    expected_labels = int(state_dict["convolution_1.lin.weight"].shape[1])
+    if len(labels) != expected_labels:
+        raise ValueError(
+            f"Dataset label vocabulary has {len(labels)} entries, but the "
+            f"checkpoint expects {expected_labels}."
+        )
+    model = SimGNN(trainer_args, len(labels))
+    model.load_state_dict(state_dict)
+    model.eval()
+    trainer = SimpleNamespace(
+        model=model,
+        global_labels={label: index for index, label in enumerate(labels)},
+        number_of_labels=len(labels),
+    )
 
     data = {
         "graph_1": payload["graph_1"],
         "graph_2": payload["graph_2"],
-        "labels_1": [str(label) for label in payload["labels_1"]],
-        "labels_2": [str(label) for label in payload["labels_2"]],
+        "labels_1": normalize_graph_labels(payload["labels_1"]),
+        "labels_2": normalize_graph_labels(payload["labels_2"]),
         "ged": float(payload.get("ged", 0.0)),
     }
     tensor_data = transfer_pair(trainer, data)
@@ -61,11 +89,7 @@ def main() -> None:
     normalized_ged = max(0.0, -math.log(max(similarity, 1e-12)))
     graph_size = 0.5 * (len(data["labels_1"]) + len(data["labels_2"]))
     predicted_ged = normalized_ged * graph_size
-    manifest_path = Path(args.training_graphs).resolve().parent / "manifest.json"
-    manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
-    target = manifest.get("target")
-    if target is None and manifest.get("dataset"):
-        _, target = ensure_training_distances(str(manifest["dataset"]))
+    _, target = ensure_training_distances(args.dataset)
     print(
         json.dumps(
             {
@@ -77,8 +101,8 @@ def main() -> None:
                 "architecture_class": "simgnn.SimGNN",
                 "unknown_labels": sorted(unknown_labels(trainer, data)),
                 "target": target,
-                "seed": hpo.get("seed", manifest.get("seed")),
-                "pair_split": hpo.get("pair_split") or manifest.get("pair_split"),
+                "seed": hpo.get("seed"),
+                "pair_split": hpo.get("pair_split"),
                 "hyperparameters": hyperparameters or None,
                 "hpo": {
                     "study_id": hpo.get("study_id"),
@@ -89,6 +113,18 @@ def main() -> None:
                 "hpo_metadata_status": hpo_status,
             }
         )
+    )
+
+
+def dataset_labels(dataset_id: str) -> list[str]:
+    config = dataset_spec(dataset_id)
+    graphs = load_graphs(config["archive"], config["format"])
+    return sorted(
+        {
+            str(label)
+            for graph in graphs.values()
+            for label in graph["labels"]
+        }
     )
 
 
@@ -134,18 +170,18 @@ def build_args(
         sys.argv = original_argv
 
 
-def transfer_pair(trainer: SimGNNTrainer, data: dict) -> dict:
+def transfer_pair(trainer, data: dict) -> dict:
     edges_1 = data["graph_1"] + [[target, source] for source, target in data["graph_1"]]
     edges_2 = data["graph_2"] + [[target, source] for source, target in data["graph_2"]]
     return {
-        "edge_index_1": torch.from_numpy(np.array(edges_1, dtype=np.int64).T).long(),
-        "edge_index_2": torch.from_numpy(np.array(edges_2, dtype=np.int64).T).long(),
+        "edge_index_1": edge_index(edges_1),
+        "edge_index_2": edge_index(edges_2),
         "features_1": labels_to_features(trainer, data["labels_1"]),
         "features_2": labels_to_features(trainer, data["labels_2"]),
     }
 
 
-def labels_to_features(trainer: SimGNNTrainer, labels: list[str]) -> torch.FloatTensor:
+def labels_to_features(trainer, labels: list[str]) -> torch.FloatTensor:
     rows = []
     for label in labels:
         row = [0.0] * trainer.number_of_labels
@@ -155,7 +191,7 @@ def labels_to_features(trainer: SimGNNTrainer, labels: list[str]) -> torch.Float
     return torch.FloatTensor(np.array(rows, dtype=np.float32))
 
 
-def unknown_labels(trainer: SimGNNTrainer, data: dict) -> set[str]:
+def unknown_labels(trainer, data: dict) -> set[str]:
     labels = set(data["labels_1"]).union(data["labels_2"])
     return {label for label in labels if label not in trainer.global_labels}
 

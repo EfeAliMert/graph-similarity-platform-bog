@@ -41,6 +41,10 @@
         {
           "path": "model/Siamese/config.py",
           "contains": "from tf_compat import tf"
+        },
+        {
+          "path": "src/utils.py",
+          "contains": "GRAPHSIM_UNIVERSAL"
         }
       ]
     },

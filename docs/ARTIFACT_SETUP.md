@@ -134,6 +134,11 @@ After `make setup`, install every registered dataset with:
 make datasets
 ```
 
+This command also materializes a verified local GEXF view under
+`Models&Datasets/GraphSim-master/data/`. These files are derived from the
+downloaded archives and can be rebuilt; they are not an additional dataset
+source.
+
 This command downloads AIDS700nef, LINUX, IMDBMulti, and PTC from the
 [GraphSim authors' shared benchmark folder](https://drive.google.com/drive/folders/1JcAgWKYC41687UeiLaFg-QlPmIpZvWhT?usp=sharing).
 It verifies each archive and GED/MCS map against the byte count and SHA-256 in

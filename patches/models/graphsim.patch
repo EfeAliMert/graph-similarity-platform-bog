@@ -230,10 +230,19 @@ index b965e74..b6d56c5 100644
      datadir = '{}/{}/{}'.format(
          get_data_path(), datadir, get_train_str(train))
 diff --git a/src/utils.py b/src/utils.py
-index 31f61e3..eac5fa1 100644
+index 31f61e3..9b2b8ea 100644
 --- a/src/utils.py
 +++ b/src/utils.py
-@@ -36,7 +36,8 @@ def load_data(name, train):
+@@ -1,4 +1,8 @@
+ def load_data(name, train):
++    import os
++    if os.environ.get('GRAPHSIM_UNIVERSAL') == '1':
++        from data import GenericGEXFData
++        return GenericGEXFData(name, train)
+     if name == 'syn':
+         from data import SynData
+         return SynData(train)
+@@ -36,7 +40,8 @@ def load_data(name, train):
          from data import PTCData
          return PTCData(train)
      else:
@@ -243,7 +252,7 @@ index 31f61e3..eac5fa1 100644
  
  
  def get_train_str(train_bool):
-@@ -363,11 +364,12 @@ def prompt_get_computer_name():
+@@ -363,11 +368,12 @@ def prompt_get_computer_name():
  
  def check_nx_version():
      import networkx as nx
