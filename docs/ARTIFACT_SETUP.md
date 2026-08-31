@@ -1,9 +1,10 @@
 # Local Artifact Setup
 
 The Git repository contains the Flask application, adapters, training scripts,
-compatibility patches, tests, and documentation. It does not contain the five
+compatibility patches, tests, and documentation. It does not place the five
 model repositories, dataset archives, Python environments, or trained
-checkpoints.
+checkpoint bytes in Git history. Pinned installers restore each artifact from
+its recorded source.
 
 This guide explains what has to be added for real inference. A source-only
 clone can start the site and run the normal tests, but model cards cannot show
@@ -11,7 +12,7 @@ clone can start the site and run the normal tests, but model cards cannot show
 
 ## What Is Missing from Git
 
-These paths are intentionally ignored:
+These paths are intentionally ignored by Git:
 
 ```text
 Models&Datasets/
@@ -22,8 +23,9 @@ tmp/
 ```
 
 They are excluded because they are large and because third-party code, data,
-and derived checkpoints may have different distribution terms. Check
-[`THIRD_PARTY.md`](THIRD_PARTY.md) before sharing any of them.
+and derived checkpoints may have different distribution terms. The locally
+trained weights are supplied as a separate, checksum-pinned GitHub Release
+asset. Check [`THIRD_PARTY.md`](THIRD_PARTY.md) before sharing artifacts.
 
 ## Tested Local Environment
 
@@ -220,11 +222,12 @@ The expected graph counts are:
 | PROTEINS | 890 | 223 | 1,113 | Structural proxy |
 | ENZYMES | 480 | 120 | 600 | Structural proxy |
 
-## 5. Create or Restore Checkpoints
+## 5. Restore or Create Checkpoints
 
-No author-released pretrained weights are bundled with this project. The
-development checkpoints were trained locally and selected by validation
-similarity MSE.
+No author-released pretrained weights are claimed by this project. The 35
+registered checkpoints were trained locally. Five AIDS700nef checkpoints are
+bound to recorded HPO selections; the remaining checkpoints carry training,
+target, seed, and split provenance without an HPO-selection claim.
 
 Expected paths follow this pattern:
 
@@ -236,9 +239,29 @@ Expected paths follow this pattern:
 | Graph Fusion | `Models&Datasets/GFM-code/checkpoints/gfm_<dataset>.pt` |
 | Graph2Region | `Models&Datasets/Graph2Region-main/checkpoints/<dataset>/g2r_<dataset>_best.pt` |
 
-There are two valid routes:
+Restore the audited bundle after `make models`:
 
-1. Restore the audited local checkpoint files and their metadata sidecars.
+```bash
+make checkpoints
+make checkpoints-verify
+make checkpoint-audit
+```
+
+`make checkpoints` downloads
+`graph-similarity-checkpoints-v1.zip` from the `checkpoints-v1` GitHub Release.
+It first verifies the archive byte count and SHA-256 in
+`configs/checkpoint_sources.json`. It then rejects unsafe ZIP paths and checks
+every extracted file against `configs/checkpoint_bundle_manifest.json` before
+installing it. A different local checkpoint is not overwritten unless the
+operator explicitly runs:
+
+```bash
+python3 scripts/fetch_checkpoints.py --force
+```
+
+There are two valid research routes:
+
+1. Restore the versioned local checkpoint files and their metadata sidecars.
 2. Train new dataset-specific checkpoints and report them as new runs.
 
 For new training, start the site:
@@ -339,7 +362,7 @@ The first four states do not prove the fifth.
 | Environments added | Dependency checks and HPO/training-plan inspection |
 | Model sources added | Adapter discovery; checkpoints may still be missing |
 | Datasets added | Graph catalog, pair preview, target inspection, and training plans |
-| Checkpoints added or trained | Real pair inference and checkpoint-backed retrieval |
+| Release checkpoints restored or new weights trained | Real pair inference and checkpoint-backed retrieval |
 | Audited checkpoints plus held-out runs | Research tables within the stated target and split limits |
 
 If a source-only clone shows `Runtime missing`, `Repository missing`, or
@@ -348,8 +371,8 @@ missing artifact instead of fabricating a model score.
 
 ## Current Artifact Limit
 
-The five source repositories are now reproducible through `make models`.
-Trained weights are still intentionally excluded from Git. A fresh clone can
-prepare and train every model, but it cannot reproduce a reported prediction
-until the matching dataset-specific checkpoint is restored or trained again.
-Keep that distinction visible in any shared result.
+The five source repositories are reproducible through `make models`, datasets
+through `make datasets`, and the 35 local checkpoints through `make
+checkpoints`. The checkpoint bundle reproduces the stored local weights, not
+the papers' published result tables. New claims still require held-out
+evaluation under the target and split rules documented in this repository.

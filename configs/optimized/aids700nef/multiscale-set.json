@@ -8,9 +8,9 @@
   "final_training": {
     "checkpoint": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt",
     "checkpoint_fingerprint": "9c54d32ddb4cf3cd8288d966e68ecd018b5ec4efdf23d42247c54a604a25cc78",
-    "completed_at": "2026-08-26T00:07:39.906870+00:00",
+    "completed_at": "2026-08-30T23:58:58.828400+00:00",
     "hpo_sidecar": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.hpo.json",
-    "job_id": "788586c1facb",
+    "job_id": "c61d764688e6",
     "seed": 379,
     "status": "completed",
     "test_evaluation": "not_run"
@@ -39,7 +39,7 @@
   "target_source": "exact A* GED benchmark",
   "test_set_used_for_selection": false,
   "trial_checkpoint": "training_logs/hpo/studies/multiscale-set__aids700nef__normalized_ged__graphsim-v2__a42538c9c25a/trials/trial_0032/graphsim.ckpt",
-  "updated_at": "2026-08-26T00:07:39.907071+00:00",
+  "updated_at": "2026-08-30T23:58:58.828608+00:00",
   "validation_mse": 0.01545,
   "validation_mse_std": 0.001294385053477777,
   "validation_spearman": 0.8316120000000001

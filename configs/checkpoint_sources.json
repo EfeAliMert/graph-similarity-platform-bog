@@ -1,0 +1,20 @@
+{
+  "bundle": {
+    "asset_name": "graph-similarity-checkpoints-v1.zip",
+    "bytes": 52410672,
+    "id": "local-checkpoints-v1",
+    "manifest": "configs/checkpoint_bundle_manifest.json",
+    "origin": "Locally trained checkpoints; not author-released pretrained weights.",
+    "release_tag": "checkpoints-v1",
+    "required_model_roots": [
+      "Models&Datasets/SimGNN-v_00001",
+      "Models&Datasets/GraphSim-master",
+      "Models&Datasets/SEGMN-main",
+      "Models&Datasets/GFM-code",
+      "Models&Datasets/Graph2Region-main"
+    ],
+    "sha256": "8daf293d88f5a0d1b23817488128a62642e44058aef8d8ad082c55a2f98c53f4",
+    "url": "https://github.com/EfeAliMert/graph-similarity-platform-bog/releases/download/checkpoints-v1/graph-similarity-checkpoints-v1.zip"
+  },
+  "schema_version": 1
+}

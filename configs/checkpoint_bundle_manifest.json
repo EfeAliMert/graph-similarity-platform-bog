@@ -1,0 +1,698 @@
+{
+  "bundle_id": "local-checkpoints-v1",
+  "checkpoints": [
+    {
+      "dataset_id": "aids700nef",
+      "files": [
+        "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_aids700nef.pt",
+        "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_aids700nef.pt.hpo.json",
+        "Models&Datasets/SimGNN-v_00001/original_datasets/aids700nef/manifest.json"
+      ],
+      "fingerprint": "b61b9a9b705f045057d7243ce50c3008efe1e04b16c71d24f0e5dd77b995d472",
+      "model_id": "simgnn",
+      "primary_path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_aids700nef.pt"
+    },
+    {
+      "dataset_id": "linux",
+      "files": [
+        "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_linux.pt",
+        "Models&Datasets/SimGNN-v_00001/original_datasets/linux/manifest.json"
+      ],
+      "fingerprint": "cf27948698929d80016345f2eaa62ab8578fc4520a4d0ca47b756bf7855e32cd",
+      "model_id": "simgnn",
+      "primary_path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_linux.pt"
+    },
+    {
+      "dataset_id": "imdbmulti",
+      "files": [
+        "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_imdbmulti.pt",
+        "Models&Datasets/SimGNN-v_00001/original_datasets/imdbmulti/manifest.json"
+      ],
+      "fingerprint": "b1f4d0edfda483e20f65081d4e58936f68a76286bf3962c557cfd687f6327514",
+      "model_id": "simgnn",
+      "primary_path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_imdbmulti.pt"
+    },
+    {
+      "dataset_id": "ptc",
+      "files": [
+        "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_ptc.pt",
+        "Models&Datasets/SimGNN-v_00001/original_datasets/ptc/manifest.json"
+      ],
+      "fingerprint": "fda8139f65c12834e1e6741cb8e839889bbf11d67368683ae039a65bf3d5b986",
+      "model_id": "simgnn",
+      "primary_path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_ptc.pt"
+    },
+    {
+      "dataset_id": "mutag",
+      "files": [
+        "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_mutag.pt",
+        "Models&Datasets/SimGNN-v_00001/original_datasets/mutag/manifest.json"
+      ],
+      "fingerprint": "cd77ea3dfd9a8be50a2d5486761adeafc1e917ee98000736aa3d188e89f54ab3",
+      "model_id": "simgnn",
+      "primary_path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_mutag.pt"
+    },
+    {
+      "dataset_id": "proteins",
+      "files": [
+        "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_proteins.pt",
+        "Models&Datasets/SimGNN-v_00001/original_datasets/proteins/manifest.json"
+      ],
+      "fingerprint": "c5b4e0fde0112cbc2136b0a63cdd87e90f21c3cf4463c38abf7fbbd53cd09660",
+      "model_id": "simgnn",
+      "primary_path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_proteins.pt"
+    },
+    {
+      "dataset_id": "enzymes",
+      "files": [
+        "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_enzymes.pt",
+        "Models&Datasets/SimGNN-v_00001/original_datasets/enzymes/manifest.json"
+      ],
+      "fingerprint": "f4b7a23d9a4ffc50ffb501226267aa9104c01e6e1f63a05082e6310f0f26ebae",
+      "model_id": "simgnn",
+      "primary_path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_enzymes.pt"
+    },
+    {
+      "dataset_id": "aids700nef",
+      "files": [
+        "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.data-00000-of-00001",
+        "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.hpo.json",
+        "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.index",
+        "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.meta",
+        "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.meta.json"
+      ],
+      "fingerprint": "9c54d32ddb4cf3cd8288d966e68ecd018b5ec4efdf23d42247c54a604a25cc78",
+      "model_id": "multiscale-set",
+      "primary_path": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt"
+    },
+    {
+      "dataset_id": "linux",
+      "files": [
+        "Models&Datasets/GraphSim-master/checkpoints/linux/graphsim.ckpt.data-00000-of-00001",
+        "Models&Datasets/GraphSim-master/checkpoints/linux/graphsim.ckpt.index",
+        "Models&Datasets/GraphSim-master/checkpoints/linux/graphsim.ckpt.meta",
+        "Models&Datasets/GraphSim-master/checkpoints/linux/graphsim.ckpt.meta.json"
+      ],
+      "fingerprint": "595d4b0965522927b6b6a01dd3d55c13d6e7fbe30503da8831505cfde2860682",
+      "model_id": "multiscale-set",
+      "primary_path": "Models&Datasets/GraphSim-master/checkpoints/linux/graphsim.ckpt"
+    },
+    {
+      "dataset_id": "imdbmulti",
+      "files": [
+        "Models&Datasets/GraphSim-master/checkpoints/imdbmulti/graphsim.ckpt.data-00000-of-00001",
+        "Models&Datasets/GraphSim-master/checkpoints/imdbmulti/graphsim.ckpt.index",
+        "Models&Datasets/GraphSim-master/checkpoints/imdbmulti/graphsim.ckpt.meta",
+        "Models&Datasets/GraphSim-master/checkpoints/imdbmulti/graphsim.ckpt.meta.json"
+      ],
+      "fingerprint": "9ac839da66011d20cf7ea948aed683d20ee02ab3fbddc6b28271157469ee38cd",
+      "model_id": "multiscale-set",
+      "primary_path": "Models&Datasets/GraphSim-master/checkpoints/imdbmulti/graphsim.ckpt"
+    },
+    {
+      "dataset_id": "ptc",
+      "files": [
+        "Models&Datasets/GraphSim-master/checkpoints/ptc/graphsim.ckpt.data-00000-of-00001",
+        "Models&Datasets/GraphSim-master/checkpoints/ptc/graphsim.ckpt.index",
+        "Models&Datasets/GraphSim-master/checkpoints/ptc/graphsim.ckpt.meta",
+        "Models&Datasets/GraphSim-master/checkpoints/ptc/graphsim.ckpt.meta.json"
+      ],
+      "fingerprint": "b629eb0a3f40f954bd56eabe3b787f88b8ab200cfdce628ef67def3dbc898046",
+      "model_id": "multiscale-set",
+      "primary_path": "Models&Datasets/GraphSim-master/checkpoints/ptc/graphsim.ckpt"
+    },
+    {
+      "dataset_id": "mutag",
+      "files": [
+        "Models&Datasets/GraphSim-master/checkpoints/mutag/graphsim.ckpt.data-00000-of-00001",
+        "Models&Datasets/GraphSim-master/checkpoints/mutag/graphsim.ckpt.index",
+        "Models&Datasets/GraphSim-master/checkpoints/mutag/graphsim.ckpt.meta",
+        "Models&Datasets/GraphSim-master/checkpoints/mutag/graphsim.ckpt.meta.json"
+      ],
+      "fingerprint": "2cacf0d75e5c832044c14774a8c0cbf1d8c9c46c42ec407fa391b7696a1f78b2",
+      "model_id": "multiscale-set",
+      "primary_path": "Models&Datasets/GraphSim-master/checkpoints/mutag/graphsim.ckpt"
+    },
+    {
+      "dataset_id": "proteins",
+      "files": [
+        "Models&Datasets/GraphSim-master/checkpoints/proteins/graphsim.ckpt.data-00000-of-00001",
+        "Models&Datasets/GraphSim-master/checkpoints/proteins/graphsim.ckpt.index",
+        "Models&Datasets/GraphSim-master/checkpoints/proteins/graphsim.ckpt.meta",
+        "Models&Datasets/GraphSim-master/checkpoints/proteins/graphsim.ckpt.meta.json"
+      ],
+      "fingerprint": "40692ecf186c125bc67e02c9f2496026873aa40b06a7e9d764167c4b4867b8df",
+      "model_id": "multiscale-set",
+      "primary_path": "Models&Datasets/GraphSim-master/checkpoints/proteins/graphsim.ckpt"
+    },
+    {
+      "dataset_id": "enzymes",
+      "files": [
+        "Models&Datasets/GraphSim-master/checkpoints/enzymes/graphsim.ckpt.data-00000-of-00001",
+        "Models&Datasets/GraphSim-master/checkpoints/enzymes/graphsim.ckpt.index",
+        "Models&Datasets/GraphSim-master/checkpoints/enzymes/graphsim.ckpt.meta",
+        "Models&Datasets/GraphSim-master/checkpoints/enzymes/graphsim.ckpt.meta.json"
+      ],
+      "fingerprint": "a27e2e8348022b7a1a93303a3408cedfa5fb314c2f7433c374914d4dd831b8b3",
+      "model_id": "multiscale-set",
+      "primary_path": "Models&Datasets/GraphSim-master/checkpoints/enzymes/graphsim.ckpt"
+    },
+    {
+      "dataset_id": "aids700nef",
+      "files": [
+        "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt",
+        "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt.hpo.json"
+      ],
+      "fingerprint": "c7aa5163fd124ac0951ceed68d3487949746a88420d940235fd4f748833991c6",
+      "model_id": "segmn",
+      "primary_path": "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt"
+    },
+    {
+      "dataset_id": "linux",
+      "files": [
+        "Models&Datasets/SEGMN-main/checkpoints/linux/segmn_linux_best.pt"
+      ],
+      "fingerprint": "6b0ad7eea082c33b0088ceedb350f67d376c0af6d43b75f2cadfd5ad0aac69d0",
+      "model_id": "segmn",
+      "primary_path": "Models&Datasets/SEGMN-main/checkpoints/linux/segmn_linux_best.pt"
+    },
+    {
+      "dataset_id": "imdbmulti",
+      "files": [
+        "Models&Datasets/SEGMN-main/checkpoints/imdbmulti/segmn_imdbmulti_best.pt"
+      ],
+      "fingerprint": "edd2ffa51b2887cefe4e87a5e5414e01e3b2ef0d6ccb1a20a763323dc946fd05",
+      "model_id": "segmn",
+      "primary_path": "Models&Datasets/SEGMN-main/checkpoints/imdbmulti/segmn_imdbmulti_best.pt"
+    },
+    {
+      "dataset_id": "ptc",
+      "files": [
+        "Models&Datasets/SEGMN-main/checkpoints/ptc/segmn_ptc_best.pt"
+      ],
+      "fingerprint": "fa8b83423c7e3c9f84da6dbf45b2c86799e559f2074265c0c32504f52f7402b1",
+      "model_id": "segmn",
+      "primary_path": "Models&Datasets/SEGMN-main/checkpoints/ptc/segmn_ptc_best.pt"
+    },
+    {
+      "dataset_id": "mutag",
+      "files": [
+        "Models&Datasets/SEGMN-main/checkpoints/mutag/segmn_mutag_best.pt"
+      ],
+      "fingerprint": "43afc9ddc6d9e650195acde76e61764c07a7d0ed81e85e2ad4875248fbebb468",
+      "model_id": "segmn",
+      "primary_path": "Models&Datasets/SEGMN-main/checkpoints/mutag/segmn_mutag_best.pt"
+    },
+    {
+      "dataset_id": "proteins",
+      "files": [
+        "Models&Datasets/SEGMN-main/checkpoints/proteins/segmn_proteins_best.pt"
+      ],
+      "fingerprint": "151465b31ba69598438d4f44c4139b586bca14eb8a43fec383530cdd568cf667",
+      "model_id": "segmn",
+      "primary_path": "Models&Datasets/SEGMN-main/checkpoints/proteins/segmn_proteins_best.pt"
+    },
+    {
+      "dataset_id": "enzymes",
+      "files": [
+        "Models&Datasets/SEGMN-main/checkpoints/enzymes/segmn_enzymes_best.pt"
+      ],
+      "fingerprint": "c4ec8a8ba9e456ebaa99c3bd6ace3fe4c1a56cac9481d1a40b57fb2223a7c7e5",
+      "model_id": "segmn",
+      "primary_path": "Models&Datasets/SEGMN-main/checkpoints/enzymes/segmn_enzymes_best.pt"
+    },
+    {
+      "dataset_id": "aids700nef",
+      "files": [
+        "Models&Datasets/GFM-code/checkpoints/gfm_aids700nef.pt",
+        "Models&Datasets/GFM-code/checkpoints/gfm_aids700nef.pt.hpo.json"
+      ],
+      "fingerprint": "6edc2d013e91fe4901d4d72372635076395663a933d7b2de412e8bda39bbcdf0",
+      "model_id": "graph-fusion",
+      "primary_path": "Models&Datasets/GFM-code/checkpoints/gfm_aids700nef.pt"
+    },
+    {
+      "dataset_id": "linux",
+      "files": [
+        "Models&Datasets/GFM-code/checkpoints/gfm_linux.pt"
+      ],
+      "fingerprint": "98da1a143ba19277e45f1d658303467c7e7288727e387e7ba134c9eee96da7b0",
+      "model_id": "graph-fusion",
+      "primary_path": "Models&Datasets/GFM-code/checkpoints/gfm_linux.pt"
+    },
+    {
+      "dataset_id": "imdbmulti",
+      "files": [
+        "Models&Datasets/GFM-code/checkpoints/gfm_imdbmulti.pt"
+      ],
+      "fingerprint": "112ac60799bf8107f974f5a7842219557643b41417cf3ec661ad3e23fa1fc3e5",
+      "model_id": "graph-fusion",
+      "primary_path": "Models&Datasets/GFM-code/checkpoints/gfm_imdbmulti.pt"
+    },
+    {
+      "dataset_id": "ptc",
+      "files": [
+        "Models&Datasets/GFM-code/checkpoints/gfm_ptc.pt"
+      ],
+      "fingerprint": "83cd162ff1727b2b1cf52fa1a992d85a72d6c79737894356bf550d6291dccc88",
+      "model_id": "graph-fusion",
+      "primary_path": "Models&Datasets/GFM-code/checkpoints/gfm_ptc.pt"
+    },
+    {
+      "dataset_id": "mutag",
+      "files": [
+        "Models&Datasets/GFM-code/checkpoints/gfm_mutag.pt"
+      ],
+      "fingerprint": "381a952e3699dec9daa7d7a956b0553631d76e382b83c6186d08761d8c7a56b5",
+      "model_id": "graph-fusion",
+      "primary_path": "Models&Datasets/GFM-code/checkpoints/gfm_mutag.pt"
+    },
+    {
+      "dataset_id": "proteins",
+      "files": [
+        "Models&Datasets/GFM-code/checkpoints/gfm_proteins.pt"
+      ],
+      "fingerprint": "ed7950fbdd94c3d19d7b7ed23aadb3c7118e7596a8ed7431502017393161a689",
+      "model_id": "graph-fusion",
+      "primary_path": "Models&Datasets/GFM-code/checkpoints/gfm_proteins.pt"
+    },
+    {
+      "dataset_id": "enzymes",
+      "files": [
+        "Models&Datasets/GFM-code/checkpoints/gfm_enzymes.pt"
+      ],
+      "fingerprint": "e6830616e99e13f91d85b30d9fd20d4e40eb12411778016aed3b551d8485adcd",
+      "model_id": "graph-fusion",
+      "primary_path": "Models&Datasets/GFM-code/checkpoints/gfm_enzymes.pt"
+    },
+    {
+      "dataset_id": "aids700nef",
+      "files": [
+        "Models&Datasets/Graph2Region-main/checkpoints/aids700nef/g2r_aids700nef_best.pt",
+        "Models&Datasets/Graph2Region-main/checkpoints/aids700nef/g2r_aids700nef_best.pt.hpo.json"
+      ],
+      "fingerprint": "342bdb739c72c065c70fb2e4a396ddf2e7fa8af80a96d2a06efdf90cf5a8ddbf",
+      "model_id": "graph2region",
+      "primary_path": "Models&Datasets/Graph2Region-main/checkpoints/aids700nef/g2r_aids700nef_best.pt"
+    },
+    {
+      "dataset_id": "linux",
+      "files": [
+        "Models&Datasets/Graph2Region-main/checkpoints/linux/g2r_linux_best.pt"
+      ],
+      "fingerprint": "7ec26a967c69522ff895394417afd7a7e782064248619e1ea4ae174b3452115a",
+      "model_id": "graph2region",
+      "primary_path": "Models&Datasets/Graph2Region-main/checkpoints/linux/g2r_linux_best.pt"
+    },
+    {
+      "dataset_id": "imdbmulti",
+      "files": [
+        "Models&Datasets/Graph2Region-main/checkpoints/imdbmulti/g2r_imdbmulti_best.pt"
+      ],
+      "fingerprint": "e3a49af80049801b3fd9e6c11128a9e851ba1207b7e0ac33a69f7748b6acc4c3",
+      "model_id": "graph2region",
+      "primary_path": "Models&Datasets/Graph2Region-main/checkpoints/imdbmulti/g2r_imdbmulti_best.pt"
+    },
+    {
+      "dataset_id": "ptc",
+      "files": [
+        "Models&Datasets/Graph2Region-main/checkpoints/ptc/g2r_ptc_best.pt"
+      ],
+      "fingerprint": "76bc87ef665818d94d5d252034a25f61ed8b05b42d320b6930ae9b905b51f478",
+      "model_id": "graph2region",
+      "primary_path": "Models&Datasets/Graph2Region-main/checkpoints/ptc/g2r_ptc_best.pt"
+    },
+    {
+      "dataset_id": "mutag",
+      "files": [
+        "Models&Datasets/Graph2Region-main/checkpoints/mutag/g2r_mutag_best.pt"
+      ],
+      "fingerprint": "a5eeca451e767be2578cef2c0fc531e698a3b124d4e8304b458992e0ff622dcb",
+      "model_id": "graph2region",
+      "primary_path": "Models&Datasets/Graph2Region-main/checkpoints/mutag/g2r_mutag_best.pt"
+    },
+    {
+      "dataset_id": "proteins",
+      "files": [
+        "Models&Datasets/Graph2Region-main/checkpoints/proteins/g2r_proteins_best.pt"
+      ],
+      "fingerprint": "a25689a74a66025a677a9da9b8b7e2979cb6226d8b83ac152efed7cabc6af6da",
+      "model_id": "graph2region",
+      "primary_path": "Models&Datasets/Graph2Region-main/checkpoints/proteins/g2r_proteins_best.pt"
+    },
+    {
+      "dataset_id": "enzymes",
+      "files": [
+        "Models&Datasets/Graph2Region-main/checkpoints/enzymes/g2r_enzymes_best.pt"
+      ],
+      "fingerprint": "557c858532d17b77f9d205c6d9515ab62579303bd1ec5459b1cfc29d58a2132b",
+      "model_id": "graph2region",
+      "primary_path": "Models&Datasets/Graph2Region-main/checkpoints/enzymes/g2r_enzymes_best.pt"
+    }
+  ],
+  "files": [
+    {
+      "bytes": 570570,
+      "path": "Models&Datasets/GFM-code/checkpoints/gfm_aids700nef.pt",
+      "sha256": "6edc2d013e91fe4901d4d72372635076395663a933d7b2de412e8bda39bbcdf0"
+    },
+    {
+      "bytes": 1318,
+      "path": "Models&Datasets/GFM-code/checkpoints/gfm_aids700nef.pt.hpo.json",
+      "sha256": "85dc63ee7192654a7d6abd2e07cee70ac91d73402d2fc57f9b6297d7764f30bd"
+    },
+    {
+      "bytes": 569628,
+      "path": "Models&Datasets/GFM-code/checkpoints/gfm_enzymes.pt",
+      "sha256": "e6830616e99e13f91d85b30d9fd20d4e40eb12411778016aed3b551d8485adcd"
+    },
+    {
+      "bytes": 571032,
+      "path": "Models&Datasets/GFM-code/checkpoints/gfm_imdbmulti.pt",
+      "sha256": "112ac60799bf8107f974f5a7842219557643b41417cf3ec661ad3e23fa1fc3e5"
+    },
+    {
+      "bytes": 569384,
+      "path": "Models&Datasets/GFM-code/checkpoints/gfm_linux.pt",
+      "sha256": "98da1a143ba19277e45f1d658303467c7e7288727e387e7ba134c9eee96da7b0"
+    },
+    {
+      "bytes": 569512,
+      "path": "Models&Datasets/GFM-code/checkpoints/gfm_mutag.pt",
+      "sha256": "381a952e3699dec9daa7d7a956b0553631d76e382b83c6186d08761d8c7a56b5"
+    },
+    {
+      "bytes": 569686,
+      "path": "Models&Datasets/GFM-code/checkpoints/gfm_proteins.pt",
+      "sha256": "ed7950fbdd94c3d19d7b7ed23aadb3c7118e7596a8ed7431502017393161a689"
+    },
+    {
+      "bytes": 570684,
+      "path": "Models&Datasets/GFM-code/checkpoints/gfm_ptc.pt",
+      "sha256": "83cd162ff1727b2b1cf52fa1a992d85a72d6c79737894356bf550d6291dccc88"
+    },
+    {
+      "bytes": 20271,
+      "path": "Models&Datasets/Graph2Region-main/checkpoints/aids700nef/g2r_aids700nef_best.pt",
+      "sha256": "342bdb739c72c065c70fb2e4a396ddf2e7fa8af80a96d2a06efdf90cf5a8ddbf"
+    },
+    {
+      "bytes": 1306,
+      "path": "Models&Datasets/Graph2Region-main/checkpoints/aids700nef/g2r_aids700nef_best.pt.hpo.json",
+      "sha256": "4fc5d3599f42dea779e3851b8112b1d7e1737f8b1c7bcfdf2e9c9aae00571db6"
+    },
+    {
+      "bytes": 19520,
+      "path": "Models&Datasets/Graph2Region-main/checkpoints/enzymes/g2r_enzymes_best.pt",
+      "sha256": "557c858532d17b77f9d205c6d9515ab62579303bd1ec5459b1cfc29d58a2132b"
+    },
+    {
+      "bytes": 20213,
+      "path": "Models&Datasets/Graph2Region-main/checkpoints/imdbmulti/g2r_imdbmulti_best.pt",
+      "sha256": "e3a49af80049801b3fd9e6c11128a9e851ba1207b7e0ac33a69f7748b6acc4c3"
+    },
+    {
+      "bytes": 19752,
+      "path": "Models&Datasets/Graph2Region-main/checkpoints/linux/g2r_linux_best.pt",
+      "sha256": "7ec26a967c69522ff895394417afd7a7e782064248619e1ea4ae174b3452115a"
+    },
+    {
+      "bytes": 19126,
+      "path": "Models&Datasets/Graph2Region-main/checkpoints/mutag/g2r_mutag_best.pt",
+      "sha256": "a5eeca451e767be2578cef2c0fc531e698a3b124d4e8304b458992e0ff622dcb"
+    },
+    {
+      "bytes": 23461,
+      "path": "Models&Datasets/Graph2Region-main/checkpoints/proteins/g2r_proteins_best.pt",
+      "sha256": "a25689a74a66025a677a9da9b8b7e2979cb6226d8b83ac152efed7cabc6af6da"
+    },
+    {
+      "bytes": 20119,
+      "path": "Models&Datasets/Graph2Region-main/checkpoints/ptc/g2r_ptc_best.pt",
+      "sha256": "76bc87ef665818d94d5d252034a25f61ed8b05b42d320b6930ae9b905b51f478"
+    },
+    {
+      "bytes": 2136068,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.data-00000-of-00001",
+      "sha256": "d9cde713c7574d7948e3759c9afab4e7c5f2f1746e3e2e6eca45f3a466068d93"
+    },
+    {
+      "bytes": 1330,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.hpo.json",
+      "sha256": "3f557354dda7d109ac4e77e4330c635cfa88d67d4fd46cb39a711c0a8b7ee94b"
+    },
+    {
+      "bytes": 1944,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.index",
+      "sha256": "9759bff0f0008810d7955e3495dadf4ef6c7c2f5266ac01c92253bfb64f4121a"
+    },
+    {
+      "bytes": 2055728,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.meta",
+      "sha256": "50116930d87b171687318c398c1cc086c0be205d0a1f1ef38b0efcfc952a88df"
+    },
+    {
+      "bytes": 13663,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/aids700nef/graphsim.ckpt.meta.json",
+      "sha256": "66c5b667968e90cc1feb7b98dde6ca28997cc2cb20977630fccce0985bfb9637"
+    },
+    {
+      "bytes": 2136068,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/enzymes/graphsim.ckpt.data-00000-of-00001",
+      "sha256": "0472b9b42b64a86bad376f63b3299c3486180b2e8efe473ac8e031c7bf0a812e"
+    },
+    {
+      "bytes": 1944,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/enzymes/graphsim.ckpt.index",
+      "sha256": "f8c4d0d222a98855cd2398db6a3b03691b974d84b1f1d1ca732a67d1d354e966"
+    },
+    {
+      "bytes": 3672729,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/enzymes/graphsim.ckpt.meta",
+      "sha256": "670ad5e7b801ca874044c1aca66029139052953110c40348fdf32d0a85a3e5dc"
+    },
+    {
+      "bytes": 12281,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/enzymes/graphsim.ckpt.meta.json",
+      "sha256": "dc8c32be0da8bc5007aabf46a4b3aaf2e3c7309c9c807f2ae2ff095da1e0503f"
+    },
+    {
+      "bytes": 2136068,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/imdbmulti/graphsim.ckpt.data-00000-of-00001",
+      "sha256": "fb29ecc875726c79111aed5e8c03ccdaf744bd8c24b0aa149fed572757cfcde8"
+    },
+    {
+      "bytes": 1944,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/imdbmulti/graphsim.ckpt.index",
+      "sha256": "09dcf56042c809bdd3b4ba3a35bf834762deaf525f00087c0d2fe601d92f9497"
+    },
+    {
+      "bytes": 3672729,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/imdbmulti/graphsim.ckpt.meta",
+      "sha256": "616baa03f7f1b4f739adb44f3485ad75848300671b30c40cba32c47e1961f1da"
+    },
+    {
+      "bytes": 22289,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/imdbmulti/graphsim.ckpt.meta.json",
+      "sha256": "6b93dd4576da37fe64030ee7bebc6eca24d4e515ac0f86f77ce6464b9db51e9f"
+    },
+    {
+      "bytes": 2136068,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/linux/graphsim.ckpt.data-00000-of-00001",
+      "sha256": "66c32a197ef9c1827193e46c30afa3b54d032b1b805c7143498139f0e990cf8b"
+    },
+    {
+      "bytes": 1944,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/linux/graphsim.ckpt.index",
+      "sha256": "13d8375073345160679bafe9b44526d22cc06563b38d6fe69eb6c9827c30809e"
+    },
+    {
+      "bytes": 3672729,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/linux/graphsim.ckpt.meta",
+      "sha256": "f2334e68257422c8d50623793747ba4b9474eba4a3085ac75cde52025337f8a8"
+    },
+    {
+      "bytes": 18304,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/linux/graphsim.ckpt.meta.json",
+      "sha256": "437c9a9b87466a3ab35483fc6b1eb9e5a61b758fe489720e9794b9403ca84bbf"
+    },
+    {
+      "bytes": 2136068,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/mutag/graphsim.ckpt.data-00000-of-00001",
+      "sha256": "bbd5308558197ab290ed81da9f6257906837a9a05426db03944123915fa89bcc"
+    },
+    {
+      "bytes": 1944,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/mutag/graphsim.ckpt.index",
+      "sha256": "afe4d88e0d690991d13580676efee5d9479b773dcdad7191a8f1630eb2d94142"
+    },
+    {
+      "bytes": 3672729,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/mutag/graphsim.ckpt.meta",
+      "sha256": "fc7f1173d23db6cdae70d0149877dfa66cee1e39ccd02ebfe4316766f9c45f35"
+    },
+    {
+      "bytes": 7868,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/mutag/graphsim.ckpt.meta.json",
+      "sha256": "491158fdb45bd737337b4cf57981793220a5dc65f6e2dcbbd5192bd131b490de"
+    },
+    {
+      "bytes": 2136068,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/proteins/graphsim.ckpt.data-00000-of-00001",
+      "sha256": "72318f9f6427679d3893ee234af2fbd4c97f0619c70866666f90ce5a7de90758"
+    },
+    {
+      "bytes": 1944,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/proteins/graphsim.ckpt.index",
+      "sha256": "de2d8aef7ea3ce578dcb1c73f0b43336b804ae6cfdca3f3bc67dee94bda6c400"
+    },
+    {
+      "bytes": 3673437,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/proteins/graphsim.ckpt.meta",
+      "sha256": "4cbb3fc9055b3bf05c5488f8737a359f99095624f000b9a4091ed62dad572a88"
+    },
+    {
+      "bytes": 19222,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/proteins/graphsim.ckpt.meta.json",
+      "sha256": "ff0a2fa35631b7f01bb722b58a658320668f70e7643367fabc221b4a2a374ed6"
+    },
+    {
+      "bytes": 2136068,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/ptc/graphsim.ckpt.data-00000-of-00001",
+      "sha256": "8419f0cad980b2c23cc365181a3d744c5b596270fa3150caf854e028bd072a02"
+    },
+    {
+      "bytes": 1944,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/ptc/graphsim.ckpt.index",
+      "sha256": "5e7bdfa1f8c26da826bc4846dee3fa53f5867cc9ecebc87e08fc71bdb9437657"
+    },
+    {
+      "bytes": 3672729,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/ptc/graphsim.ckpt.meta",
+      "sha256": "f60e2adf090522a7563bfea1408b7af5befa92cec13edf0d2d7da93e7a1c724a"
+    },
+    {
+      "bytes": 10909,
+      "path": "Models&Datasets/GraphSim-master/checkpoints/ptc/graphsim.ckpt.meta.json",
+      "sha256": "52a18373052fd749cd999340120345e974b9b3856ef07576e29830770ee9c249"
+    },
+    {
+      "bytes": 2804275,
+      "path": "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt",
+      "sha256": "c7aa5163fd124ac0951ceed68d3487949746a88420d940235fd4f748833991c6"
+    },
+    {
+      "bytes": 1346,
+      "path": "Models&Datasets/SEGMN-main/checkpoints/aids700nef/segmn_aids700nef_best.pt.hpo.json",
+      "sha256": "e338b0720ed0cc0d81733cdb56c6d1f04f814fef266e3ff0675aa6ca42435e91"
+    },
+    {
+      "bytes": 2442362,
+      "path": "Models&Datasets/SEGMN-main/checkpoints/enzymes/segmn_enzymes_best.pt",
+      "sha256": "c4ec8a8ba9e456ebaa99c3bd6ace3fe4c1a56cac9481d1a40b57fb2223a7c7e5"
+    },
+    {
+      "bytes": 11183165,
+      "path": "Models&Datasets/SEGMN-main/checkpoints/imdbmulti/segmn_imdbmulti_best.pt",
+      "sha256": "edd2ffa51b2887cefe4e87a5e5414e01e3b2ef0d6ccb1a20a763323dc946fd05"
+    },
+    {
+      "bytes": 2708126,
+      "path": "Models&Datasets/SEGMN-main/checkpoints/linux/segmn_linux_best.pt",
+      "sha256": "6b0ad7eea082c33b0088ceedb350f67d376c0af6d43b75f2cadfd5ad0aac69d0"
+    },
+    {
+      "bytes": 2442196,
+      "path": "Models&Datasets/SEGMN-main/checkpoints/mutag/segmn_mutag_best.pt",
+      "sha256": "43afc9ddc6d9e650195acde76e61764c07a7d0ed81e85e2ad4875248fbebb468"
+    },
+    {
+      "bytes": 2442445,
+      "path": "Models&Datasets/SEGMN-main/checkpoints/proteins/segmn_proteins_best.pt",
+      "sha256": "151465b31ba69598438d4f44c4139b586bca14eb8a43fec383530cdd568cf667"
+    },
+    {
+      "bytes": 11182667,
+      "path": "Models&Datasets/SEGMN-main/checkpoints/ptc/segmn_ptc_best.pt",
+      "sha256": "fa8b83423c7e3c9f84da6dbf45b2c86799e559f2074265c0c32504f52f7402b1"
+    },
+    {
+      "bytes": 63712,
+      "path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_aids700nef.pt",
+      "sha256": "b61b9a9b705f045057d7243ce50c3008efe1e04b16c71d24f0e5dd77b995d472"
+    },
+    {
+      "bytes": 1481,
+      "path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_aids700nef.pt.hpo.json",
+      "sha256": "0bb209d497461e7ae4708828aca7632d581ea8a4d349ae3c9790534d0a9d6d83"
+    },
+    {
+      "bytes": 123690,
+      "path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_enzymes.pt",
+      "sha256": "f4b7a23d9a4ffc50ffb501226267aa9104c01e6e1f63a05082e6310f0f26ebae"
+    },
+    {
+      "bytes": 123126,
+      "path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_imdbmulti.pt",
+      "sha256": "b1f4d0edfda483e20f65081d4e58936f68a76286bf3962c557cfd687f6327514"
+    },
+    {
+      "bytes": 122630,
+      "path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_linux.pt",
+      "sha256": "cf27948698929d80016345f2eaa62ab8578fc4520a4d0ca47b756bf7855e32cd"
+    },
+    {
+      "bytes": 125702,
+      "path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_mutag.pt",
+      "sha256": "cd77ea3dfd9a8be50a2d5486761adeafc1e917ee98000736aa3d188e89f54ab3"
+    },
+    {
+      "bytes": 123708,
+      "path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_proteins.pt",
+      "sha256": "c5b4e0fde0112cbc2136b0a63cdd87e90f21c3cf4463c38abf7fbbd53cd09660"
+    },
+    {
+      "bytes": 132234,
+      "path": "Models&Datasets/SimGNN-v_00001/checkpoints/simgnn_ptc.pt",
+      "sha256": "fda8139f65c12834e1e6741cb8e839889bbf11d67368683ae039a65bf3d5b986"
+    },
+    {
+      "bytes": 2523,
+      "path": "Models&Datasets/SimGNN-v_00001/original_datasets/aids700nef/manifest.json",
+      "sha256": "7385b4e3623c0349cb0d826dbc11007238deff377f176ce4b36ac9f47112906b"
+    },
+    {
+      "bytes": 2228,
+      "path": "Models&Datasets/SimGNN-v_00001/original_datasets/enzymes/manifest.json",
+      "sha256": "cc40d7daed34b0e80b74d4156af855887fec6b68205823a19e1ee14a53e623ee"
+    },
+    {
+      "bytes": 2539,
+      "path": "Models&Datasets/SimGNN-v_00001/original_datasets/imdbmulti/manifest.json",
+      "sha256": "4e65800968d5286b128131baa9dd34ddfe8ac1971576895982629cca551afd1d"
+    },
+    {
+      "bytes": 2115,
+      "path": "Models&Datasets/SimGNN-v_00001/original_datasets/linux/manifest.json",
+      "sha256": "d877a425e1d61eb5b651c54d8f6b287b81a377703c4dc55406048c6b380570a8"
+    },
+    {
+      "bytes": 2217,
+      "path": "Models&Datasets/SimGNN-v_00001/original_datasets/mutag/manifest.json",
+      "sha256": "76c74f2ebe3bd9b6b6d63c974f628e6d1f453c2aa089b735646217035e18f360"
+    },
+    {
+      "bytes": 2233,
+      "path": "Models&Datasets/SimGNN-v_00001/original_datasets/proteins/manifest.json",
+      "sha256": "42b2d76565ff45b8e9b768ad5811e0996e4ba3b737fe1fddea1317342a971d10"
+    },
+    {
+      "bytes": 2498,
+      "path": "Models&Datasets/SimGNN-v_00001/original_datasets/ptc/manifest.json",
+      "sha256": "75ab28b0bdbc27f6665c16cc6501d29fc2cbfd303e75d1daa31f0de5b44128b2"
+    }
+  ],
+  "logical_checkpoint_count": 35,
+  "origin": "Locally trained checkpoints; not author-released pretrained weights.",
+  "schema_version": 1
+}

@@ -24,3 +24,9 @@ license.
 `make models` clones the upstream repositories directly. The upstream source
 trees remain under their authors' terms; this repository stores only its
 installer, pinned identities, and narrow compatibility patches.
+
+The `checkpoints-v1` Release contains only locally trained weight files and
+their provenance sidecars. It contains no upstream source tree or dataset
+archive. The files are identified by `configs/checkpoint_bundle_manifest.json`
+and are described as local project checkpoints, not official pretrained
+weights from the model authors.

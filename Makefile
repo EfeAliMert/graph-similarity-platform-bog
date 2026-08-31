@@ -2,7 +2,7 @@ PYTHON ?= python3
 PYG_PYTHON := .venvs/gnn-pyg/bin/python
 GRAPHSIM_PYTHON := .venvs/graphsim/bin/python
 
-.PHONY: run test test-artifacts check preflight manifest matrix-plan matrix-full matrix-existing study hpo checkpoint-audit model-audit graphsim-calibrate setup models models-verify datasets datasets-verify
+.PHONY: run test test-artifacts check preflight manifest matrix-plan matrix-full matrix-existing study hpo checkpoint-audit model-audit graphsim-calibrate setup models models-verify datasets datasets-verify checkpoints checkpoints-verify
 
 run:
 	$(PYG_PYTHON) app.py
@@ -70,3 +70,9 @@ datasets:
 
 datasets-verify:
 	$(PYG_PYTHON) scripts/fetch_datasets.py --verify-only
+
+checkpoints:
+	$(PYTHON) scripts/fetch_checkpoints.py
+
+checkpoints-verify:
+	$(PYTHON) scripts/fetch_checkpoints.py --verify-only
